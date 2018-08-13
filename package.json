@@ -1,0 +1,12 @@
+{
+  "name": "aboutme",
+  "version": "1.0.0",
+  "description": "About me!",
+  "main": "index.js",
+  "repository": "https://github.com/samscha/aboutme.git",
+  "author": "Samuel Cha <sunchipssam@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.8.0"
+  }
+}
