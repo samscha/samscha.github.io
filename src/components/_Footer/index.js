@@ -3,12 +3,20 @@ import { NavLink } from 'react-router-dom';
 
 export default _ => (
   <div className="Footer">
-    <NavLink className="Footer__Link" to="/about">
+    <div className="FlexibleSpace" />
+
+    <NavLink className="Footer__link" to="/about">
       about
     </NavLink>
 
-    <div className="Footer__Link">blog</div>
+    <NavLink className="Footer__link" to="/blog">
+      blog
+    </NavLink>
 
-    <div className="Footer__Link">blog</div>
+    <NavLink className="Footer__link" to="/contact">
+      contact
+    </NavLink>
+
+    <div className="FlexibleSpace" />
   </div>
 );

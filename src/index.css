@@ -130,42 +130,101 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 1.4rem;
 }
+.linkInv {
+  color: #ffffff;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+}
+.linkInv:hover {
+  background-color: #ffffff;
+  color: #263238;
+}
+.linkInv:active {
+  text-decoration: underline;
+}
 .App {
+  color: #263238;
   height: 100vh;
   width: 100%;
 }
 .Footer {
   background: #263238;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr repeat(3, 100px) 1fr;
   justify-items: center;
-  padding: 55px 0;
+  padding: 35px 0;
 }
-.Footer .Footer__Link {
+.Footer .Footer__link {
   color: #ffffff;
-  font-size: 0.95rem;
+  cursor: pointer;
+  margin: 10px 0;
   padding: 4px;
   text-decoration: none;
+  font-size: 0.95rem;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.Footer .Footer__Link:hover {
+.Footer .Footer__link:hover {
   background-color: #ffffff;
   color: #263238;
 }
-.Footer .Footer__Link:active {
+.Footer .Footer__link:active {
   text-decoration: underline;
 }
 .Header {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-  padding: 25px 0;
-}
-.Header .Header__Link {
-  width: 200px;
+  cursor: pointer;
+  padding: 10px 35px;
   text-align: center;
+}
+.Header .Header__title {
+  font-size: 2.05rem;
+  margin: 15px 0;
+}
+.Header .Header__subtitle {
+  margin: 15px 0;
 }
 .Template {
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100%;
+}
+.Four04 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Four04 .Four04__Description {
+  margin: 10px 0;
+  padding: 4px;
+}
+.Four04 .Four04__Link {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+}
+.Four04 .Four04__Link:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.Four04 .Four04__Link:active {
+  text-decoration: underline;
+}
+.Four04 .Four04__NavLink {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+}
+.Four04 .Four04__NavLink:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.Four04 .Four04__NavLink:active {
+  text-decoration: underline;
 }

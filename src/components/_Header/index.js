@@ -1,13 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-export default _ => (
-  <div className="Header">
-    <div className="Header__Link">home</div>
+export default withRouter(props => (
+  <div className="Header" onClick={_ => props.history.push('/')}>
+    <div className="Header__title">Samuel Cha</div>
 
-    <div className="Header__Link">projects</div>
-
-    <div className="Header__Link">blog</div>
-
-    <div className="Header__Link">about</div>
+    <div className="Header__subtitle">Software Engineer</div>
   </div>
-);
+));

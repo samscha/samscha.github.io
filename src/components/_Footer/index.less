@@ -1,23 +1,15 @@
 .Footer {
   background: @themeColor;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr repeat(3, 100px) 1fr;
   justify-items: center;
-  padding: 55px 0;
+  padding: 35px 0;
 
-  .Footer__Link {
-    color: #ffffff;
+  .Footer__link {
+    .linkInv();
+
     font-size: @fontSm;
-    padding: 4px;
-    text-decoration: none;
-
-    &:hover {
-      background-color: #ffffff;
-      color: @themeColor;
-    }
-
-    &:active {
-      text-decoration: underline;
-    }
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
