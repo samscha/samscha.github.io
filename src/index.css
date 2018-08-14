@@ -228,3 +228,6 @@ body {
 .Four04 .Four04__NavLink:active {
   text-decoration: underline;
 }
+.Landing .Projects {
+  text-align: center;
+}
