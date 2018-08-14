@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+const DEBUG = process.env.DEBUG === 'true';
+const PORT = process.env.PORT;
 
-import App from './components/App';
+const server = require('./server');
 
-import './index.css';
-
-ReactDOM.render(<App />, document.getElementById('root'));
+server.listen(
+  PORT,
+  _ => (DEBUG ? console.log(`Listening on port: ${PORT}`) : null),
+);
