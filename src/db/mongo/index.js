@@ -1,51 +1,47 @@
 const MONGODB = JSON.parse(process.env.MONGODB);
+const DEBUG = JSON.parse(process.env.DEBUG);
 
 const mongoose = require('../../server.dependencies').mongoose;
 
-// if (process.env.CURR_ENV === 'DEV') {
-//   mongoose
-//     .connect(
-//       MONGODB.DEV.path,
-//       MONGODB.DEV.options,
-//     )
-//     .then(
-//       _ => console.log(`Connected to ${MONGODB.DEV.path}`),
-//       err => console.log(`Error connecting to ${MONGODB.DEV.path}: ${err}`),
-//     );
-// } else if (process.env.CURR_ENV === 'PROD') {
-//   mongoose
-//     .connect(
-//       MONGODB.PROD.path,
-//       MONGODB.PROD.options,
-//     )
-//     .then(_ => _, err => console.log(`Error connecting to db: ${err}`));
-// } else {
-//   if (JSON.parse(process.env.DEBUG)) console.log(`curr env not specified`);
-// }
+switch (process.env.NODE_ENV) {
+  case 'development':
+    const devPath = MONGODB.DEV.path;
 
-switch (process.env.CURR_ENV) {
-  case 'DEV':
-    return mongoose.connect(
-      MONGODB.DEV.path,
-      MONGODB.DEV.options,
-      err => {
-        if (err) {
-          console.log(`Error connecting to ${MONGODB.DEV.path}: ${err}`);
-          return;
-        }
+    return mongoose
+      .connect(
+        devPath,
+        MONGODB.DEV.options,
+      )
+      .then(
+        _ => {
+          console.log(`Connected to ${devPath}`);
+        },
+        err => {
+          console.log(`Error connecting to ${devPath}: ${err}`);
+          mongoose.connection.close(_ => {
+            console.log('Connection closed before exiting');
 
-        console.log(`Connected to ${MONGODB.DEV.path}`);
-      },
-    );
+            process.exit(1);
+          });
+        },
+      );
 
-  case 'PROD':
-    return mongoose.connect(
-      MONGODB.PROD.path,
-      MONGODB.PROD.options,
-      err => {
-        if (err) console.log(`Error connecting to db: ${err}`);
-      },
-    );
+  case 'production':
+    const prodPath = MONGODB.PROD.path;
+
+    return mongoose
+      .connect(
+        prodPath,
+        MONGODB.PROD.options,
+      )
+      .then(
+        _ => (DEBUG ? console.log(`Connected to ${prodPath}`) : null),
+        err => {
+          if (DEBUG) console.log(`Error connecting to db: ${err}`);
+
+          process.exit(1);
+        },
+      );
 
   default:
     if (JSON.parse(process.env.DEBUG)) console.log(`curr env not specified`);

@@ -2,6 +2,7 @@ const DEBUG = process.env.DEBUG === 'true';
 const PORT = process.env.PORT;
 
 const server = require('./server');
+server.get('env');
 
 server.listen(
   PORT,

@@ -11,7 +11,7 @@ exports.create = (req, res, next) => {
 
 exports.retrieve = (req, res, next) => {
   User.findById(req.user.id)
-    .populate('jobs')
+    .populate('projects')
     .exec((err, user) => {
       if (err)
         return res
@@ -52,6 +52,21 @@ exports.delete = (req, res, next) => {
 
     next();
   });
+};
+
+exports.addProject = (req, res, next) => {
+  User.findByIdAndUpdate(
+    req.user.id,
+    { $push: { projects: res.locals.newProject._id } },
+    (err, userWithAddedProject) => {
+      if (err)
+        return res
+          .status(500)
+          .send({ err, message: `error adding project to user` });
+
+      next();
+    },
+  );
 };
 
 exports.addJob = (req, res, next) => {

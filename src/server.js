@@ -3,7 +3,7 @@ const server = require('express')();
 /**
  * trust first proxy in production
  */
-if (JSON.parse(process.env.PROD)) server.set('trust proxy', 1);
+if (process.env.NODE_ENV === 'production') server.set('trust proxy', 1);
 
 /**
  * server configuration

@@ -1,9 +1,7 @@
-const mongoose = require('mongoose');
+const { mongoose } = require('../../../server.dependencies');
 const { Schema } = mongoose;
 
 const bcrypt = require('bcryptjs');
-
-// const Job = require('../../jobs/model');
 
 const UserSchema = new Schema(
   {
@@ -11,7 +9,7 @@ const UserSchema = new Schema(
     password: { type: String, required: true },
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
-    jobs: [{ type: Schema.Types.ObjectId, ref: 'Job' }],
+    projects: [{ type: Schema.Types.ObjectId, ref: 'Project' }],
   },
   {
     timestamps: true,
@@ -40,13 +38,13 @@ UserSchema.pre('save', function(next) {
   });
 });
 
-UserSchema.statics.getAllUsers = function(cb) {
-  User.find({}, (err, user) => {
-    if (err) return cb({ err });
+// UserSchema.statics.getAllUsers = function(cb) {
+//   User.find({}, (err, user) => {
+//     if (err) return cb({ err });
 
-    cb(users);
-  });
-};
+//     cb(users);
+//   });
+// };
 
 UserSchema.methods.comparePassword = function(pwd, cb) {
   bcrypt.compare(pwd, this.password, (err, isMatch) => {

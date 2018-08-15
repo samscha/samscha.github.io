@@ -1,4 +1,4 @@
-const sanitize = require('../../../jobs/routes/utils/sanitize').job;
+const sanitize = require('../../../projects/routes/utils/sanitize').project;
 
 exports.info = (req, res, next) => {
   const USER_FIELDS = JSON.parse(process.env.USER_FIELDS || []);
@@ -40,7 +40,7 @@ exports.user = user => {
     createdAt: undefined,
     updatedAt: undefined,
     __v: undefined,
-    jobs: user.jobs.map(job => sanitize(job)),
+    projects: user.projects.map(project => sanitize(project)),
   };
 };
 

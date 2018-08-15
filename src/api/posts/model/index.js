@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const user = require('../../users/model/controller');
 
-const JobSchema = new Schema(
+const PostSchema = new Schema(
   {
     company: { type: String, required: true },
     position: { type: String, required: true },
@@ -25,8 +25,8 @@ const JobSchema = new Schema(
   },
 );
 
-// JobSchema.post('remove', async function() {
+// PostSchema.post('remove', async function() {
 //   await user.removeJob(this._id);
 // });
 
-module.exports = mongoose.model(`Job`, JobSchema);
+module.exports = mongoose.model(`Job`, PostSchema);

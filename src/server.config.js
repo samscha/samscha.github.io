@@ -22,6 +22,13 @@ config = [
   express.json(),
 
   /**
+   * check db connection on every request
+   * it is important to check this before using session
+   * because session is stored in db
+   */
+  require('./api/utils/check').dbConnection,
+
+  /**
    * cors
    */
   cors(JSON.parse(process.env.CORS_OPTIONS)),
