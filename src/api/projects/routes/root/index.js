@@ -4,9 +4,18 @@ const utils = require('../utils');
 
 router
   .route(`/`)
+  .get(utils.upload.getPhoto, (req, res) => {
+    const bucket = res.locals.bucket;
+
+    res.contentType(bucket.ContentType);
+    res.send(bucket.Body);
+    // res.send({ bucket: res.locals.bucket }),
+  })
   .post(
     utils.check.loggedIn,
+    utils.parse.multipartForm,
     utils.sanitize.projectInfo,
+    utils.upload.photo,
     utils.project.create,
     utils.user.addProject,
     (req, res) => {
