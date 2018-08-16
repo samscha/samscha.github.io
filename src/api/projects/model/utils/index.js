@@ -1,1 +1,1 @@
-exports.log = require('../../../utils').log;
+exports.log = require('../../routes/utils').log;

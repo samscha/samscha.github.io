@@ -1,11 +1,14 @@
 import React from 'react';
 
+import * as c from '../';
+
 export default _ => (
   <div className="Landing">
-    {/* <div className="Projects">projects</div> */}
+    <c.Projects />
+
     {/* copied from https://github.com/samscha/track-my-jobs/blob/master/src/client/src/components/Construction.js */}
     {/* please note: this is temporary */}
-    <div
+    {/* <div
       className="ConstructionTitle"
       style={{
         margin: '10px 0',
@@ -39,6 +42,6 @@ export default _ => (
           </a>
         </li>
       </ul>
-    </div>
+    </div> */}
   </div>
 );

@@ -21,7 +21,9 @@ exports.getPhoto = (req, res, next) => {
  * https://medium.com/@fabianopb/upload-files-with-node-and-react-to-aws-s3-in-3-steps-fdaa8581f2bd
  *
  */
-exports.photo = async (req, res, next) => {
+exports.upload = async (req, res, next) => {
+  if (!res.locals.files) return next();
+
   const _uploadFile = (buffer, name, type) => {
     const params = {
       Body: buffer,
@@ -45,10 +47,7 @@ exports.photo = async (req, res, next) => {
     const fileName = `${title}/${timestamp}-${originalFilename}-proj-tbn`;
     const data = await _uploadFile(buffer, fileName, type);
 
-    res.locals.newProject = {
-      ...res.locals.newProject,
-      thumbnail: data.Key,
-    };
+    res.locals.thumbnailKey = data.Key;
 
     next();
   } catch (error) {

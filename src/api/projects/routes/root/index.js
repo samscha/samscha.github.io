@@ -4,19 +4,23 @@ const utils = require('../utils');
 
 router
   .route(`/`)
-  .get(utils.upload.getPhoto, (req, res) => {
-    const bucket = res.locals.bucket;
+  .get(
+    // utils.photo.getPhoto, (req, res) => {
+    // const bucket = res.locals.bucket;
 
-    res.contentType(bucket.ContentType);
-    res.send(bucket.Body);
+    // res.contentType(bucket.ContentType);
+    // res.send(bucket.Body);
     // res.send({ bucket: res.locals.bucket }),
-  })
+    (req, res) => {
+      res.status(422).send({ message: `invalid id` });
+    },
+  )
   .post(
     utils.check.loggedIn,
     utils.parse.multipartForm,
     utils.sanitize.projectInfo,
     utils.project.create,
-    utils.upload.photo,
+    utils.photo.upload,
     utils.project.addPhoto,
     utils.user.addProject,
     (req, res) => {
@@ -31,7 +35,7 @@ router
   )
   .put(
     utils.check.loggedIn,
-    utils.sanitize.projectInfo,
+    utils.sanitize.updatedProjectInfo,
     utils.project.update,
     (req, res) => {
       res.send(utils.sanitize.project(res.locals.updatedProject));

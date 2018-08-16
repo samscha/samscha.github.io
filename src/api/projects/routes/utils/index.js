@@ -13,8 +13,10 @@ exports.multiparty = multiparty;
 exports.upload = upload;
 
 exports.check = require('../../../utils/check');
+exports.log = require('../../../utils').log;
 exports.parse = require('./parse');
 exports.project = require('../../model/controller');
 exports.sanitize = require('./sanitize');
-exports.upload = require('./upload');
+exports.photo = require('./photo');
 exports.user = require('../../../users/model/controller');
+exports.validate = require('./validate');

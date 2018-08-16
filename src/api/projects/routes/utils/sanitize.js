@@ -31,6 +31,23 @@ exports.projectInfo = (req, res, next) => {
   next();
 };
 
+exports.updatedProjectInfo = (req, res, next) => {
+  const OPTIONAL_FIELDS = JSON.parse(process.env.PROJECT_FIELDS_OPTIONAL || []);
+  const sanitizedProject = {};
+
+  for (let i = 0; i < OPTIONAL_FIELDS.length; i++) {
+    const field = OPTIONAL_FIELDS[i];
+    const info = req.body[field];
+
+    if (!info) continue;
+
+    sanitizedProject[field] = info;
+  }
+
+  res.locals.sanitizedProject = sanitizedProject;
+  next();
+};
+
 /**
  * note: this is not to be used with middleware
  *

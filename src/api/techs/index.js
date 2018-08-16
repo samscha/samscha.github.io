@@ -1,12 +1,11 @@
 const router = require('express').Router();
 
 /**
- * /api/projects
+ * /api/tags
  *
- * routes for projects endpoint
+ * routes for tags endpoint
  *
  */
-router.use(`/all`, require('./routes/all'));
 router.use(`/`, require('./routes/root'));
 
 module.exports = router;

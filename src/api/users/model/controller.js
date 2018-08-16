@@ -1,4 +1,4 @@
-const User = require('./index');
+const User = require('./');
 
 exports.create = (req, res, next) => {
   new User(res.locals.sanitizedUser).save((err, savedUser) => {

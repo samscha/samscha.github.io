@@ -227,20 +227,3 @@ body {
 .Four04 .Four04__NavLink:active {
   text-decoration: underline;
 }
-.Landing .Projects {
-  text-align: center;
-}
-.Landing .ConstructionMain .constructionTEMP {
-  color: #263238;
-  cursor: pointer;
-  margin: 10px 0;
-  padding: 4px;
-  text-decoration: none;
-}
-.Landing .ConstructionMain .constructionTEMP:hover {
-  background-color: #263238;
-  color: #ffffff;
-}
-.Landing .ConstructionMain .constructionTEMP:active {
-  text-decoration: underline;
-}
