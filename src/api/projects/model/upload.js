@@ -45,12 +45,10 @@ exports.photo = async (req, res, next) => {
     const fileName = `${title}/${timestamp}-${originalFilename}-proj-tbn`;
     const data = await _uploadFile(buffer, fileName, type);
 
-    res.locals.thumbnailKey = data.Key;
-
-    // res.locals.newProject = {
-    //   ...res.locals.newProject,
-    //   thumbnail: data.Key,
-    // };
+    res.locals.newProject = {
+      ...res.locals.newProject,
+      thumbnail: data.Key,
+    };
 
     next();
   } catch (error) {

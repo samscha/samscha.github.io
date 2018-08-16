@@ -15,11 +15,12 @@ router
     utils.check.loggedIn,
     utils.parse.multipartForm,
     utils.sanitize.projectInfo,
-    utils.upload.photo,
     utils.project.create,
+    utils.upload.photo,
+    utils.project.addPhoto,
     utils.user.addProject,
     (req, res) => {
-      res.send(utils.sanitize.project(res.locals.newProject));
+      res.send(utils.sanitize.project(res.locals.newUpdatedProject));
     },
   );
 
