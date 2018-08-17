@@ -1079,7 +1079,6 @@ body {
   font-size: 1.65rem;
   justify-content: center;
   margin: 0 auto;
-  max-width: 530px;
   text-align: center;
 }
 .Landing .Intro .LinkContainer__link:hover {
@@ -1089,8 +1088,18 @@ body {
 .Landing .Intro .LinkContainer__link:active {
   text-decoration: underline;
 }
-.Landing .flexiEmptySpace {
-  height: 100px;
+.Landing .Intro .LinkContainer__link .IntroText {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+}
+.Landing .Intro .LinkContainer__link .IntroText .QuoteLeft {
+  justify-self: end;
+  padding: 0 15px 0 0;
+}
+.Landing .Intro .LinkContainer__link .IntroText .QuoteRight {
+  align-self: end;
+  justify-self: start;
+  padding: 0 0 0 15px;
 }
 .Landing .TechnologyBar__c {
   color: 'black';

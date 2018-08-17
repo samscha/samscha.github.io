@@ -9,7 +9,14 @@ export default _ => (
   <div className="Landing">
     <div className="Intro">
       <NavLink className="LinkContainer__link" to="/about">
-        Enhancing everyday living through technology
+        <div className="IntroText">
+          <FontAwesomeIcon className="QuoteLeft" icon={['fas', 'quote-left']} />
+          Enhancing everyday living through technology
+          <FontAwesomeIcon
+            className="QuoteRight"
+            icon={['fas', 'quote-right']}
+          />
+        </div>
       </NavLink>
     </div>
 
