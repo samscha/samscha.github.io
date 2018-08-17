@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import * as a from '../../actions';
+// import * as a from '../../actions';
 
 import * as c from '../';
 
-const fetchProjects = a.p.fetchProjects;
+// const fetchProjects = a.p.fetchProjects;
+
+import projects from './projects.tmp';
 
 export default connect(
-  state => ({ projects: state.projects }),
-  { fetchProjects },
+  // state => ({ projects: state.projects }),
+  _ => ({}),
+  {},
 )(
+  // { fetchProjects },
   class extends Component {
     componentWillMount() {
       // this.props.fetchProjects('recent');
@@ -19,7 +23,7 @@ export default connect(
     render() {
       return (
         <div className="Projects">
-          {this.props.projects.map(project => {
+          {projects.map(project => {
             return <c.Project key={project.title} project={project} />;
           })}
         </div>

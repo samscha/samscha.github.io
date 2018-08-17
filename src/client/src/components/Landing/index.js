@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import * as c from '../';
 
 export default _ => (
@@ -8,6 +10,29 @@ export default _ => (
 
     <c.Projects />
 
+    <div className="TechnologyBar__c">
+      <p className="TechnologyBar__p">icons by</p>
+      {/* <p className="TechnologyBar__p">by</p> */}
+
+      <a
+        className="TechnologyBar__link"
+        href="https://fontawesome.com/"
+        rel="noopener noreferrer"
+        target="_null"
+      >
+        <FontAwesomeIcon icon={['fab', 'font-awesome']} />
+      </a>
+
+      <p className="TechnologyBar__p">and</p>
+      <a
+        className="TechnologyBar__link"
+        href="http://fizzed.com/oss/font-mfizz"
+        rel="noopener noreferrer"
+        target="_null"
+      >
+        <p>Fizzed</p>
+      </a>
+    </div>
     {/* copied from https://github.com/samscha/track-my-jobs/blob/master/src/client/src/components/Construction.js */}
     {/* please note: this is temporary */}
     {/* <div

@@ -1,3 +1,79 @@
 .Project {
-  margin: 10px 0;
+  border: 1px solid;
+  height: 500px;
+  // padding: 5px;
+  width: 95%;
+  max-width: 700px;
+  margin: 25px 10px;
+
+  @media @phone {
+    height: 600px;
+  }
+
+  // @media @tablet {
+  //   width: 500px;
+  // }
+
+  .ProjectImage {
+    // visibility: hidden;
+    position: absolute;
+    width: 75%;
+    img {
+      height: 50%;
+      width: 50%;
+      position: relative;
+      visibility: hidden;
+      object-fit: cover;
+      background: rgba(76, 175, 80, 0.1);
+      opacity: 0.2;
+    }
+  }
+
+  .ProjectBody {
+    opacity: 1;
+    align-items: center;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 2fr;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+
+    .ProjectHeader {
+      .ProjectHeader__title {
+        font-size: @fontLg;
+        margin: 0 0 10px 0;
+      }
+
+      .ProjectHeader__subtitle {
+        font-size: @fontSm;
+      }
+    }
+
+    .Project__description {
+      // line-height: 1.4;
+      // width: 75%;
+      width: 100%;
+    }
+
+    .Project__links {
+      .ProjectLinkTo {
+        .link();
+
+        margin: 0 10px;
+      }
+    }
+
+    .Project__technologies {
+      align-self: start;
+      display: grid;
+      grid-auto-flow: 1fr 1fr;
+      grid-gap: 2px;
+      grid-template-columns: repeat(4, 1fr);
+
+      @media @minimum {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
 }

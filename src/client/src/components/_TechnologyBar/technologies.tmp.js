@@ -1,0 +1,59 @@
+// MOVE THESE TO THE BACKEND **************************************************
+export default [
+  {
+    text: 'AWS',
+    link: 'https://aws.amazon.com/',
+    icon: ['fab', 'aws'],
+    // opacity: '0.25',
+  },
+  {
+    text: 'C',
+    link: 'https://en.wikipedia.org/wiki/C_(programming_language)',
+    custom: 'icon-c',
+    // opacity: '0.25',
+  },
+  {
+    text: 'CSS3',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3',
+    icon: ['fab', 'css3-alt'],
+  },
+  { text: 'CLI', link: 'https://www.iterm2.com/', custom: 'icon-shell' },
+  {
+    text: 'Git',
+    link: 'https://github.com/samscha',
+    custom: 'icon-git',
+  },
+  { text: 'Heroku', link: 'https://www.heroku.com', custom: 'icon-heroku' },
+  {
+    text: 'HTML5',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
+    icon: ['fab', 'html5'],
+  },
+  {
+    text: 'JavaScript',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    icon: ['fab', 'js-square'],
+  },
+  { text: 'LESS', link: 'http://lesscss.org', icon: ['fab', 'less'] },
+  {
+    text: 'macOS',
+    link: 'https://en.wikipedia.org/wiki/MacOS',
+    icon: ['fab', 'apple'],
+  },
+  { text: 'MongoDB', link: 'https://www.mongodb.com', custom: 'icon-mongodb' },
+  {
+    text: 'mySQL',
+    link: 'https://www.mysql.com',
+    custom: 'icon-mysql-alt',
+    // opacity: '0.25',
+  },
+  { text: 'Node.js', link: 'https://nodejs.org/en/', icon: ['fab', 'node-js'] },
+  { text: 'npm', link: 'https://www.npmjs.com', icon: ['fab', 'npm'] },
+  {
+    text: 'Python',
+    link: 'https://www.python.org',
+    icon: ['fab', 'python'],
+    // opacity: '0.50',
+  },
+  { text: 'React', link: 'https://reactjs.org', icon: ['fab', 'react'] },
+];
