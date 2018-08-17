@@ -769,9 +769,20 @@ body {
   text-decoration: underline;
 }
 .Header {
+  color: #263238;
   cursor: pointer;
-  padding: 10px 35px;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+  margin: 0;
   text-align: center;
+}
+.Header:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.Header:active {
+  text-decoration: underline;
 }
 .Header .Header__title {
   font-size: 2.05rem;
@@ -792,19 +803,6 @@ body {
     height: 600px;
   }
 }
-.Project .ProjectImage {
-  position: absolute;
-  width: 75%;
-}
-.Project .ProjectImage img {
-  height: 50%;
-  width: 50%;
-  position: relative;
-  visibility: hidden;
-  object-fit: cover;
-  background: rgba(76, 175, 80, 0.1);
-  opacity: 0.2;
-}
 .Project .ProjectBody {
   opacity: 1;
   align-items: center;
@@ -814,6 +812,21 @@ body {
   justify-content: center;
   justify-items: center;
   width: 100%;
+}
+.Project .ProjectBody .ProjectHeader {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+  margin: 0;
+}
+.Project .ProjectBody .ProjectHeader:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.Project .ProjectBody .ProjectHeader:active {
+  text-decoration: underline;
 }
 .Project .ProjectBody .ProjectHeader .ProjectHeader__title {
   font-size: 1.7rem;

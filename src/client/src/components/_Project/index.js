@@ -33,11 +33,16 @@ export default connect(
           </div> */}
 
           <div className="ProjectBody">
-            <div className="ProjectHeader">
+            <a
+              className="ProjectHeader"
+              href={urls.find(u => u.text === 'Demo').link}
+              target="_null"
+              rel="noopener noreferrer"
+            >
               <div className="ProjectHeader__title">{title}</div>
 
               <div className="ProjectHeader__subtitle">{subtitle}</div>
-            </div>
+            </a>
 
             <div className="Project__description">{description}</div>
 
