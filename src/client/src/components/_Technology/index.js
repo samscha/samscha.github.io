@@ -5,7 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import * as c from '../';
 
 export default props => (
-  <div className="Technology">
+  <a
+    className="Technology"
+    href={props.tech.link}
+    rel="noopener noreferrer"
+    target="_null"
+  >
+    {/* <a href="www.google.com" target="_null"> */}
     <div
       className="Technology__icon"
       style={{ opacity: props.tech.opacity || 1.0 }}
@@ -23,5 +29,6 @@ export default props => (
     >
       {props.tech.text}
     </div>
-  </div>
+    {/* </a> */}
+  </a>
 );

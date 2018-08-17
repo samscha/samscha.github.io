@@ -782,10 +782,23 @@ body {
   margin: 10px 0;
 }
 .Technology {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+  margin: 0;
   align-items: center;
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
+}
+.Technology:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.Technology:active {
+  text-decoration: underline;
 }
 .Technology .Technology__icon {
   font-size: 2.05rem;
