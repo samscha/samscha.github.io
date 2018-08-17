@@ -1,0 +1,81 @@
+.About {
+  .ImgContainer {
+    margin: 0 auto;
+    margin-top: 4px;
+    width: 250px;
+
+    img {
+      border-radius: 50%;
+      height: 250px;
+      width: 250px;
+    }
+  }
+
+  .AboutMeLinksSection {
+    display: flex;
+    flex-direction: row;
+    font-size: @fontTitle;
+    justify-content: center;
+
+    .AboutMeLinksSection__link {
+      .link();
+
+      margin: 10px 0;
+      text-align: center;
+      width: 50px;
+    }
+  }
+
+  .About__text {
+    // border-top: 1px solid black;
+    padding: 24px;
+    line-height: 1.4;
+    max-width: 500px;
+    margin: 0 auto;
+    color: #000000;
+    // text-align: center;
+
+    .About__text_link {
+      .link();
+
+      padding: 0;
+
+      color: #000000;
+    }
+  }
+
+  .ContactLinkContainer {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 100px) 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    margin: 0 0 20px 0;
+
+    .About__contactLink {
+      .link();
+
+      color: #000000;
+      align-self: end;
+      // font-size: @fontSm;
+      margin-left: 20px;
+      margin-right: 20px;
+      text-align: center;
+    }
+  }
+
+  .AboutMe__c {
+    color: 'black';
+    align-items: center;
+    display: grid;
+    font-size: @fontXsm;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    margin: 0 0 10px 0;
+
+    .AboutMe__link {
+      .link();
+
+      margin: 0 1px;
+    }
+  }
+}

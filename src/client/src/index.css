@@ -919,6 +919,111 @@ body {
   grid-template-rows: auto 1fr auto;
   height: 100%;
 }
+.About .ImgContainer {
+  margin: 0 auto;
+  margin-top: 4px;
+  width: 250px;
+}
+.About .ImgContainer img {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+}
+.About .AboutMeLinksSection {
+  display: flex;
+  flex-direction: row;
+  font-size: 2.85rem;
+  justify-content: center;
+}
+.About .AboutMeLinksSection .AboutMeLinksSection__link {
+  color: #263238;
+  cursor: pointer;
+  padding: 4px;
+  text-decoration: none;
+  margin: 10px 0;
+  text-align: center;
+  width: 50px;
+}
+.About .AboutMeLinksSection .AboutMeLinksSection__link:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.About .AboutMeLinksSection .AboutMeLinksSection__link:active {
+  text-decoration: underline;
+}
+.About .About__text {
+  padding: 24px;
+  line-height: 1.4;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #000000;
+}
+.About .About__text .About__text_link {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+  padding: 0;
+  color: #000000;
+}
+.About .About__text .About__text_link:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.About .About__text .About__text_link:active {
+  text-decoration: underline;
+}
+.About .ContactLinkContainer {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 100px) 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  margin: 0 0 20px 0;
+}
+.About .ContactLinkContainer .About__contactLink {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+  color: #000000;
+  align-self: end;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+.About .ContactLinkContainer .About__contactLink:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.About .ContactLinkContainer .About__contactLink:active {
+  text-decoration: underline;
+}
+.About .AboutMe__c {
+  color: 'black';
+  align-items: center;
+  display: grid;
+  font-size: 0.75rem;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  margin: 0 0 10px 0;
+}
+.About .AboutMe__c .AboutMe__link {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+  margin: 0 1px;
+}
+.About .AboutMe__c .AboutMe__link:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.About .AboutMe__c .AboutMe__link:active {
+  text-decoration: underline;
+}
 .Four04 {
   align-items: center;
   display: flex;
