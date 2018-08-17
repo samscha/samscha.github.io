@@ -1069,34 +1069,34 @@ body {
   margin: 0 auto 20px auto;
   width: 85%;
 }
-.Landing .Intro .LinkContainer__link {
-  color: #263238;
-  cursor: pointer;
-  margin: 10px 0;
-  padding: 4px;
-  text-decoration: none;
+.Landing .Intro .IntroText {
   display: flex;
   font-size: 1.65rem;
   justify-content: center;
   margin: 0 auto;
   text-align: center;
 }
-.Landing .Intro .LinkContainer__link:hover {
+.Landing .Intro .IntroText .LinkContainer__link {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+}
+.Landing .Intro .IntroText .LinkContainer__link:hover {
   background-color: #263238;
   color: #ffffff;
 }
-.Landing .Intro .LinkContainer__link:active {
+.Landing .Intro .IntroText .LinkContainer__link:active {
   text-decoration: underline;
 }
-.Landing .Intro .LinkContainer__link .IntroText {
-  display: grid;
-  grid-template-columns: 100px 1fr 100px;
-}
-.Landing .Intro .LinkContainer__link .IntroText .QuoteLeft {
+.Landing .Intro .IntroText .LinkContainer__link .QuoteLeft {
   justify-self: end;
   padding: 0 15px 0 0;
 }
-.Landing .Intro .LinkContainer__link .IntroText .QuoteRight {
+.Landing .Intro .IntroText .LinkContainer__link .QuoteRight {
   align-self: end;
   justify-self: start;
   padding: 0 0 0 15px;

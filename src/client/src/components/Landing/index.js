@@ -8,16 +8,16 @@ import * as c from '../';
 export default _ => (
   <div className="Landing">
     <div className="Intro">
-      <NavLink className="LinkContainer__link" to="/about">
-        <div className="IntroText">
+      <div className="IntroText">
+        <NavLink className="LinkContainer__link" to="/about">
           <FontAwesomeIcon className="QuoteLeft" icon={['fas', 'quote-left']} />
           Enhancing everyday living through technology
           <FontAwesomeIcon
             className="QuoteRight"
             icon={['fas', 'quote-right']}
           />
-        </div>
-      </NavLink>
+        </NavLink>
+      </div>
     </div>
 
     <c.TechnologyBar />
