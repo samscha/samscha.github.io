@@ -18,7 +18,7 @@ require('./db').connectToDb();
 /**
  * server routes
  */
-server.use(`/api`, require('./api'));
+// server.use(`/api`, require('./api')); ********* RE-ENABLE SOON **************
 // add more here
 
 /**
