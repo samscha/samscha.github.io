@@ -46,8 +46,8 @@ export default connect(
           </div>
 
           <div className="TechnologyBar__c">
-            <p className="TechnologyBar__p">icons</p>
-            <p className="TechnologyBar__p">by</p>
+            <p className="TechnologyBar__p">icons by</p>
+            {/* <p className="TechnologyBar__p">by</p> */}
 
             <a
               className="TechnologyBar__link"
