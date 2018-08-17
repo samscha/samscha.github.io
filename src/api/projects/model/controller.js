@@ -34,12 +34,8 @@ exports.retrieve = async (req, res, next) => {
 exports.retrieveWithParms = async (req, res, next) => {
   try {
     const projects = await Project.getAllProjects(res.locals.tag);
-    // (err, projects) => {
-    // return projects;
-    // },
-    // );
 
-    console.log(projects);
+    res.locals.projects = projects;
     next();
   } catch (err) {
     utils.log.error(err);

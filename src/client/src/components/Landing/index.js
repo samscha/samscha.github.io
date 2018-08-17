@@ -4,6 +4,8 @@ import * as c from '../';
 
 export default _ => (
   <div className="Landing">
+    <c.TechnologyBar />
+
     <c.Projects />
 
     {/* copied from https://github.com/samscha/track-my-jobs/blob/master/src/client/src/components/Construction.js */}

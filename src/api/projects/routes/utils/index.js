@@ -18,5 +18,6 @@ exports.parse = require('./parse');
 exports.project = require('../../model/controller');
 exports.sanitize = require('./sanitize');
 exports.photo = require('./photo');
+exports.tag = require('../../../tags/model');
 exports.user = require('../../../users/model/controller');
 exports.validate = require('./validate');

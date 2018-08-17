@@ -6,6 +6,10 @@ import store from '../../store';
 
 import * as c from '../';
 
+import init from './init';
+
+init();
+
 export default _ => {
   return (
     <Provider store={store}>

@@ -1,10 +1,16 @@
 import t from './_Template';
 
+import _Project from './_Project';
 import _Projects from './_Projects';
+import _Technology from './_Technology';
+import _TechnologyBar from './_TechnologyBar';
 
 import _Four04 from './Four04';
 import _Landing from './Landing';
 
 export const Four04 = t(_Four04);
 export const Landing = t(_Landing);
+export const Project = _Project;
 export const Projects = _Projects;
+export const Technology = _Technology;
+export const TechnologyBar = _TechnologyBar;

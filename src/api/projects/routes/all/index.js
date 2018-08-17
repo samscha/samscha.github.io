@@ -5,7 +5,7 @@ const utils = require('../utils');
 router
   .route(`/:tag`)
   .get(utils.validate.tag, utils.project.retrieveWithParms, (req, res) => {
-    res.send({ here: 'here' });
+    res.send({ projects: utils.sanitize.projects(res.locals.projects) });
   });
 
 router

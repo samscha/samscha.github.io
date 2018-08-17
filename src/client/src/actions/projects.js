@@ -21,9 +21,11 @@ export const fetchProjects = parm => {
 
     try {
       console.log('here');
-      const response = await axios.get(`${root}/projects/${parm}`);
-      console.log(response);
-      dispatch({ type: PROJECTS_FETCH_SUCCESS });
+      const response = await axios.get(`${root}/projects/all/${parm}`);
+      dispatch({
+        type: PROJECTS_FETCH_SUCCESS,
+        payload: response.data.projects,
+      });
     } catch (error) {
       console.log(error);
       dispatch({ type: PROJECTS_FETCH_ERROR });

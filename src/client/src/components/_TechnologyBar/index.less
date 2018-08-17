@@ -1,0 +1,57 @@
+.TechnologyBar {
+  margin: 10px 0;
+
+  .TechnologyBar__grid {
+    // align-items: center;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(16, 100px);
+    grid-template-rows: 1fr;
+    // justify-items: center;
+    justify-content: center;
+    margin: 15px 0;
+
+    @media @laptop {
+      grid-template-columns: repeat(8, 100px);
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @media @tablet {
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    @media @phone {
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @media @minimum {
+      grid-template-columns: repeat(2, 100px);
+      grid-template-rows: repeat(8, 1fr);
+    }
+  }
+
+  .TechnologyBar__c {
+    color: 'black';
+    align-items: center;
+    display: grid;
+    font-size: @fontXsm;
+    grid-template-columns: repeat(5, auto);
+    // grid-column-gap: 4px;
+    // padding: 4px;
+    justify-content: center;
+    // opacity: 0.5;
+
+    .TechnologyBar__p {
+      padding: 4px;
+    }
+
+    .TechnologyBar__link {
+      .link();
+
+      margin: 0;
+      // padding: 0;
+    }
+  }
+}

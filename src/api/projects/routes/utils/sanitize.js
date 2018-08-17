@@ -54,7 +54,19 @@ exports.updatedProjectInfo = (req, res, next) => {
  * @param {Object} project - project doc
  */
 exports.project = project => {
-  if (!JSON.parse(process.env.PROD)) return project;
+  if (process.env.NODE_ENV === 'development') return project;
+
+  return {
+    ...project._doc,
+    _id: undefined,
+    __v: undefined,
+    createdAt: undefined,
+    updatedAt: undefined,
+  };
+};
+
+exports.projects = projects => {
+  if (process.env.NODE_ENV === 'development') return projects;
 
   return {
     ...project._doc,

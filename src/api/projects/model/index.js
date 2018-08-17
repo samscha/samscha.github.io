@@ -20,7 +20,9 @@ ProjectSchema.statics.getAllProjects = async function(parms = {}) {
   const Project = this;
 
   try {
-    const projects = await Project.find(parms);
+    const projects = await Project.find(parms).populate(
+      'tags technologies urls',
+    );
 
     return projects;
   } catch (error) {
