@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -6,6 +7,12 @@ import * as c from '../';
 
 export default _ => (
   <div className="Landing">
+    <div className="Intro">
+      <NavLink className="LinkContainer__link" to="/about">
+        Enhancing everyday living through technology
+      </NavLink>
+    </div>
+
     <c.TechnologyBar />
 
     <c.Projects />

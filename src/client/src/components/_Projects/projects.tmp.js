@@ -34,12 +34,12 @@ const PicMe = {
       custom: 'icon-bootstrap',
       link: 'https://getbootstrap.com/',
     },
+    { technology: 'PassportJS', link: 'http://www.passportjs.org/' },
     {
       technology: 'Stripe',
       icon: ['fab', 'cc-stripe'],
       link: 'https://stripe.com/',
     },
-    { technology: 'PassportJS', link: 'http://www.passportjs.org/' },
   ],
   title: 'PicMe',
   subtitle: 'Photo Finding and Sharing Platform',
@@ -62,4 +62,4 @@ const TrackMyJobs = {
   description: 'Track your jobs and show off your statistics',
 };
 
-export default [TrackMyJobs, PicMe, Foodggregator];
+export default [PicMe, TrackMyJobs, Foodggregator];
