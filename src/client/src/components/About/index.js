@@ -1,11 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import prof from '../../assets-tmp/profile_tmp.png';
 
-export default _ => (
+export default withRouter(props => (
   <div className="About">
     <div className="ImgContainer">
       <img src={prof} alt="prof-tmp-alt" />
@@ -123,6 +123,16 @@ export default _ => (
       </a>
     </div>
 
+    <div className="GoBackButton">
+      <FontAwesomeIcon
+        className="GoBackButton__button"
+        icon={['fas', 'arrow-circle-left']}
+        size="2x"
+        onClick={_ => props.history.goBack()}
+        href={null}
+      />
+    </div>
+
     <div className="AboutMe__c">
       <p className="AboutMe__p">icons by</p>
 
@@ -136,4 +146,4 @@ export default _ => (
       </a>
     </div>
   </div>
-);
+));
