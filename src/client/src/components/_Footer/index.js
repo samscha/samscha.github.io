@@ -4,7 +4,7 @@ import { NavLink, withRouter } from 'react-router-dom';
 export default withRouter(props => (
   <div className="Footer">
     <div className="FlexibleSpace" />
-    {console.log(props.location.pathname)}
+
     <NavLink
       className="Footer__link"
       to={props.location.pathname === '/about' ? '/' : '/about'}
