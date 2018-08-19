@@ -12,6 +12,7 @@ export default _ => {
     <div className="App">
       <Switch>
         <Route exact path="/about" component={c.About} />
+        <Route exact path="/contact" component={c.Contact} />
         <Route exact path="/" component={c.Landing} />
         <Route path="/" component={c.Four04} />
       </Switch>

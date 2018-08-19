@@ -11,7 +11,7 @@ export default _ => (
       <div className="IntroText">
         <NavLink className="LinkContainer__link" to="/about">
           <FontAwesomeIcon className="QuoteLeft" icon={['fas', 'quote-left']} />
-          Enhancing everyday living through technology
+          <p>Enhancing everyday living through technology</p>
           <FontAwesomeIcon
             className="QuoteRight"
             icon={['fas', 'quote-right']}

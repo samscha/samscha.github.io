@@ -987,7 +987,6 @@ body {
   margin: 10px 0;
   padding: 4px;
   text-decoration: none;
-  color: #000000;
   align-self: end;
   margin-left: 20px;
   margin-right: 20px;
@@ -1044,6 +1043,75 @@ body {
 .About .AboutMe__c .AboutMe__link:active {
   text-decoration: underline;
 }
+.Contact .ContactContainer {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  margin: 0 auto;
+}
+.Contact .ContactContainer .ContactContainer__contactLink {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+  justify-self: center;
+}
+.Contact .ContactContainer .ContactContainer__contactLink:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.Contact .ContactContainer .ContactContainer__contactLink:active {
+  text-decoration: underline;
+}
+.Contact .ContactContainer .ContactContainer__contactText {
+  align-self: center;
+  margin: 0 0 0 10px;
+}
+.Contact .GoBackButton {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  width: 300px;
+}
+.Contact .GoBackButton .GoBackButton__button {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+}
+.Contact .GoBackButton .GoBackButton__button:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.Contact .GoBackButton .GoBackButton__button:active {
+  text-decoration: underline;
+}
+.Contact .Contact__c {
+  color: 'black';
+  align-items: center;
+  display: grid;
+  font-size: 0.75rem;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  margin: 0 0 10px 0;
+}
+.Contact .Contact__c .Contact__link {
+  color: #263238;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  text-decoration: none;
+  margin: 0 1px;
+}
+.Contact .Contact__c .Contact__link:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.Contact .Contact__c .Contact__link:active {
+  text-decoration: underline;
+}
 .Four04 {
   align-items: center;
   display: flex;
@@ -1094,7 +1162,6 @@ body {
   font-size: 1.65rem;
   justify-content: center;
   margin: 0 auto;
-  text-align: center;
 }
 .Landing .Intro .IntroText .LinkContainer__link {
   color: #263238;
@@ -1103,7 +1170,7 @@ body {
   padding: 4px;
   text-decoration: none;
   display: grid;
-  grid-template-columns: 50px 1fr 50px;
+  grid-template-columns: repeat(3, auto);
 }
 .Landing .Intro .IntroText .LinkContainer__link:hover {
   background-color: #263238;
@@ -1111,6 +1178,9 @@ body {
 }
 .Landing .Intro .IntroText .LinkContainer__link:active {
   text-decoration: underline;
+}
+.Landing .Intro .IntroText .LinkContainer__link p {
+  text-align: center;
 }
 .Landing .Intro .IntroText .LinkContainer__link .QuoteLeft {
   justify-self: end;
