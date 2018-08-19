@@ -34,7 +34,7 @@ const PicMe = {
       custom: 'icon-bootstrap',
       link: 'https://getbootstrap.com/',
     },
-    { technology: 'PassportJS', link: 'http://www.passportjs.org/' },
+    { technology: 'Passport', link: 'http://www.passportjs.org/' },
     {
       technology: 'Stripe',
       icon: ['fab', 'cc-stripe'],
