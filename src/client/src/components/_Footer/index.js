@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export default withRouter(props => (
   <div className="Footer">
     <div className="FlexibleSpace" />
@@ -12,12 +14,15 @@ export default withRouter(props => (
       {props.location.pathname === '/about' ? 'home' : 'about'}
     </NavLink>
 
-    <NavLink
+    <a
       className="Footer__link"
-      to={props.location.pathname === '/blog' ? '/' : '/blog'}
+      href="https://www.medium.com/@samscha"
+      rel="noopener noreferrer"
+      target="_null"
     >
-      {props.location.pathname === '/blog' ? 'home' : 'blog'}
-    </NavLink>
+      {props.location.pathname === '/blog' ? 'home' : 'blog'}{' '}
+      <FontAwesomeIcon icon={['fas', 'external-link-alt']} />
+    </a>
 
     <NavLink
       className="Footer__link"
