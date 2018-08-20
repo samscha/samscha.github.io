@@ -20,8 +20,7 @@ export default withRouter(props => (
       rel="noopener noreferrer"
       target="_null"
     >
-      {props.location.pathname === '/blog' ? 'home' : 'blog'}{' '}
-      <FontAwesomeIcon icon={['fas', 'external-link-alt']} />
+      blog <FontAwesomeIcon icon={['fas', 'external-link-alt']} />
     </a>
 
     <NavLink
