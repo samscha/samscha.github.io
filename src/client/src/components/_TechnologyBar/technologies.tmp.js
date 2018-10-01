@@ -30,6 +30,12 @@ export default [
     icon: ['fab', 'html5'],
   },
   {
+    text: 'Java',
+    link:
+      'https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html',
+    icon: ['fab', 'java'],
+  },
+  {
     text: 'JavaScript',
     link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     icon: ['fab', 'js-square'],
@@ -56,4 +62,15 @@ export default [
     // opacity: '0.50',
   },
   { text: 'React', link: 'https://reactjs.org', icon: ['fab', 'react'] },
+  {
+    text: 'Native',
+    link: 'https://facebook.github.io/react-native/',
+    icon: ['fab', 'react'],
+  },
+  {
+    text: 'PostgreSQL',
+    link: 'https://www.postgresql.org/',
+    custom: 'icon-postgres',
+  },
+  { text: 'Spring', link: 'https://spring.io/', custom: 'icon-spring' },
 ];
