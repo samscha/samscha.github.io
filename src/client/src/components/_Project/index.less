@@ -64,7 +64,13 @@
       .ProjectLinkTo {
         .link();
 
-        margin: 0 10px;
+        @media @minimum {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin: 0 10px;
+        }
       }
     }
 

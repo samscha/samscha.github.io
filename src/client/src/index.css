@@ -845,7 +845,6 @@ body {
   margin: 10px 0;
   padding: 4px;
   text-decoration: none;
-  margin: 0 10px;
 }
 .Project .ProjectBody .Project__links .ProjectLinkTo:hover {
   background-color: #263238;
@@ -853,6 +852,15 @@ body {
 }
 .Project .ProjectBody .Project__links .ProjectLinkTo:active {
   text-decoration: underline;
+}
+@media (max-width: 450px) {
+  .Project .ProjectBody .Project__links .ProjectLinkTo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 10px;
+  }
 }
 .Project .ProjectBody .Project__technologies {
   align-self: start;
