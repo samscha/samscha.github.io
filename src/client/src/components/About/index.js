@@ -93,7 +93,7 @@ export default withRouter(props => (
 
       <a
         className="About__contactLink"
-        href="https://www.dropbox.com/s/ndkuk53r5dwg825/samuel-cha-software-engineer-resume.pdf?dl=0"
+        href="https://www.dropbox.com/s/ce5lhyzij189q3d/samuel-cha-software-engineer-resume.pdf?dl=0"
         rel="noopener noreferrer"
         target="_null"
         style={{ display: 'flex', flexDirection: 'row' }}
