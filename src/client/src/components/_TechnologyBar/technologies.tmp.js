@@ -59,6 +59,7 @@ export default [
     link: 'http://www.mybatis.org/mybatis-3/',
     custom: 'icon-database',
   },
+  { text: 'Netlify', link: 'https://www.netlify.com', icon: ['fas', 'cloud'] },
   { text: 'Node.js', link: 'https://nodejs.org/en/', icon: ['fab', 'node-js'] },
   { text: 'npm', link: 'https://www.npmjs.com', icon: ['fab', 'npm'] },
   {
