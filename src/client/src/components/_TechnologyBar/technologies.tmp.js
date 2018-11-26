@@ -18,6 +18,7 @@ export default [
     icon: ['fab', 'css3-alt'],
   },
   { text: 'CLI', link: 'https://www.iterm2.com/', custom: 'icon-shell' },
+  { text: 'Express', link: 'https://expressjs.com/', icon: ['fas', 'server'] },
   {
     text: 'Git',
     link: 'https://github.com/samscha',
@@ -53,6 +54,11 @@ export default [
     custom: 'icon-mysql-alt',
     // opacity: '0.25',
   },
+  {
+    text: 'MyBatis',
+    link: 'http://www.mybatis.org/mybatis-3/',
+    custom: 'icon-database',
+  },
   { text: 'Node.js', link: 'https://nodejs.org/en/', icon: ['fab', 'node-js'] },
   { text: 'npm', link: 'https://www.npmjs.com', icon: ['fab', 'npm'] },
   {
@@ -73,4 +79,5 @@ export default [
     custom: 'icon-postgres',
   },
   { text: 'Spring', link: 'https://spring.io/', custom: 'icon-spring' },
+  { text: 'Vue.js', link: 'https://vuejs.org/', icon: ['fab', 'vuejs'] },
 ];

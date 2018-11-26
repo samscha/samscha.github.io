@@ -889,12 +889,12 @@ body {
   margin: 10px 0;
   padding: 4px;
   text-decoration: none;
-  margin: 0;
+  margin: 2px;
   align-items: center;
   display: grid;
   grid-template-rows: 2fr 1fr;
   justify-items: center;
-  width: 75px;
+  width: 80px;
 }
 .Technology:hover {
   background-color: #263238;
