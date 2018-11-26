@@ -26,9 +26,11 @@
   "proxy": "http://localhost:5555",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cd build && echo '/*    /index.html   200' >> _redirects",
     "eject": "react-scripts eject",
-    "less": "less-watch-compiler src src index.less"
+    "less": "less-watch-compiler src src index.less",
+    "netlify": "npm run build && netlify deploy -o -m 'deploy draft' -d=./build",
+    "netlify:prod": "netlify deploy -o -m 'prod' -d=./build -p"
   },
   "browserslist": [
     ">0.2%",

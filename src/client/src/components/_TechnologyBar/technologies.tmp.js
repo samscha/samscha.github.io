@@ -80,5 +80,6 @@ export default [
     custom: 'icon-postgres',
   },
   { text: 'Spring', link: 'https://spring.io/', custom: 'icon-spring' },
+  { text: 'VSC', link: 'https://code.visualstudio.com/', icon: 'code' },
   { text: 'Vue.js', link: 'https://vuejs.org/', icon: ['fab', 'vuejs'] },
 ];
