@@ -6,13 +6,13 @@ export default withRouter(props => (
     <div className="Four04__Description">page not found!</div>
 
     {/* {console.log(props.history)} */}
-    <a
+    <div
       className="Four04__Link"
       onClick={_ => props.history.goBack()}
-      href={null}
+      // href={null}
     >
       return
-    </a>
+    </div>
 
     <NavLink className="Four04__Link" to="/">
       return home
