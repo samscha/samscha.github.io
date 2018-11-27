@@ -1,17 +1,17 @@
 // MOVE THESE TO THE BACKEND **************************************************
 export default [
-  {
-    text: 'AWS',
-    link: 'https://aws.amazon.com/',
-    icon: ['fab', 'aws'],
-    // opacity: '0.25',
-  },
-  {
-    text: 'C',
-    link: 'https://en.wikipedia.org/wiki/C_(programming_language)',
-    custom: 'icon-c',
-    // opacity: '0.25',
-  },
+  // {
+  //   text: 'AWS',
+  //   link: 'https://aws.amazon.com/',
+  //   icon: ['fab', 'aws'],
+  //   // opacity: '0.25',
+  // },
+  // {
+  //   text: 'C',
+  //   link: 'https://en.wikipedia.org/wiki/C_(programming_language)',
+  //   custom: 'icon-c',
+  //   // opacity: '0.25',
+  // },
   {
     text: 'CSS3',
     link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3',
@@ -62,12 +62,12 @@ export default [
   { text: 'Netlify', link: 'https://www.netlify.com', icon: ['fas', 'cloud'] },
   { text: 'Node.js', link: 'https://nodejs.org/en/', icon: ['fab', 'node-js'] },
   { text: 'npm', link: 'https://www.npmjs.com', icon: ['fab', 'npm'] },
-  {
-    text: 'Python',
-    link: 'https://www.python.org',
-    icon: ['fab', 'python'],
-    // opacity: '0.50',
-  },
+  // {
+  //   text: 'Python',
+  //   link: 'https://www.python.org',
+  //   icon: ['fab', 'python'],
+  //   // opacity: '0.50',
+  // },
   { text: 'React', link: 'https://reactjs.org', icon: ['fab', 'react'] },
   {
     text: 'Native',
