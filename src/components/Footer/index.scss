@@ -1,0 +1,32 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.footer {
+  .last-updated {
+    display: flex;
+    justify-content: flex-end;
+
+    color: $color-primary;
+    font-size: $font-0x;
+    padding: 5px 5px 5px 0;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 100px) 1fr;
+    justify-items: center;
+
+    padding: 35px 0;
+    background: $color-primary;
+
+    .footer-links__link {
+      @include linkInv;
+
+      align-self: end;
+
+      margin-left: 20px;
+      margin-right: 20px;
+      text-align: center;
+    }
+  }
+}

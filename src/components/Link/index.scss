@@ -1,0 +1,7 @@
+@import '../../scss/mixins.scss';
+
+.link {
+  @include link;
+
+  display: block;
+}

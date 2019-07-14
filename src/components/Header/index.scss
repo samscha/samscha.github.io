@@ -1,0 +1,22 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.header {
+  @include link;
+
+  margin: 0;
+  text-align: center;
+
+  &.no-link {
+    @include unLink;
+  }
+
+  .header__title {
+    font-size: $font-3x;
+    margin: 15px 0;
+  }
+
+  .header__subtitle {
+    margin: 15px 0;
+  }
+}

@@ -1,0 +1,59 @@
+@import './variables.scss';
+
+@mixin link($color: $color-primary, $bkgColor: $color-white) {
+  color: $color;
+  cursor: pointer;
+  padding: $link-padding;
+  text-decoration: none;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $color;
+      color: $bkgColor;
+    }
+
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+@mixin linkInv {
+  @include link($color-white, $color-primary);
+}
+
+@mixin unLink {
+  @include link;
+
+  cursor: initial;
+
+  &:hover {
+    background-color: unset;
+    color: unset;
+  }
+
+  &:active {
+    text-decoration: unset;
+  }
+}
+
+@mixin iconText {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 5px;
+
+  align-self: center;
+}
+
+@mixin text {
+  color: $color-black;
+  line-height: $text-line-height;
+  white-space: pre-wrap;
+}
+
+@mixin infoSection {
+  display: flex;
+  flex-flow: column nowrap;
+
+  margin: -$link-padding 0;
+}

@@ -1,10 +1,17 @@
-const DEBUG = process.env.DEBUG === 'true';
-const PORT = process.env.PORT;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-const server = require('./server');
-server.get('env');
+import App from './App';
+import './index.scss';
 
-server.listen(
-  PORT,
-  _ => (DEBUG ? console.log(`Listening on port: ${PORT}`) : null),
+import { ScrollToTop } from './components';
+
+ReactDOM.render(
+  <Router>
+    <ScrollToTop>
+      <App />
+    </ScrollToTop>
+  </Router>,
+  document.getElementById('root'),
 );
