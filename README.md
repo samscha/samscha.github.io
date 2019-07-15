@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2161a579-85e6-4406-9d9b-024db9f9979a/deploy-status)](https://app.netlify.com/sites/samscha/deploys)
+
 # About Me (Sam)
 
 ## Intro
