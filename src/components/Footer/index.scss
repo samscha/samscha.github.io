@@ -12,12 +12,13 @@
   }
 
   .footer-links {
+    @include baseGradient();
+
     display: grid;
     grid-template-columns: 1fr repeat(3, 100px) 1fr;
     justify-items: center;
 
     padding: 35px 0;
-    background: $color-primary;
 
     .footer-links__link {
       @include linkInv;

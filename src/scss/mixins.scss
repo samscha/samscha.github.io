@@ -8,12 +8,12 @@
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background-color: $color;
+      @include baseGradient($color);
       color: $bkgColor;
     }
 
     &:active {
-      text-decoration: underline;
+      opacity: 0.9;
     }
   }
 }
@@ -28,7 +28,7 @@
   cursor: initial;
 
   &:hover {
-    background-color: unset;
+    background: unset;
     color: unset;
   }
 
@@ -56,4 +56,8 @@
   flex-flow: column nowrap;
 
   margin: -$link-padding 0;
+}
+
+@mixin baseGradient($color: $color-primary) {
+  background: linear-gradient(to top, $color, lighten($color, 7%));
 }
