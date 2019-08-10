@@ -1,7 +1,7 @@
 {
-  "name": "aboutme",
+  "name": "samscha",
   "version": "1.0.0",
-  "description": "aboutme",
+  "description": "Personal website for Samuel Cha",
   "repository": "https://github.com/samscha/aboutme.git",
   "author": "Samuel Cha <sunchipssam@gmail.com>",
   "license": "MIT",
@@ -32,6 +32,7 @@
     "not op_mini all"
   ],
   "engines": {
-    "node": "^12"
+    "node": "^12",
+    "npm": "^6"
   }
 }
