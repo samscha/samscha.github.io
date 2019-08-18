@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import infos from '../../assets/about/infos';
-import infoText from '../../assets/about/infoText';
+import infos from '../../assets/js/about/infos';
+import infoText from '../../assets/js/about/infoText';
 import profileImg from '../../assets/images/profileImg.png';
 import { IconsBy, IconText, Link, LocationMarker } from '../../components';
 import { withLayout } from '../../layouts';
