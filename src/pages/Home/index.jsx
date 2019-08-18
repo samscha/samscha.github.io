@@ -1,12 +1,8 @@
 import React from 'react';
 import './index.scss';
-
+import techs from '../../assets/js/home/techs';
 import { IconsBy, Link, LocationMarker, TechIcon } from '../../components';
 import { withLayout } from '../../layouts';
-// TEMP
-import techs from '../../assets-tmp/tech.tmp';
-// import projects from '../../assets-tmp/projects.tmp';
-// TEMP
 
 export default withLayout(
   class extends React.Component {
