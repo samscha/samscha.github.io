@@ -1,4 +1,3 @@
-// MOVE THESE TO THE BACKEND **************************************************
 export default [
   // {
   //   text: `AWS`,
