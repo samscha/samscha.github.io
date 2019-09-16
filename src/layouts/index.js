@@ -1,1 +1,1 @@
-export { default as withLayout } from './default';
+export { default as withLayout } from './page';
