@@ -12,3 +12,5 @@ https://samscha.com
 - [ ] add in-depth unit tests
 - [ ] add e2e tests
 - [ ] add projects
+- [ ] add dark mode
+- [ ] add admin section
