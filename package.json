@@ -20,10 +20,10 @@
     "react-scripts": "^3.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/plugin-proposal-class-properties": "^7.7.0",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
     "@types/jest": "^24.0.19",
     "babel-jest": "^24.9.0",
     "enzyme": "^3.10.0",
@@ -44,7 +44,7 @@
     "not op_mini all"
   ],
   "engines": {
-    "node": "^13",
+    "node": "~13.1.0",
     "npm": "^6"
   },
   "jest": {
