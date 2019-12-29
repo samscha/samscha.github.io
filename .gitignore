@@ -68,3 +68,6 @@ typings/
 
 # build
 build/
+
+# Sublime
+*.sublime-*
