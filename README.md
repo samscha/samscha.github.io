@@ -6,7 +6,7 @@ https://samscha.com
 
 ## TODO
 
-- [x] ~~move image to cdn~~ move image to assets
+- [ ] move image to cdn
 - [ ] finish basic unit tests
 - [ ] update to hooks
 - [ ] add in-depth unit tests
