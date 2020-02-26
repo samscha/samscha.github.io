@@ -1,0 +1,17 @@
+.image-with-many-hats {
+  &.circle {
+    border-radius: 50%;
+  }
+  &.clickable {
+    cursor: pointer;
+    @media (hover: hover) and (pointer: fine) {
+      transition: 0.35s;
+      &:hover {
+        opacity: 0.85;
+      }
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+}
