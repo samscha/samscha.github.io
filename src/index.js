@@ -8,10 +8,10 @@ import './index.scss';
 import { ScrollToTop } from './components';
 
 ReactDOM.render(
-  <Router>
-    <ScrollToTop>
-      <App />
-    </ScrollToTop>
-  </Router>,
-  document.getElementById('root'),
+    <Router>
+        <ScrollToTop>
+            <App />
+        </ScrollToTop>
+    </Router>,
+    document.getElementById('root'),
 );

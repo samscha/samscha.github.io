@@ -1,63 +1,65 @@
 @import './variables.scss';
 
 @mixin link($color: $color-primary, $bkgColor: $color-white) {
-  color: $color;
-  cursor: pointer;
-  padding: $link-padding;
-  text-decoration: none;
-
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      @include baseGradient($color);
-      color: $bkgColor;
+    color: $color;
+    cursor: pointer;
+    padding: $link-padding;
+    text-decoration: none;
+    @media (hover: hover) and (pointer: fine) {
+        &:active {
+            opacity: 0.9;
+        }
+        &:hover {
+            @include baseGradient($color);
+            color: $bkgColor;
+        }
     }
-
-    &:active {
-      opacity: 0.9;
-    }
-  }
 }
 
-@mixin linkInv {
-  @include link($color-white, $color-primary);
+@mixin linkInv($color: $color-white, $bkgColor: $color-primary) {
+    @include link($color, $bkgColor);
 }
 
 @mixin unLink {
-  @include link;
-
-  cursor: initial;
-
-  &:hover {
-    background: unset;
-    color: unset;
-  }
-
-  &:active {
-    text-decoration: unset;
-  }
+    @include link;
+    cursor: initial;
+    &:active {
+        text-decoration: unset;
+    }
+    &:hover {
+        background: unset;
+        color: unset;
+    }
 }
 
 @mixin iconText {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-column-gap: 5px;
-
-  align-self: center;
+    align-self: center;
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: repeat(2, auto);
 }
 
 @mixin text {
-  color: $color-black;
-  line-height: $text-line-height;
-  white-space: pre-wrap;
+    color: $color-black;
+    line-height: $text-line-height;
+    white-space: pre-wrap;
+    @include darkMode {
+        color: $dark-scheme-color;
+    }
 }
 
 @mixin infoSection {
-  display: flex;
-  flex-flow: column nowrap;
-
-  margin: -$link-padding 0;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: -$link-padding 0;
 }
 
 @mixin baseGradient($color: $color-primary) {
-  background: linear-gradient(to top, $color, lighten($color, 7%));
+    background: linear-gradient(to top, $color, lighten($color, 7%));
+}
+
+@mixin darkMode {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
 }

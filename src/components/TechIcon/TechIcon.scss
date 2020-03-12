@@ -1,0 +1,20 @@
+@import '../../scss/mixins.scss';
+
+.tech-icon {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    justify-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 5px;
+    width: 90px;
+    .icon {
+        font-size: $font-2x;
+        padding: 11px;
+        align-self: start;
+    }
+    .text {
+        align-self: start;
+        padding: 4px 0 0 0;
+    }
+}

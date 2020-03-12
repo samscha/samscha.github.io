@@ -2,27 +2,25 @@
 // @import '../../scss/variables.scss';
 
 .homepage {
-  display: grid;
-  grid-row-gap: 15px;
-  justify-items: center;
-
-  .technology-container {
-    .technology-bar {
-      display: flex;
-      justify-content: center;
-      flex-flow: row wrap;
-
-      .technology-bar__icon {
-        margin: 15px 7px;
-      }
+    display: grid;
+    grid-row-gap: 15px;
+    justify-items: center;
+    .technology-container {
+        .technology-bar {
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+            .technology-bar__icon {
+                margin: 15px 7px;
+            }
+        }
     }
-  }
 
-  // .projects {
-  //   text-align: center;
+    // .projects {
+    //   text-align: center;
 
-  //   .projects__project {
-  //     margin: 15px 0;
-  //   }
-  // }
+    //   .projects__project {
+    //     margin: 15px 0;
+    //   }
+    // }
 }
