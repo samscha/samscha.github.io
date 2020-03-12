@@ -14,14 +14,17 @@ export default () => {
         title,
     }) => {
         const classNames = ['image'];
+        const imageStyle = {};
 
         circle && classNames.push('circle');
         onClick && classNames.push('clickable');
         classNameProp && classNames.push(classNameProp);
 
-        switch (tag) {
-            case 'div':
-                return (
+        if (tag === 'div') imageStyle.display = 'none';
+
+        return (
+            <React.Fragment>
+                {tag == 'div' && (
                     <div
                         className={classNames.join(' ')}
                         alt={alt}
@@ -34,20 +37,17 @@ export default () => {
                         }}
                         title={title}
                     />
-                );
-
-            case 'img':
-            default:
-                return (
-                    <img
-                        className={classNames.join(' ')}
-                        alt={alt}
-                        onClick={onClick}
-                        src={src}
-                        title={title}
-                    />
-                );
-        }
+                )}
+                <img
+                    className={classNames.join(' ')}
+                    alt={alt}
+                    onClick={onClick}
+                    src={src}
+                    title={title}
+                    style={imageStyle}
+                />
+            </React.Fragment>
+        );
     };
 
     Image.defaultProps = {

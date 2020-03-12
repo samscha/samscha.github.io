@@ -25,7 +25,7 @@ export default ({ Image, useHistory, useLocation }) => {
                             styleProps={{
                                 backgroundSize: '70px',
                             }}
-                            // tag="div"
+                            tag="div"
                             title="Sam"
                             {...imageProps}
                         />
