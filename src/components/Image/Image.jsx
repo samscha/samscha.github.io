@@ -24,7 +24,7 @@ export default () => {
 
         return (
             <React.Fragment>
-                {tag == 'div' && (
+                {tag === 'div' && (
                     <div
                         className={classNames.join(' ')}
                         alt={alt}
