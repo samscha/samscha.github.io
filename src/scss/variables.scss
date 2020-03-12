@@ -3,9 +3,12 @@ $color-primary: #2e3c44;
 $color-white: #fff;
 $color-black: #1a1a1a;
 
-$font-4x: 4em;
-$font-3x: 2.5em;
-$font-2x: 1.5em;
+$dark-scheme-darken: 20%;
+$dark-scheme-color: darken($color-white, $dark-scheme-darken);
+
+$font-4x: 2.75em;
+$font-3x: 1.5em;
+$font-2x: 1.25em;
 $font-1x: 1.1em;
 $font-0x: 0.75em;
 $font-line-height: 1.35em;

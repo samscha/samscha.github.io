@@ -1,8 +1,16 @@
+@import './mixins.scss';
 @import './variables.scss';
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  font-size: $font-1x;
-  min-width: $layout-min-width;
+    background-color: $color-white;
+    color: $color-primary;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol';
+    font-size: $font-1x;
+    min-width: $layout-min-width;
+    @include darkMode {
+        background-color: $color-black;
+        color: $dark-scheme-color;
+    }
 }

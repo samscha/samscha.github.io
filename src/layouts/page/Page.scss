@@ -1,17 +1,17 @@
 @import '../../scss/variables.scss';
 
 .layout-page {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-row-gap: 10px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-row-gap: 10px;
 
-  height: 100%;
-  width: 100%;
-
-  .main-content {
-    justify-self: center;
-
+    height: 100%;
     width: 100%;
-    max-width: $layout-max-width;
-  }
+
+    .main-content {
+        justify-self: center;
+
+        width: 100%;
+        max-width: $layout-max-width;
+    }
 }
