@@ -12,10 +12,13 @@
         justify-items: center;
         padding: 35px 0;
         .footer-links__link {
-            @include linkInv(
-                $dark-scheme-color,
-                darken($color-primary, $dark-scheme-darken)
-            );
+            @include linkInv;
+            @include darkMode {
+                @include linkInv(
+                    $dark-scheme-color,
+                    darken($color-primary, $dark-scheme-darken)
+                );
+            }
             align-self: end;
             margin-left: 20px;
             margin-right: 20px;
