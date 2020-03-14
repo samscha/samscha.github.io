@@ -1,1 +1,3 @@
-export { LocationMarker } from './LocationMarker';
+import LocationMarker from './LocationMarker';
+
+export default LocationMarker();

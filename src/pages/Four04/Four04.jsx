@@ -1,14 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './index.scss';
+import './Four04.scss';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-export default class extends React.Component {
-    iconSize = '2x';
-
-    render() {
-        const { history } = this.props;
+export default ({ FontAwesomeIcon, NavLink, useHistory }) => {
+    const Four04 = () => {
+        const iconSize = '2x';
+        const history = useHistory();
 
         return (
             <div className="four04">
@@ -22,7 +18,7 @@ export default class extends React.Component {
                 >
                     <FontAwesomeIcon
                         icon={['fas', 'arrow-left']}
-                        size={this.iconSize}
+                        size={iconSize}
                         fixedWidth
                     />
                 </div>
@@ -30,11 +26,12 @@ export default class extends React.Component {
                 <NavLink className="link" title="Go home" to="/">
                     <FontAwesomeIcon
                         icon={['fas', 'home']}
-                        size={this.iconSize}
+                        size={iconSize}
                         fixedWidth
                     />
                 </NavLink>
             </div>
         );
-    }
-}
+    };
+    return Four04;
+};
