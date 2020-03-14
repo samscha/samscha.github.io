@@ -6,11 +6,11 @@ https://samscha.com
 
 ## TODO
 
-- [ ] move image to cdn
-- [ ] finish basic unit tests
-- [ ] update to hooks
-- [ ] add in-depth unit tests
-- [ ] add e2e tests
-- [ ] add projects
-- [ ] add dark mode
-- [ ] add admin section
+-   [ ] move image to cdn
+-   [ ] finish basic unit tests
+-   [x] update to hooks
+-   [ ] add in-depth unit tests
+-   [ ] add e2e tests
+-   [ ] add projects
+-   [x] add dark mode
+-   [ ] add admin section
