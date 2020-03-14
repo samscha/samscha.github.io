@@ -5,19 +5,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
     .title {
         font-size: $font-4x;
     }
-
     .description {
         margin: 0 0 10px 0;
         padding: 4px;
     }
-
     .link {
-        @include link;
-
         margin: 10px 0;
     }
 }

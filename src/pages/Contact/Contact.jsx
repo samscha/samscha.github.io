@@ -1,29 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import contacts from '../../assets/js/contact/contacts';
-import { IconsBy, IconText, Link } from '../../components';
 import './Contact.scss';
 
-export default class extends React.Component {
-    static propTypes = {
-        contacts: PropTypes.arrayOf(
-            PropTypes.shape({
-                href: PropTypes.string.isRequired,
-                icon: PropTypes.array.isRequired,
-                target: PropTypes.string,
-                text: PropTypes.string.isRequired,
-                title: PropTypes.string.isRequired,
-            }),
-        ),
-    };
-
-    static defaultProps = {
-        contacts: contacts,
-    };
-
-    render() {
-        const { contacts } = this.props;
-
+export default ({ IconsBy, IconText, Link, contacts }) => {
+    const ContactPage = () => {
         return (
             <div className="contact-page">
                 {contacts.length > 0 && (
@@ -58,5 +38,19 @@ export default class extends React.Component {
                 <IconsBy fa />
             </div>
         );
-    }
-}
+    };
+
+    ContactPage.propTypes = {
+        contacts: PropTypes.arrayOf(
+            PropTypes.shape({
+                href: PropTypes.string.isRequired,
+                icon: PropTypes.array.isRequired,
+                target: PropTypes.string,
+                text: PropTypes.string.isRequired,
+                title: PropTypes.string.isRequired,
+            }),
+        ),
+    };
+
+    return ContactPage;
+};

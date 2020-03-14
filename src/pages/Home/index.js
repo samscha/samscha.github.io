@@ -1,5 +1,7 @@
 import techs from '../../assets/js/home/techs';
-import { IconsBy, LocationMarker, TechIcon } from '../../components';
+import IconsBy from '../../components/IconsBy';
+import LocationMarker from '../../components/LocationMarker';
+import TechIcon from '../../components/TechIcon';
 import { withLayout } from '../../layouts';
 import HomePage from './Home';
 
