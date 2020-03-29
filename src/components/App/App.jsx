@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.scss';
 
-export default ({ About, Contact, Four04, Home, Route, Switch }) => {
+export default ({ About, Contact, Four04, Home, Route, Switch, init }) => {
+    init();
+
     return () => (
         <div className="app">
             <Switch>
