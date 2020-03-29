@@ -1,16 +1,16 @@
 import React from 'react';
 import './Header.scss';
 
-export default ({ Image, useHistory, useLocation }) => {
+export default ({ Image, useLocation }) => {
     const Header = () => {
-        const history = useHistory();
         const location = useLocation();
         const imageProps = {};
 
         if (location.pathname !== '/') {
-            imageProps.onClick = () => {
-                history.push('/');
-            };
+            imageProps.href = '/';
+            imageProps.title = 'Go Home';
+        } else {
+            imageProps.title = 'Sam';
         }
 
         return (
@@ -25,8 +25,7 @@ export default ({ Image, useHistory, useLocation }) => {
                             styleProps={{
                                 backgroundSize: '70px',
                             }}
-                            tag="div"
-                            title="Sam"
+                            tag="a"
                             {...imageProps}
                         />
                     </div>
