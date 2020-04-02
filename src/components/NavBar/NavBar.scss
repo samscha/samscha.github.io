@@ -1,0 +1,28 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.nav-bar {
+    @include baseGradient();
+    @include darkMode {
+        @include baseGradient(darken($color-primary, $dark-scheme-darken));
+    }
+    .nav-bar-links {
+        display: grid;
+        grid-template-columns: 1fr repeat(3, 100px) 1fr;
+        justify-items: center;
+        padding: 15px 0;
+        .nav-bar-links__link {
+            @include linkInv;
+            @include darkMode {
+                @include linkInv(
+                    $dark-scheme-color,
+                    darken($color-primary, $dark-scheme-darken)
+                );
+            }
+            align-self: end;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: center;
+        }
+    }
+}

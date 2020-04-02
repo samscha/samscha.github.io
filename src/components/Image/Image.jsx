@@ -10,12 +10,17 @@ export default () => {
         href,
         onClick,
         src,
-        styleProps,
+        style,
         tag,
         title,
     }) => {
         const classNames = ['image'];
         const imageStyle = {};
+
+        circle && classNames.push('circle');
+        onClick && classNames.push('clickable');
+        classNameProp && classNames.push(classNameProp);
+
         const img = (
             <img
                 className={classNames.join(' ')}
@@ -27,27 +32,23 @@ export default () => {
             />
         );
 
-        circle && classNames.push('circle');
-        onClick && classNames.push('clickable');
-        classNameProp && classNames.push(classNameProp);
-
-        if (tag === 'a') {
+        if (tag === 'div') {
             imageStyle.display = 'none';
             return (
-                <a
+                <div
                     className={classNames.join(' ')}
                     alt={alt}
-                    href={href}
+                    // href={href}
                     style={{
                         backgroundImage: `url(${src})`,
                         backgroundPosition: 'center center',
                         backgroundRepeat: 'none',
-                        ...styleProps,
+                        ...style,
                     }}
                     title={title}
                 >
                     {img}
-                </a>
+                </div>
             );
         }
 
@@ -56,7 +57,7 @@ export default () => {
 
     Image.defaultProps = {
         circle: false,
-        styleProps: {},
+        style: {},
         tag: 'img',
     };
 
@@ -66,9 +67,9 @@ export default () => {
         href: PropTypes.string,
         onClick: PropTypes.func,
         src: PropTypes.string.isRequired,
-        styleProps: PropTypes.object,
-        tag: PropTypes.oneOf(['a', 'img']),
-        title: PropTypes.string.isRequired,
+        style: PropTypes.object,
+        tag: PropTypes.oneOf(['div', 'img']),
+        title: PropTypes.string,
     };
 
     return Image;

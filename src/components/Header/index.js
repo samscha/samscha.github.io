@@ -1,5 +1,6 @@
 import useLocation from '../../hooks/useLocation';
-import Header from './Header';
 import Image from '../Image';
+import Link from '../Link';
+import Header from './Header';
 
-export default Header({ Image, useLocation });
+export default Header({ Image, Link, useLocation });

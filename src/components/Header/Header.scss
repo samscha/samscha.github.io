@@ -26,6 +26,42 @@
             .subtitle {
                 font-size: $font-3x;
             }
+            .link.profile-img {
+                color: unset;
+                padding: unset;
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+                &:hover {
+                    background-color: unset;
+                    color: unset;
+                }
+            }
+            .nav-bar {
+                @include baseGradient();
+                @include darkMode {
+                    @include baseGradient(
+                        darken($color-primary, $dark-scheme-darken)
+                    );
+                }
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+                justify-items: center;
+                padding: 15px 0;
+                .nav-bar__link {
+                    @include linkInv;
+                    @include darkMode {
+                        @include linkInv(
+                            $dark-scheme-color,
+                            darken($color-primary, $dark-scheme-darken)
+                        );
+                    }
+                    align-self: end;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    text-align: center;
+                }
+            }
         }
     }
 }

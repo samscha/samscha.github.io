@@ -1,34 +1,40 @@
 import React from 'react';
 import './Header.scss';
 
-export default ({ Image, useLocation }) => {
+export default ({ Image, Link, useLocation }) => {
     const Header = () => {
         const location = useLocation();
-        const imageProps = {};
+        const isAtHome = location.pathname === '/';
 
-        if (location.pathname !== '/') {
-            imageProps.href = '/';
-            imageProps.title = 'Go Home';
-        } else {
-            imageProps.title = 'Sam';
-        }
+        const profileImg = () => {
+            const img = (
+                <Image
+                    alt="Sam"
+                    circle
+                    className="header-logo"
+                    src="/images/profile.png"
+                    style={{
+                        backgroundSize: '70px',
+                    }}
+                    tag="div"
+                    title={isAtHome ? 'Sam' : undefined}
+                />
+            );
+
+            if (!isAtHome)
+                return (
+                    <Link className="profile-img" title="Go home" to="/">
+                        {img}
+                    </Link>
+                );
+
+            return img;
+        };
 
         return (
             <div className="header">
                 <div className="header-container">
-                    <div className="header__item">
-                        <Image
-                            alt="Sam"
-                            circle
-                            className="header-logo"
-                            src="/images/profile.png"
-                            styleProps={{
-                                backgroundSize: '70px',
-                            }}
-                            tag="a"
-                            {...imageProps}
-                        />
-                    </div>
+                    <div className="header__item">{profileImg()}</div>
                     <div className="header__item">
                         <div className="title">Samuel Cha</div>
                     </div>
