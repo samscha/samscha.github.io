@@ -8,9 +8,24 @@
     }
     .nav-bar-links {
         display: grid;
-        grid-template-columns: 1fr repeat(3, 100px) 1fr;
+        grid-template-columns: 1fr repeat(4, 100px) 1fr;
         justify-items: center;
         padding: 15px 0;
+        .header-logo {
+            height: 35px;
+            width: 35px;
+        }
+        .link.profile-img {
+            color: unset;
+            padding: unset;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            &:hover {
+                background-color: unset;
+                color: unset;
+            }
+        }
         .nav-bar-links__link {
             @include linkInv;
             @include darkMode {
@@ -19,10 +34,14 @@
                     darken($color-primary, $dark-scheme-darken)
                 );
             }
-            align-self: end;
-            margin-left: 20px;
-            margin-right: 20px;
-            text-align: center;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            // align-self: center;
+            // height: 100%;
+            // margin-left: 20px;
+            // margin-right: 20px;
+            // text-align: center;
         }
     }
 }
