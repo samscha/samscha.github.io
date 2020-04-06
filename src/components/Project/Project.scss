@@ -1,0 +1,30 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.project {
+    display: grid;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    width: 100%;
+    max-width: 700px;
+    .name {
+        font-weight: bold;
+        text-align: center;
+    }
+    .image {
+        border: 1px solid $color-black;
+        object-fit: contain;
+        max-height: 400px;
+        width: 100%;
+    }
+    .info {
+        @include text;
+    }
+    .link {
+        @include unLink;
+        cursor: pointer;
+        display: unset;
+        padding: 0;
+        text-decoration: underline;
+    }
+}

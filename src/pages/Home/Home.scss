@@ -1,11 +1,13 @@
 // @import '../../scss/mixins.scss';
-// @import '../../scss/variables.scss';
+@import '../../scss/variables.scss';
 
 .homepage {
+    $section-margin-bottom: 25px;
     display: grid;
     grid-row-gap: 15px;
     justify-items: center;
     .technology-container {
+        margin: 0 0 $section-margin-bottom 0;
         .technology-bar {
             display: flex;
             justify-content: center;
@@ -15,12 +17,16 @@
             }
         }
     }
-
-    // .projects {
-    //   text-align: center;
-
-    //   .projects__project {
-    //     margin: 15px 0;
-    //   }
-    // }
+    .projects {
+        margin: 0 0 $section-margin-bottom 0;
+        padding: 0 15px;
+        .title {
+            font-size: $font-3x;
+            text-align: center;
+        }
+        .project-container {
+            margin: 10px 0;
+            padding: 10px 0;
+        }
+    }
 }
