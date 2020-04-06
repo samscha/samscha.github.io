@@ -7,7 +7,6 @@ export default () => {
         alt,
         circle,
         className: classNameProp,
-        href,
         onClick,
         src,
         style,
@@ -38,7 +37,6 @@ export default () => {
                 <div
                     className={classNames.join(' ')}
                     alt={alt}
-                    // href={href}
                     style={{
                         backgroundImage: `url(${src})`,
                         backgroundPosition: 'center center',

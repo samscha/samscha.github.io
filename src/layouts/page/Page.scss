@@ -6,14 +6,6 @@
     grid-row-gap: 10px;
     height: 100%;
     width: 100%;
-    .sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-    .sticky + .header {
-        padding-top: 10px;
-    }
     .main-content {
         justify-self: center;
         width: 100%;
