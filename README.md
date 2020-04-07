@@ -11,6 +11,6 @@ https://samscha.com
 -   [x] update to hooks
 -   [ ] add in-depth unit tests
 -   [ ] add e2e tests
--   [ ] add projects
+-   [x] add projects
 -   [x] add dark mode
 -   [ ] add admin section
