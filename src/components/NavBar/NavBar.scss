@@ -1,0 +1,44 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.nav-bar {
+    @include baseGradient();
+    @include darkMode {
+        @include baseGradient(darken($color-primary, $dark-scheme-darken));
+    }
+    position: sticky;
+    top: 0;
+    .nav-bar-links {
+        display: grid;
+        grid-template-columns: 1fr repeat(4, 100px) 1fr;
+        justify-items: center;
+        padding: 15px 0;
+        .header-logo {
+            height: 35px;
+            width: 35px;
+        }
+        .link.profile-img {
+            color: unset;
+            padding: unset;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            &:hover {
+                background-color: unset;
+                color: unset;
+            }
+        }
+        .nav-bar-links__link {
+            @include linkInv;
+            @include darkMode {
+                @include linkInv(
+                    $dark-scheme-color,
+                    darken($color-primary, $dark-scheme-darken)
+                );
+            }
+            align-items: center;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+    }
+}

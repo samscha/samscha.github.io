@@ -8,6 +8,8 @@ And although all of the above came with challenges and problems to solve, I was 
 
 That is, until I enrolled in Lambda School’s Computer Science program. There, I went to a fully-remote classroom every weekday fulltime, mastering web development on the front end using React and Redux, configuring back end Express, Node.js, and Django servers, querying noSQL and SQL relational databases like MongoDB and Knex, as well as learning C to build CPUs and queues.
 
-Nowadays, I'm working as a Software Engineer at NewPoint Media, a real estate and integrated marketing company in Austin, TX, with the goal of combining print and technology for the best home buying experience.
+I was last working as a Software Engineer at NewPoint Media, a real estate and integrated marketing company in Austin, TX, with the goal of combining print and technology for the best home buying experience from December 2018 to March 2020.
 
-More info can also be found at:`;
+Now, I am looking for new opportunities in Austin, but I am open to fully remote opportunities as well.
+
+More info can also be found here:`;

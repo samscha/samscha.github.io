@@ -1,7 +1,14 @@
 import React from 'react';
 import './Home.scss';
 
-export default ({ IconsBy, LocationMarker, TechIcon, techs }) => {
+export default ({
+    IconsBy,
+    LocationMarker,
+    Project,
+    TechIcon,
+    projects,
+    techs,
+}) => {
     const HomePage = () => {
         return (
             <div className="homepage">
@@ -31,18 +38,21 @@ export default ({ IconsBy, LocationMarker, TechIcon, techs }) => {
                     </div>
                 )}
 
-                <IconsBy fa fz />
+                {projects.length > 0 && (
+                    <div className="projects">
+                        <div className="title">Projects</div>
+                        {projects.map(project => (
+                            <div
+                                key={project.name}
+                                className="project-container"
+                            >
+                                <Project {...project} />
+                            </div>
+                        ))}
+                    </div>
+                )}
 
-                {/* {projects.length > 0 && (
-            <div className="projects">
-              Projects
-              {projects.map(project => (
-                <div key={project.id} className="projects__project">
-                  <Project {...project} />
-                </div>
-              ))}
-            </div>
-          )} */}
+                <IconsBy fa fz />
             </div>
         );
     };
