@@ -12,6 +12,9 @@
         text-align: center;
     }
     .image {
+        @include darkMode {
+            border: 1px solid $dark-scheme-color;
+        }
         border: 1px solid $color-black;
         object-fit: contain;
         max-height: 400px;
