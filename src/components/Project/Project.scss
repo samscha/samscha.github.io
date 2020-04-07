@@ -24,6 +24,9 @@
         @include text;
     }
     .link {
+        @include darkMode {
+            color: $dark-scheme-color;
+        }
         @include unLink;
         cursor: pointer;
         display: unset;
