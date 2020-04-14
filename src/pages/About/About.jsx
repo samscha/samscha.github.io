@@ -14,8 +14,8 @@ export default ({
             infos.length > 0 && (
                 <div className="infos-section">
                     {infos
-                        .filter(info => types.includes(info.type))
-                        .map(info => {
+                        .filter((info) => types.includes(info.type))
+                        .map((info) => {
                             const { href, icon, target, text, title } = info;
 
                             return (
