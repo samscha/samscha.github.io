@@ -14,25 +14,31 @@ export default () => {
         title,
     }) => {
         const classNames = ['image'];
-        const imageStyle = {};
+        const initImgDisplay = tag === 'div' ? 'none' : undefined;
+        const [imgDisplay, updateImgDisplay] = React.useState(initImgDisplay);
+        const [imgHasError, updateImgHasError] = React.useState(false);
 
         circle && classNames.push('circle');
         onClick && classNames.push('clickable');
         classNameProp && classNames.push(classNameProp);
+        imgHasError && classNames.push('error');
 
         const img = (
             <img
                 className={classNames.join(' ')}
+                onError={() => {
+                    updateImgDisplay('unset');
+                    updateImgHasError(true);
+                }}
                 alt={alt}
                 onClick={onClick}
                 src={src}
                 title={title}
-                style={imageStyle}
+                style={{ display: imgDisplay }}
             />
         );
 
         if (tag === 'div') {
-            imageStyle.display = 'none';
             return (
                 <div
                     className={classNames.join(' ')}
