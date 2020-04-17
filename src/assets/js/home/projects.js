@@ -4,7 +4,9 @@ export default [
         techs: 'React',
         image: {
             alt: 'React Component Library showcase',
-            src: '/images/react-component-library-showcase.png',
+            // src: '/images/react-component-library-showcase.png',
+            src:
+                'https://bluayqsidfdcphwsfrvveqdibdtxvjyp.s3.us-east-2.amazonaws.com/react-component-library-showcase.png',
         },
         info: `Helped build out a library of first- and third-party React components to be injected into other projects.
 
