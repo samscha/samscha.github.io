@@ -11,7 +11,7 @@ import projects from './projects.tmp';
 
 export default connect(
     // state => ({ projects: state.projects }),
-    _ => ({}),
+    (_) => ({}),
     {},
 )(
     // { fetchProjects },
@@ -23,7 +23,7 @@ export default connect(
         render() {
             return (
                 <div className="Projects">
-                    {projects.map(project => {
+                    {projects.map((project) => {
                         return (
                             <c.Project key={project.title} project={project} />
                         );
