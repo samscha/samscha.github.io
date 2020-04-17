@@ -12,7 +12,7 @@ export default ({ IconText, Image, Link, useLocation }) => {
                     alt="Sam"
                     circle
                     className="header-logo"
-                    src="/images/profile.png"
+                    src="https://mbmqddcnrrqqmkxghrkfqxfrwwxsgpgj.s3.us-east-2.amazonaws.com/profile.png"
                     style={{
                         backgroundSize: '35px',
                     }}
