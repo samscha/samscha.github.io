@@ -8,7 +8,7 @@ export default ({ IconsBy, IconText, Link, contacts }) => {
             <div className="contact-page">
                 {contacts.length > 0 && (
                     <div className="links-section">
-                        {contacts.map(info => {
+                        {contacts.map((info) => {
                             const { href, icon, target, text, title } = info;
 
                             return (

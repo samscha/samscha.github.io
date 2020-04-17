@@ -26,7 +26,7 @@ export default ({
                                     if (a > b) return 1;
                                     return 0;
                                 })
-                                .map(tech => (
+                                .map((tech) => (
                                     <div
                                         key={tech.link}
                                         className="technology-bar__icon"
@@ -41,7 +41,7 @@ export default ({
                 {projects.length > 0 && (
                     <div className="projects">
                         <div className="title">Projects</div>
-                        {projects.map(project => (
+                        {projects.map((project) => (
                             <div
                                 key={project.name}
                                 className="project-container"
