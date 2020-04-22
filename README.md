@@ -7,6 +7,7 @@ https://samscha.com
 ## TODO
 
 -   [x] move image to cdn
+-   [ ] add resizing of images via cdn/lambda
 -   [ ] finish basic unit tests
 -   [x] update to hooks
 -   [ ] add in-depth unit tests
