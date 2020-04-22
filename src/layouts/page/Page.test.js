@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import withLayout from './Page.jsx';
 
-describe(`default layout`, function() {
+describe(`default layout`, function () {
     // class BaseComponent extends React.Component {
     //   render() {
     //     return <div id="base-component">abse setuff</div>;
@@ -12,7 +12,7 @@ describe(`default layout`, function() {
     // const baseWithLayout = shallow(<BaseLayout />);
     // const baseDiv = 'div.template';
     // const contentDiv = 'div.main-content';
-    it(`should render div.template`, function() {
+    it(`should render div.template`, function () {
         // expect(baseWithLayout.find(baseDiv)).toHaveLength(1);
     });
     // it(`should render a Header`, function() {

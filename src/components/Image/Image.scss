@@ -5,10 +5,16 @@
     @include darkMode {
         filter: brightness(100% - $dark-scheme-darken);
     }
+    color: $color-white;
     &.circle {
         border-radius: 50%;
     }
     &.clickable {
         cursor: pointer;
+    }
+    &.error {
+        @include darkMode {
+            filter: unset;
+        }
     }
 }

@@ -4,7 +4,8 @@ export default [
         techs: 'React',
         image: {
             alt: 'React Component Library showcase',
-            src: '/images/react-component-library-showcase.png',
+            src: `${process.env.REACT_APP_IMAGES_BASE_URL}/react-component-library-showcase.png`,
+            title: 'React Component Library showcase',
         },
         info: `Helped build out a library of first- and third-party React components to be injected into other projects.
 
@@ -21,7 +22,8 @@ Notable components include an image carousel with lightbox feature, a form drive
         techs: 'React Native, Java, PostgreSQL',
         image: {
             alt: 'Cash Envelope app showcase',
-            src: '/images/cash-envelope-showcase.png',
+            src: `${process.env.REACT_APP_IMAGES_BASE_URL}/cash-envelope-showcase.png`,
+            title: 'Cash Envelope app showcase',
         },
         info: `Built a React Native app with Java-Spring backend connected to PostgresQL.
 
@@ -36,7 +38,8 @@ Features included creating a new user, creating multiple virtual envelopes that 
         techs: 'MongoDB, Express, React, Node',
         image: {
             alt: 'PicMe showcase',
-            src: '/images/picme-showcase.png',
+            src: `${process.env.REACT_APP_IMAGES_BASE_URL}/picme-showcase.png`,
+            title: 'PicMe showcase',
         },
         info: `Culminating project at Lambda School built in collaboration with two other developers. Over the course of four weeks, built a web app from scratch where users can upload photos of their friends, find their pictures uploaded by others, and buy credits to download photos.
 

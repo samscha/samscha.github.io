@@ -6,11 +6,13 @@ https://samscha.com
 
 ## TODO
 
--   [ ] move image to cdn
+-   [x] move image to cdn
+-   [ ] add resizing of images via cdn/lambda
 -   [ ] finish basic unit tests
 -   [x] update to hooks
 -   [ ] add in-depth unit tests
 -   [ ] add e2e tests
--   [ ] add projects
+-   [x] add projects
 -   [x] add dark mode
 -   [ ] add admin section
+-   [ ] fix page length vh
