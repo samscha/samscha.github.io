@@ -15,4 +15,4 @@ https://samscha.com
 -   [x] add projects
 -   [x] add dark mode
 -   [ ] add admin section
--   [ ] fix page length vh
+-   [x] fix page length vh
