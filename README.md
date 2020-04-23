@@ -4,7 +4,7 @@
 
 https://samscha.com
 
-## TODO
+## `TODO`
 
 -   [x] move image to cdn
 -   [ ] add resizing of images via cdn/lambda
