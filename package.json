@@ -2,7 +2,7 @@
     "name": "samscha",
     "version": "1.0.0",
     "description": "Personal website for Samuel Cha",
-    "repository": "https://github.com/samscha/aboutme.git",
+    "repository": "https://github.com/samscha/samscha.git",
     "author": "Samuel Cha <sunchipssam@gmail.com>",
     "license": "MIT",
     "dependencies": {
