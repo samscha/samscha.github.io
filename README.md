@@ -4,7 +4,7 @@
 
 https://samscha.com
 
-## TODO
+## `TODO`
 
 -   [x] move image to cdn
 -   [ ] add resizing of images via cdn/lambda
@@ -15,4 +15,4 @@ https://samscha.com
 -   [x] add projects
 -   [x] add dark mode
 -   [ ] add admin section
--   [ ] fix page length vh
+-   [x] fix page length vh
