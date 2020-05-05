@@ -7,11 +7,15 @@ export default ({ IconText, Image, Link, useLocation }) => {
         const isAtHome = location.pathname === '/';
 
         const profileImg = () => {
+            const imageClassName = ['header-logo'];
+
+            if (isAtHome) imageClassName.push('nav-bar-link');
+
             const img = (
                 <Image
                     alt="Sam"
                     circle
-                    className="header-logo nav-bar-link"
+                    className={imageClassName.join(' ')}
                     src={`${process.env.REACT_APP_IMAGES_BASE_URL}/profile.png`}
                     style={{
                         backgroundSize: '35px',
@@ -23,7 +27,11 @@ export default ({ IconText, Image, Link, useLocation }) => {
 
             if (!isAtHome)
                 return (
-                    <Link className="profile-img" title="Go home" to="/">
+                    <Link
+                        className="profile-img nav-bar-link"
+                        title="Go home"
+                        to="/"
+                    >
                         {img}
                     </Link>
                 );
