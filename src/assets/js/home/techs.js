@@ -1,10 +1,12 @@
 export default [
-    // {
-    //   text: `AWS`,
-    //   link: `https://aws.amazon.com/`,
-    //   icon: [`fab`, `aws`],
-    //   // opacity: `0.25`,
-    // },
+    {
+        text: `AWS`,
+        title: 'Click to learn more about AWS',
+        link: `https://aws.amazon.com/`,
+        icon: [`fab`, `aws`],
+        type: 'fa',
+        // opacity: `0.25`,
+    },
     // {
     //   text: `C`,
     //   link: `https://en.wikipedia.org/wiki/C_(programming_language)`,
