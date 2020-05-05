@@ -10,9 +10,15 @@
     top: 0;
     z-index: 1;
     .nav-bar-links {
-        display: grid;
-        grid-template-columns: 1fr repeat(4, 100px) 1fr;
-        justify-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 800px;
+        .nav-bar-link {
+            margin: 0 15px;
+        }
         padding: 15px 0;
         .header-logo {
             height: 35px;

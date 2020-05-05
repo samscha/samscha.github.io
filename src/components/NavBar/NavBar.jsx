@@ -11,7 +11,7 @@ export default ({ IconText, Image, Link, useLocation }) => {
                 <Image
                     alt="Sam"
                     circle
-                    className="header-logo"
+                    className="header-logo nav-bar-link"
                     src={`${process.env.REACT_APP_IMAGES_BASE_URL}/profile.png`}
                     style={{
                         backgroundSize: '35px',
@@ -34,30 +34,28 @@ export default ({ IconText, Image, Link, useLocation }) => {
         return (
             <div className="nav-bar">
                 <div className="nav-bar-links">
-                    <div />
                     {profileImg()}
                     <Link
-                        className="nav-bar-links__link"
+                        className="nav-bar-links__link nav-bar-link"
                         to="/about"
                         title="Go to the about page"
                     >
                         about
                     </Link>
                     <Link
-                        className="nav-bar-links__link"
+                        className="nav-bar-links__link nav-bar-link"
                         href="https://www.medium.com/@samscha"
                         title="Click to go to Sam's blog on Medium"
                     >
                         <IconText icon={['fab', 'medium']} text="blog" />
                     </Link>
                     <Link
-                        className="nav-bar-links__link"
+                        className="nav-bar-links__link nav-bar-link"
                         to="/contact"
                         title="Go to the contact page"
                     >
                         contact
                     </Link>
-                    <div />
                 </div>
             </div>
         );
