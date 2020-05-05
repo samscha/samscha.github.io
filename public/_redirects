@@ -1,5 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://samscha.netlify.com/* https://samscha.com/:splat 301!
-
-/*    /index.html   200
-
