@@ -1,9 +1,9 @@
 export default [
     {
-        href: 'mailto:chasamuels@gmail.com',
+        href: 'mailto:contact@samscha.com',
         icon: ['fas', 'envelope'],
         target: '',
-        text: 'chasamuels@gmail.com',
+        text: 'contact@samscha.com',
         title: `Click to email Sam`,
     },
     {
