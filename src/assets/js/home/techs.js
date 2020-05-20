@@ -95,7 +95,7 @@ export default [
     //   type: `fz`,
     // },
     {
-        text: `mySQL`,
+        text: `MySQL`,
         title: `Click to learn more about MySQL`,
         link: `https://www.mysql.com`,
         icon: `icon-mysql-alt`,
