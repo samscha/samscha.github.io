@@ -5,14 +5,7 @@ export default [
         link: `https://aws.amazon.com/`,
         icon: [`fab`, `aws`],
         type: 'fa',
-        // opacity: `0.25`,
     },
-    // {
-    //   text: `C`,
-    //   link: `https://en.wikipedia.org/wiki/C_(programming_language)`,
-    //   icon: `icon-c`,
-    //   // opacity: `0.25`,
-    // },
     {
         text: `CSS3`,
         title: `Click to learn more about CSS from MDN`,
@@ -41,12 +34,6 @@ export default [
         icon: `icon-git`,
         type: `fz`,
     },
-    // {
-    //   text: `Heroku`,
-    //   link: `https://www.heroku.com`,
-    //   icon: `icon-heroku`,
-    //   type: `fz`,
-    // },
     {
         text: `HTML5`,
         title: `Click to learn more about HTML5 from MDN`,
@@ -54,13 +41,6 @@ export default [
         icon: [`fab`, `html5`],
         type: `fa`,
     },
-    // {
-    //   text: `Java`,
-    //   link:
-    //     `https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html`,
-    //   icon: [`fab`, `java`],
-    //   type: `fa`,
-    // },
     {
         text: `JavaScript`,
         title: `Click to learn more about JavaScript from MDN`,
@@ -68,12 +48,6 @@ export default [
         icon: [`fab`, `js-square`],
         type: `fa`,
     },
-    // {
-    //   text: `LESS`,
-    //   link: `http://lesscss.org`,
-    //   icon: [`fab`, `less`],
-    //   type: `fa`,
-    // },
     {
         text: `Sass`,
         title: `Click to learn more about Sass, a CSS preprocessor`,
@@ -88,32 +62,13 @@ export default [
         icon: [`fab`, `apple`],
         type: `fa`,
     },
-    // {
-    //   text: `MongoDB`,
-    //   link: `https://www.mongodb.com`,
-    //   icon: `icon-mongodb`,
-    //   type: `fz`,
-    // },
     {
         text: `MySQL`,
         title: `Click to learn more about MySQL`,
         link: `https://www.mysql.com`,
         icon: `icon-mysql-alt`,
         type: `fz`,
-        // opacity: `0.25`,
     },
-    // {
-    //   text: `MyBatis`,
-    //   link: `http://www.mybatis.org/mybatis-3/`,
-    //   icon: `icon-database`,
-    //   type: `fz`,
-    // },
-    // {
-    //   text: `Netlify`,
-    //   link: `https://www.netlify.com`,
-    //   icon: [`fas`, `cloud`],
-    //   type: `fa`,
-    // },
     {
         text: `Node.js`,
         title: `Click to learn more about Node.js`,
@@ -128,12 +83,6 @@ export default [
         icon: [`fab`, `npm`],
         type: `fa`,
     },
-    // {
-    //   text: `Python`,
-    //   link: `https://www.python.org`,
-    //   icon: [`fab`, `python`],
-    //   // opacity: `0.50`,
-    // },
     {
         text: `React`,
         title: `Click to learn more about React`,
@@ -141,30 +90,6 @@ export default [
         icon: [`fab`, `react`],
         type: `fa`,
     },
-    // {
-    //   text: `Native`,
-    //   link: `https://facebook.github.io/react-native/`,
-    //   icon: [`fab`, `react`],
-    //   type: `fa`,
-    // },
-    // {
-    //   text: `PostgreSQL`,
-    //   link: `https://www.postgresql.org/`,
-    //   icon: `icon-postgres`,
-    //   type: `fz`,
-    // },
-    // {
-    //   text: `Spring`,
-    //   link: `https://spring.io/`,
-    //   icon: `icon-spring`,
-    //   type: `fz`,
-    // },
-    // {
-    //   text: `VSC`,
-    //   link: `https://code.visualstudio.com/`,
-    //   icon: [`fa`, `code`],
-    //   type: `fa`,
-    // },
     {
         text: `Gitflow`,
         title: `Click to learn more about Gitflow`,
@@ -179,10 +104,4 @@ export default [
         icon: ['fab', 'jira'],
         type: 'fa',
     },
-    // {
-    //   text: `Vue.js`,
-    //   link: `https://vuejs.org/`,
-    //   icon: [`fab`, `vuejs`],
-    //   type: `fa`,
-    // },
 ];
