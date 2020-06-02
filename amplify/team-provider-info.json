@@ -1,0 +1,28 @@
+{
+    "develop": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-api-develop-143551-authRole",
+            "UnauthRoleArn": "arn:aws:iam::609215230012:role/amplify-api-develop-143551-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::609215230012:role/amplify-api-develop-143551-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-api-develop-143551-deployment",
+            "UnauthRoleName": "amplify-api-develop-143551-unauthRole",
+            "StackName": "amplify-api-develop-143551",
+            "StackId": "arn:aws:cloudformation:us-east-1:609215230012:stack/amplify-api-develop-143551/1b289200-a43f-11ea-815c-0e05d1a3c102",
+            "AmplifyAppId": "d2m36eneuifk1i"
+        }
+    },
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-samscha-master-153015-authRole",
+            "UnauthRoleArn": "arn:aws:iam::609215230012:role/amplify-samscha-master-153015-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::609215230012:role/amplify-samscha-master-153015-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-samscha-master-153015-deployment",
+            "UnauthRoleName": "amplify-samscha-master-153015-unauthRole",
+            "StackName": "amplify-samscha-master-153015",
+            "StackId": "arn:aws:cloudformation:us-east-1:609215230012:stack/amplify-samscha-master-153015/b41b5ea0-a446-11ea-b1b7-0e29088293c9",
+            "AmplifyAppId": "d2m36eneuifk1i"
+        }
+    }
+}
