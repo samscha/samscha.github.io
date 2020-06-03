@@ -1,0 +1,12 @@
+{
+    "develop": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "samscha"
+    },
+    "master": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "samscha"
+    }
+}
