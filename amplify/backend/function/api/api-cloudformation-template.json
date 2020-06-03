@@ -33,12 +33,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"lambdaapi",
+						"samscha-api",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"lambdaapi",
+									"samscha-api",
 									"-",
 									{
 										"Ref": "env"
@@ -67,8 +67,8 @@
 				"Runtime": "nodejs12.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "amplify-samscha-master-153015-deployment",
-					"S3Key": "amplify-builds/lambdaapi-6d754a744a394771444a-build.zip"
+					"S3Bucket": "amplify-samscha-develop-102910-deployment",
+					"S3Key": "amplify-builds/api-656b4c48415231394144-build.zip"
 				}
 			}
 		},
@@ -78,12 +78,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"samschaLambdaRolede7b6d1a",
+						"samschaLambdaRole4a1c8c4b",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"samschaLambdaRolede7b6d1a",
+									"samschaLambdaRole4a1c8c4b",
 									"-",
 									{
 										"Ref": "env"
