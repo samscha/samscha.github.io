@@ -1,35 +1,34 @@
 {
     "paths": [
         {
-            "name": "/images",
-            "lambdaFunction": "lambdaapi",
+            "name": "/v1",
+            "lambdaFunction": "api",
             "privacy": {
                 "open": true
             }
         }
     ],
-    "resourceName": "api",
-    "apiName": "api",
+    "resourceName": "samscha",
+    "apiName": "samscha",
     "functionArns": [
         {
-            "lambdaFunction": "lambdaapi"
+            "lambdaFunction": "api"
         }
     ],
     "privacy": {
         "auth": 0,
         "unauth": 0,
-        "authRoleName": "amplify-samscha-master-153015-authRole",
-        "unAuthRoleName": "amplify-samscha-master-153015-unauthRole"
+        "authRoleName": "amplify-samscha-develop-102910-authRole",
+        "unAuthRoleName": "amplify-samscha-develop-102910-unauthRole"
     },
     "dependsOn": [
         {
             "category": "function",
-            "resourceName": "lambdaapi",
+            "resourceName": "api",
             "attributes": [
                 "Name",
                 "Arn"
             ]
         }
-    ],
-    "uuid": "cae29163"
+    ]
 }
