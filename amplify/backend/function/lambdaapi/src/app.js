@@ -29,17 +29,16 @@ app.use(function (req, res, next) {
  * Example get method *
  **********************/
 
-app.get('/api/user', function (req, res) {
+app.get('/images', function (req, res) {
     // Add your code here
-    res.json({ success: 'get call succeed for user!', url: req.url });
+    res.json({
+        success: 'get call succeed for images!',
+        url: req.url,
+        test: 'message',
+    });
 });
 
-app.get('/api/item', function (req, res) {
-    // Add your code here
-    res.json({ success: 'get call succeed!', url: req.url });
-});
-
-app.get('/api/item/*', function (req, res) {
+app.get('/images/*', function (req, res) {
     // Add your code here
     res.json({ success: 'get call succeed!', url: req.url });
 });
@@ -48,12 +47,12 @@ app.get('/api/item/*', function (req, res) {
  * Example post method *
  ****************************/
 
-app.post('/api/item', function (req, res) {
+app.post('/images', function (req, res) {
     // Add your code here
     res.json({ success: 'post call succeed!', url: req.url, body: req.body });
 });
 
-app.post('/api/item/*', function (req, res) {
+app.post('/images/*', function (req, res) {
     // Add your code here
     res.json({ success: 'post call succeed!', url: req.url, body: req.body });
 });
