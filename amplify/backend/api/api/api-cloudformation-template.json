@@ -90,7 +90,7 @@
             ],
             "paths": {
               
-              "/api": {
+              "/images": {
                 "options": {
                   "consumes": [
                     "application/json"
@@ -189,7 +189,7 @@
                   }
                 }
               },
-              "/api/{proxy+}": {
+              "/images/{proxy+}": {
                 "options": {
                   "consumes": [
                     "application/json"
@@ -367,7 +367,7 @@
         
         
         
-      "DeploymentAPIGWapi33f45e5e": {
+      "DeploymentAPIGWapicae29163": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",

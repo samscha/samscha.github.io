@@ -1,7 +1,7 @@
 {
     "paths": [
         {
-            "name": "/api",
+            "name": "/images",
             "lambdaFunction": "lambdaapi",
             "privacy": {
                 "open": true
@@ -31,5 +31,5 @@
             ]
         }
     ],
-    "uuid": "33f45e5e"
+    "uuid": "cae29163"
 }
