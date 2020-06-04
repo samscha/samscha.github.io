@@ -10,7 +10,7 @@
         "@fortawesome/free-brands-svg-icons": "^5.13.0",
         "@fortawesome/free-regular-svg-icons": "^5.13.0",
         "@fortawesome/free-solid-svg-icons": "^5.13.0",
-        "@fortawesome/react-fontawesome": "^0.1.9",
+        "@fortawesome/react-fontawesome": "^0.1.10",
         "node-sass": "^4.14.0",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
@@ -19,9 +19,9 @@
         "react-scripts": "^3.4.1"
     },
     "devDependencies": {
-        "@babel/core": "^7.10.1",
+        "@babel/core": "^7.10.2",
         "@babel/plugin-proposal-class-properties": "^7.10.1",
-        "@babel/preset-env": "^7.10.1",
+        "@babel/preset-env": "^7.10.2",
         "@babel/preset-react": "^7.10.1",
         "@types/jest": "^25.2.3",
         "enzyme": "^3.11.0",
