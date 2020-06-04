@@ -29,11 +29,6 @@ app.use(function (req, res, next) {
  * Example get method *
  **********************/
 
-app.get('/v1/test', function (req, res) {
-    // Add your code here
-    res.json({ success: 'get test call succeed!', url: req.url });
-});
-
 app.get('/v1/item', function (req, res) {
     // Add your code here
     res.json({ success: 'get call succeed!', url: req.url });
