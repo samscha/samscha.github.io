@@ -6,80 +6,13 @@ or in the "license" file accompanying this file. This file is distributed on an 
 See the License for the specific language governing permissions and limitations under the License.
 */
 
-var express = require('express');
-var bodyParser = require('body-parser');
-var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
+const awsServerlessExpressMiddleware = require('aws-serverless-express');
+const configs = [
+    // AWS configs
+    awsServerlessExpressMiddleware.eventContext(),
+].concat(require('./app/configs'));
 
-// declare a new express app
-var app = express();
-app.use(bodyParser.json());
-app.use(awsServerlessExpressMiddleware.eventContext());
-
-// Enable CORS for all methods
-app.use(function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header(
-        'Access-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept',
-    );
-    next();
-});
-
-/**********************
- * Example get method *
- **********************/
-
-app.get('/v1/item', function (req, res) {
-    // Add your code here
-    res.json({ success: 'get call succeed!', url: req.url });
-});
-
-app.get('/v1/item/*', function (req, res) {
-    // Add your code here
-    res.json({ success: 'get call succeed!', url: req.url });
-});
-
-/****************************
- * Example post method *
- ****************************/
-
-app.post('/v1/item', function (req, res) {
-    // Add your code here
-    res.json({ success: 'post call succeed!', url: req.url, body: req.body });
-});
-
-app.post('/v1/item/*', function (req, res) {
-    // Add your code here
-    res.json({ success: 'post call succeed!', url: req.url, body: req.body });
-});
-
-/****************************
- * Example put method *
- ****************************/
-
-app.put('/v1/item', function (req, res) {
-    // Add your code here
-    res.json({ success: 'put call succeed!', url: req.url, body: req.body });
-});
-
-app.put('/v1/item/*', function (req, res) {
-    // Add your code here
-    res.json({ success: 'put call succeed!', url: req.url, body: req.body });
-});
-
-/****************************
- * Example delete method *
- ****************************/
-
-app.delete('/v1/item', function (req, res) {
-    // Add your code here
-    res.json({ success: 'delete call succeed!', url: req.url });
-});
-
-app.delete('/v1/item/*', function (req, res) {
-    // Add your code here
-    res.json({ success: 'delete call succeed!', url: req.url });
-});
+const app = require('./app/app.js')(require('./router'), configs);
 
 app.listen(3000, function () {
     console.log('App started');
