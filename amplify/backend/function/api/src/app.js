@@ -6,7 +6,7 @@ or in the "license" file accompanying this file. This file is distributed on an 
 See the License for the specific language governing permissions and limitations under the License.
 */
 
-const awsServerlessExpressMiddleware = require('aws-serverless-express');
+const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
 const configs = [
     // AWS configs
     awsServerlessExpressMiddleware.eventContext(),
