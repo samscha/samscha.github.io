@@ -12,7 +12,7 @@ const configs = [
     awsServerlessExpressMiddleware.eventContext(),
 ].concat(require('./expressapp/configs'));
 
-const app = require('./expressapp')(require('./router'), configs);
+const app = require('./expressapp/app')(require('./router'), configs);
 
 app.listen(3000, function () {
     console.log('App started');
