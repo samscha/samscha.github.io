@@ -10,7 +10,7 @@ const awsServerlessExpressMiddleware = require('aws-serverless-express/middlewar
 const configs = [
     // AWS configs
     awsServerlessExpressMiddleware.eventContext(),
-].concat(require('./app/configs'));
+].concat(require('./expressapp/configs'));
 
 const app = require('./expressapp')(require('./router'), configs);
 
