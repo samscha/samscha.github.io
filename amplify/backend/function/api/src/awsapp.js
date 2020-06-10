@@ -10,9 +10,9 @@ const awsServerlessExpressMiddleware = require('aws-serverless-express/middlewar
 const configs = [
     // AWS configs
     awsServerlessExpressMiddleware.eventContext(),
-].concat(require('./expressapp/configs'));
+].concat(require('./app/configs'));
 
-const app = require('./expressapp/app')(require('./router'), configs);
+const app = require('./app/app')(require('./router'), configs);
 
 app.listen(3000, function () {
     console.log('App started');
