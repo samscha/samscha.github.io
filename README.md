@@ -12,7 +12,8 @@ https://samscha.com
 -   [ ] add e2e tests
 -   [ ] add resizing of images via cdn/lambda
 -   [ ] finish basic unit tests
--   [ ] reintegrate API
+-   [ ] move images to api
+-   [x] reintegrate API
 -   [x] add dark mode
 -   [x] add backend
 -   [x] add projects
