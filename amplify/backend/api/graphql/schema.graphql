@@ -5,4 +5,5 @@ type Skill @model {
     text: String!
     title: String!
     type: String!
+    metadata: [String]
 }
