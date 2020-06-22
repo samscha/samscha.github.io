@@ -1,9 +1,9 @@
 type Skill @model {
-    id: ID!
-    icon: [String]!
-    link: String!
-    text: String!
-    title: String!
-    type: String!
-    metadata: [String]
+  id: ID!
+  icon: [String]!
+  link: String!
+  text: String!
+  title: String!
+  type: String!
+  metadata: [String]
 }
