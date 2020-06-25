@@ -17,9 +17,14 @@ router
             type: `fa`,
         };
 
-        const newSkill = await API.graphql(
-            graphqlOperation(createSkill, { input: firstSkill }),
-        );
+        const newSkill = await API.graphql({
+            query: createSkill,
+            variables: { input: firstSkill },
+            authMode: 'API_KEY',
+        });
+        // const newSkill = await API.graphql(
+        //     graphqlOperation(createSkill, { input: firstSkill }),
+        // );
 
         res.json({ success: 'get content succeed', url: req.url, newSkill });
     })
