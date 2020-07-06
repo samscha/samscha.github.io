@@ -64,6 +64,14 @@ export default ({ IconText, Image, Link, useLocation }) => {
                     >
                         <IconText icon={['fab', 'github']} text="" />
                     </Link>
+                    <Link
+                        className="nav-bar-links__link nav-bar-link"
+                        href="mailto:contact@samscha.com"
+                        target=""
+                        title="Click to email Sam"
+                    >
+                        <IconText icon={['fas', 'envelope']} text="" />
+                    </Link>
                     {/* <Link
                         className="nav-bar-links__link nav-bar-link"
                         href="https://www.medium.com/@samscha"
