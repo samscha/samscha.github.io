@@ -50,6 +50,20 @@ export default ({ IconText, Image, Link, useLocation }) => {
                     >
                         about
                     </Link>
+                    <Link
+                        className="nav-bar-links__link nav-bar-link"
+                        href="https://linkedin.com/in/chasamuels"
+                        title="Click to go to Sam's LinkedIn"
+                    >
+                        <IconText icon={['fab', 'linkedin']} text="" />
+                    </Link>
+                    <Link
+                        className="nav-bar-links__link nav-bar-link"
+                        href="https://github.com/samscha"
+                        title="Click to go to Sam's GitHub"
+                    >
+                        <IconText icon={['fab', 'github']} text="" />
+                    </Link>
                     {/* <Link
                         className="nav-bar-links__link nav-bar-link"
                         href="https://www.medium.com/@samscha"
