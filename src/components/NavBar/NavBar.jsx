@@ -48,7 +48,7 @@ export default ({ IconText, Image, Link, useLocation }) => {
                         to="/about"
                         title="Go to the about page"
                     >
-                        about
+                        <IconText icon={['fas', 'info-circle']} text="" />
                     </Link>
                     <Link
                         className="nav-bar-links__link nav-bar-link"
