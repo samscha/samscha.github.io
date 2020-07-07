@@ -52,18 +52,47 @@ export default ({ IconText, Image, Link, useLocation }) => {
                     </Link>
                     <Link
                         className="nav-bar-links__link nav-bar-link"
+                        href="https://linkedin.com/in/chasamuels"
+                        title="Click to go to Sam's LinkedIn"
+                    >
+                        <IconText icon={['fab', 'linkedin']} text="" />
+                    </Link>
+                    <Link
+                        className="nav-bar-links__link nav-bar-link"
+                        href="https://github.com/samscha"
+                        title="Click to go to Sam's GitHub"
+                    >
+                        <IconText icon={['fab', 'github']} text="" />
+                    </Link>
+                    <Link
+                        className="nav-bar-links__link nav-bar-link"
+                        href="https://t.me/chasamuels"
+                        title="Click to Telegram Sam"
+                    >
+                        <IconText icon={['fab', 'telegram-plane']} text="" />
+                    </Link>
+                    <Link
+                        className="nav-bar-links__link nav-bar-link"
+                        href="mailto:contact@samscha.com"
+                        target=""
+                        title="Click to email Sam"
+                    >
+                        <IconText icon={['fas', 'envelope']} text="" />
+                    </Link>
+                    {/* <Link
+                        className="nav-bar-links__link nav-bar-link"
                         href="https://www.medium.com/@samscha"
                         title="Click to go to Sam's blog on Medium"
                     >
                         <IconText icon={['fab', 'medium']} text="blog" />
-                    </Link>
-                    <Link
+                    </Link> */}
+                    {/* <Link
                         className="nav-bar-links__link nav-bar-link"
                         to="/contact"
                         title="Go to the contact page"
                     >
                         contact
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         );
