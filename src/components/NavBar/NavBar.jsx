@@ -66,6 +66,13 @@ export default ({ IconText, Image, Link, useLocation }) => {
                     </Link>
                     <Link
                         className="nav-bar-links__link nav-bar-link"
+                        href="https://t.me/chasamuels"
+                        title="Click to Telegram Sam"
+                    >
+                        <IconText icon={['fab', 'telegram-plane']} text="" />
+                    </Link>
+                    <Link
+                        className="nav-bar-links__link nav-bar-link"
                         href="mailto:contact@samscha.com"
                         target=""
                         title="Click to email Sam"
@@ -79,13 +86,13 @@ export default ({ IconText, Image, Link, useLocation }) => {
                     >
                         <IconText icon={['fab', 'medium']} text="blog" />
                     </Link> */}
-                    <Link
+                    {/* <Link
                         className="nav-bar-links__link nav-bar-link"
                         to="/contact"
                         title="Go to the contact page"
                     >
                         contact
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         );
