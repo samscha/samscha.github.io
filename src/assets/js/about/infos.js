@@ -39,12 +39,12 @@ export default [
         icon: ['fab', 'linkedin'],
         type: 'social',
     },
-    {
-        text: 'chasamuels',
-        href: 'https://twitter.com/chasamuels',
-        title: `Click to go to Sam's Twitter`,
-        external: true,
-        icon: ['fab', 'twitter'],
-        type: 'social',
-    },
+    // {
+    //     text: 'chasamuels',
+    //     href: 'https://twitter.com/chasamuels',
+    //     title: `Click to go to Sam's Twitter`,
+    //     external: true,
+    //     icon: ['fab', 'twitter'],
+    //     type: 'social',
+    // },
 ];

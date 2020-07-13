@@ -19,11 +19,11 @@
         "react-scripts": "^3.4.1"
     },
     "devDependencies": {
-        "@babel/core": "^7.10.3",
-        "@babel/plugin-proposal-class-properties": "^7.10.1",
-        "@babel/preset-env": "^7.10.3",
-        "@babel/preset-react": "^7.10.1",
-        "@types/jest": "^26.0.0",
+        "@babel/core": "^7.10.4",
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "@babel/preset-react": "^7.10.4",
+        "@types/jest": "^26.0.3",
         "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "^1.15.2",
         "react-test-renderer": "^16.13.1"
