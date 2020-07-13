@@ -1,12 +1,13 @@
 const router = require('express').Router();
 
 //TESTING ONLY
-const Amplify, { API, graphqlOperation } = require('aws-amplify');
-const awsconfig = require('./aws-exports')
+const { API, graphqlOperation } = require('aws-amplify');
+const Amplify = require('aws-amplify');
+const awsconfig = require('./aws-exports');
 const { createSkill } = require('../../graphql/mutations');
 let id = 0;
 
-Amplify.configure(awsconfig)
+Amplify.configure(awsconfig);
 
 router
     .route('/content')
