@@ -30,12 +30,13 @@
 					"defaultAuthentication": {
 						"authenticationType": "API_KEY",
 						"apiKeyConfig": {
-							"description": "",
+							"description": "samscha-graphql",
 							"apiKeyExpirationDays": 7
 						}
 					}
 				}
 			}
 		}
-	}
+	},
+	"auth": {}
 }
