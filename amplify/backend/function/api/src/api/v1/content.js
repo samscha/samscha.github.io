@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 router
     .route('/content')
-    .get(async (req, res) => {
+    .get((req, res) => {
         res.json({ success: 'get content succeed', url: req.url });
     })
     .all((req, res) => res.sendStatus(405));
