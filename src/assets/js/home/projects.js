@@ -25,7 +25,7 @@ Notable components include an image carousel with lightbox feature, a form drive
             src: `${process.env.REACT_APP_IMAGES_BASE_URL}/cash-envelope-showcase.png`,
             title: 'Cash Envelope app showcase',
         },
-        info: `Built a React Native app with Java-Spring backend connected to PostgresQL.
+        info: `Built a React Native app with Java-Spring backend connected to PostgreSQL.
 
 Features included creating a new user, creating multiple virtual envelopes that hold currency values and notes, as well as session authentication via JWT.`,
         externalLink: {
