@@ -68,7 +68,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-samscha-develop-102910-deployment",
-					"S3Key": "amplify-builds/api-656b4c48415231394144-build.zip"
+					"S3Key": "amplify-builds/api-70456d6f6f763364354a-build.zip"
 				}
 			}
 		},
