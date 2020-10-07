@@ -13,7 +13,7 @@ export default ({ FontAwesomeIcon, Link }) => {
                         <FontAwesomeIcon icon={['fas', 'question-circle']} />
                     )}
                 </div>
-                <p className="text">{text}</p>
+                {text && <p className="text">{text}</p>}
             </Link>
         );
     };

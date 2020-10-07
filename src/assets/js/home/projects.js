@@ -16,6 +16,7 @@ Notable components include an image carousel with lightbox feature, a form drive
             title:
                 'Click to go an example page showcasing React Component Library components',
         },
+        enabled: false,
     },
     {
         name: 'Cash Envelope',
@@ -32,6 +33,7 @@ Features included creating a new user, creating multiple virtual envelopes that 
             href: 'https://github.com/samscha/cash-envelope-native',
             title: 'Click to go to GitHub repo for Cash Envelope',
         },
+        enabled: false,
     },
     {
         name: 'PicMe',
@@ -48,5 +50,6 @@ Implemented all aspects of the backend using Express and including authenticatio
             href: 'https://github.com/Lambda-School-Labs/pic_me',
             title: 'Click to go to GitHub repo for PicMe',
         },
+        enabled: false,
     },
 ];
