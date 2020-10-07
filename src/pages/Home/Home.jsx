@@ -72,7 +72,6 @@ export default ({
 
                 <div className="projects">
                     <div className="title">Projects</div>
-
                     {filteredProjects.length > 0 ? (
                         filteredProjects.map((project) => (
                             <div
