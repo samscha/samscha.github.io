@@ -12,6 +12,23 @@
             display: flex;
             justify-content: center;
             flex-flow: row wrap;
+            &.secondary {
+                .technology-bar__icon {
+                    margin: 5px;
+                    .tech-icon {
+                        $secondary-icon-size: 40px;
+                        align-items: center;
+                        display: flex;
+                        height: $secondary-icon-size;
+                        justify-content: center;
+                        padding: 2px;
+                        width: $secondary-icon-size;
+                        .icon {
+                            font-size: $font-1x;
+                        }
+                    }
+                }
+            }
             .technology-bar__icon {
                 margin: 15px 7px;
             }
@@ -27,6 +44,9 @@
         .project-container {
             margin: 10px 0;
             padding: 10px 0;
+        }
+        .no-projects-title {
+            margin: 35px 0;
         }
     }
 }

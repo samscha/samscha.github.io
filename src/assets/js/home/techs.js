@@ -5,6 +5,8 @@ export default [
         link: `https://aws.amazon.com/`,
         icon: [`fab`, `aws`],
         type: 'fa',
+        set: `primary`,
+        enabled: true,
     },
     {
         text: `CSS3`,
@@ -12,6 +14,8 @@ export default [
         link: `https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3`,
         icon: [`fab`, `css3-alt`],
         type: `fa`,
+        set: `primary`,
+        enabled: false,
     },
     {
         text: `cli`,
@@ -19,6 +23,8 @@ export default [
         link: `https://support.apple.com/guide/terminal/welcome/mac`,
         icon: `icon-shell`,
         type: `fz`,
+        set: `primary`,
+        enabled: true,
     },
     {
         text: `Express`,
@@ -26,6 +32,8 @@ export default [
         link: `https://expressjs.com/`,
         icon: [`fas`, `server`],
         type: `fa`,
+        set: `primary`,
+        enabled: true,
     },
     {
         text: `Git`,
@@ -33,6 +41,8 @@ export default [
         link: `https://github.com/samscha`,
         icon: `icon-git`,
         type: `fz`,
+        set: `primary`,
+        enabled: true,
     },
     {
         text: `HTML5`,
@@ -40,6 +50,8 @@ export default [
         link: `https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5`,
         icon: [`fab`, `html5`],
         type: `fa`,
+        set: `primary`,
+        enabled: false,
     },
     {
         text: `JavaScript`,
@@ -47,6 +59,8 @@ export default [
         link: `https://developer.mozilla.org/en-US/docs/Web/JavaScript`,
         icon: [`fab`, `js-square`],
         type: `fa`,
+        set: `primary`,
+        enabled: true,
     },
     {
         text: `Sass`,
@@ -54,6 +68,8 @@ export default [
         link: `https://sass-lang.com/`,
         icon: [`fab`, `sass`],
         type: `fa`,
+        set: `primary`,
+        enabled: true,
     },
     {
         text: `macOS`,
@@ -61,6 +77,17 @@ export default [
         link: `https://en.wikipedia.org/wiki/MacOS`,
         icon: [`fab`, `apple`],
         type: `fa`,
+        set: `primary`,
+        enabled: true,
+    },
+    {
+        text: `PHP`,
+        title: `Click to learn more about PHP`,
+        link: `https://www.php.net/`,
+        icon: ['fab', 'php'],
+        type: `fa`,
+        set: `secondary`,
+        enabled: true,
     },
     {
         text: `MySQL`,
@@ -68,6 +95,8 @@ export default [
         link: `https://www.mysql.com`,
         icon: `icon-mysql-alt`,
         type: `fz`,
+        set: `secondary`,
+        enabled: true,
     },
     {
         text: `Node.js`,
@@ -75,6 +104,8 @@ export default [
         link: `https://nodejs.org/en/`,
         icon: [`fab`, `node-js`],
         type: `fa`,
+        set: `primary`,
+        enabled: true,
     },
     {
         text: `npm`,
@@ -82,6 +113,8 @@ export default [
         link: `https://www.npmjs.com`,
         icon: [`fab`, `npm`],
         type: `fa`,
+        set: `primary`,
+        enabled: true,
     },
     {
         text: `React`,
@@ -89,6 +122,8 @@ export default [
         link: `https://reactjs.org`,
         icon: [`fab`, `react`],
         type: `fa`,
+        set: `primary`,
+        enabled: true,
     },
     {
         text: `Gitflow`,
@@ -96,6 +131,8 @@ export default [
         link: `https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow`,
         icon: [`fas`, `code-branch`],
         type: `fa`,
+        set: `primary`,
+        enabled: true,
     },
     {
         text: 'Agile',
@@ -103,5 +140,16 @@ export default [
         link: 'https://www.atlassian.com/agile/project-management/workflow',
         icon: ['fab', 'jira'],
         type: 'fa',
+        set: `primary`,
+        enabled: true,
+    },
+    {
+        text: 'PostgreSQL',
+        title: 'Click to learn more about PostgreSQL',
+        link: 'https://www.postgresql.org/',
+        icon: `icon-postgres`,
+        type: `fz`,
+        set: `primary`,
+        enabled: true,
     },
 ];
