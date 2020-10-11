@@ -1,10 +1,11 @@
 import React from 'react';
 import './NavBar.scss';
 
-export default ({ IconText, Image, Link, useLocation }) => {
+export default ({ IconText, Image, Link, navBarLinks, useLocation }) => {
     const NavBar = () => {
         const location = useLocation();
         const isAtHome = location.pathname === '/';
+        const filteredNavBarLinks = navBarLinks.filter((l) => l.enabled);
 
         const profileImg = () => {
             const imageClassName = ['header-logo'];
@@ -43,60 +44,27 @@ export default ({ IconText, Image, Link, useLocation }) => {
             <div className="nav-bar">
                 <div className="nav-bar-links">
                     {profileImg()}
-                    <Link
-                        className="nav-bar-links__link nav-bar-link"
-                        to="/about"
-                        title="Go to the about page"
-                    >
-                        <IconText icon={['fas', 'info-circle']} text="" />
-                    </Link>
-                    <Link
-                        className="nav-bar-links__link nav-bar-link"
-                        href="https://linkedin.com/in/chasamuels"
-                        title="Click to go to Sam's LinkedIn"
-                    >
-                        <IconText icon={['fab', 'linkedin']} text="" />
-                    </Link>
-                    <Link
-                        className="nav-bar-links__link nav-bar-link"
-                        href="https://github.com/samscha"
-                        title="Click to go to Sam's GitHub"
-                    >
-                        <IconText icon={['fab', 'github']} text="" />
-                    </Link>
-                    <Link
-                        className="nav-bar-links__link nav-bar-link"
-                        href="https://t.me/chasamuels"
-                        title="Click to Telegram Sam"
-                    >
-                        <IconText icon={['fab', 'telegram-plane']} text="" />
-                    </Link>
-                    <Link
-                        className="nav-bar-links__link nav-bar-link"
-                        href="mailto:contact@samscha.com"
-                        target=""
-                        title="Click to email Sam"
-                    >
-                        <IconText icon={['fas', 'envelope']} text="" />
-                    </Link>
-                    {/* <Link
-                        className="nav-bar-links__link nav-bar-link"
-                        href="https://www.medium.com/@samscha"
-                        title="Click to go to Sam's blog on Medium"
-                    >
-                        <IconText icon={['fab', 'medium']} text="blog" />
-                    </Link> */}
-                    {/* <Link
-                        className="nav-bar-links__link nav-bar-link"
-                        to="/contact"
-                        title="Go to the contact page"
-                    >
-                        contact
-                    </Link> */}
+                    {filteredNavBarLinks.map((link) => (
+                        <Link
+                            className="nav-bar-links__link nav-bar-link"
+                            to={link.to}
+                            href={link.href}
+                            title={link.title}
+                        >
+                            <>
+                                {link.icon && (
+                                    <IconText icon={link.icon} text="" />
+                                )}
+                                {link.text && link.text}
+                            </>
+                        </Link>
+                    ))}
                 </div>
             </div>
         );
     };
+
+    // TODO navBarLinks should be a prop of <NavBar />
 
     return NavBar;
 };
