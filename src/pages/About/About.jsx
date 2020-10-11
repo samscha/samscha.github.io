@@ -9,11 +9,13 @@ export default ({
     infos,
     infoText,
 }) => {
+    const filteredInfos = infos.filter((i) => i.enabled);
     const getInfo = (types = []) => {
+        console.log('filteredInfos', filteredInfos);
         return (
-            infos.length > 0 && (
+            filteredInfos.length > 0 && (
                 <div className="infos-section">
-                    {infos
+                    {filteredInfos
                         .filter((info) => types.includes(info.type))
                         .map((info) => {
                             const { href, icon, target, text, title } = info;
@@ -52,8 +54,6 @@ export default ({
                 {getInfo(['work', 'education'])}
 
                 {infoText && <p className="info-text">{infoText}</p>}
-
-                {getInfo(['social'])}
 
                 <IconsBy fa />
             </div>

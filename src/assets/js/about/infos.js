@@ -1,11 +1,21 @@
 export default [
     {
+        text: 'Volusion',
+        title: `Click to go to Volusion's website`,
+        href: 'http://volusion.com',
+        external: true,
+        icon: ['fas', 'briefcase'],
+        type: 'work',
+        enabled: true,
+    },
+    {
         text: 'NewPoint Media',
         title: `Click to go to NewPoint Media's website`,
         href: 'http://newpointmediagroup.com/',
         external: true,
         icon: ['fas', 'briefcase'],
         type: 'work',
+        enabled: true,
     },
     {
         text: 'Lambda School',
@@ -14,6 +24,7 @@ export default [
         external: true,
         icon: ['fas', 'graduation-cap'],
         type: 'education',
+        enabled: true,
     },
     {
         text: 'University of Washington',
@@ -22,6 +33,7 @@ export default [
         external: true,
         icon: ['fas', 'graduation-cap'],
         type: 'education',
+        enabled: true,
     },
     {
         text: 'samscha',
@@ -30,6 +42,7 @@ export default [
         external: true,
         icon: ['fab', 'github'],
         type: 'social',
+        enabled: true,
     },
     {
         text: 'chasamuels',
@@ -38,13 +51,15 @@ export default [
         external: true,
         icon: ['fab', 'linkedin'],
         type: 'social',
+        enabled: false,
     },
-    // {
-    //     text: 'chasamuels',
-    //     href: 'https://twitter.com/chasamuels',
-    //     title: `Click to go to Sam's Twitter`,
-    //     external: true,
-    //     icon: ['fab', 'twitter'],
-    //     type: 'social',
-    // },
+    {
+        text: 'chasamuels',
+        href: 'https://twitter.com/chasamuels',
+        title: `Click to go to Sam's Twitter`,
+        external: true,
+        icon: ['fab', 'twitter'],
+        type: 'social',
+        enabled: false,
+    },
 ];

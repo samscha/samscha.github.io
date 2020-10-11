@@ -46,6 +46,7 @@ export default ({ IconText, Image, Link, navBarLinks, useLocation }) => {
                     {profileImg()}
                     {filteredNavBarLinks.map((link) => (
                         <Link
+                            key={JSON.stringify(link)}
                             className="nav-bar-links__link nav-bar-link"
                             to={link.to}
                             href={link.href}
