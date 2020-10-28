@@ -11,7 +11,6 @@ export default ({
 }) => {
     const filteredInfos = infos.filter((i) => i.enabled);
     const getInfo = (types = []) => {
-        console.log('filteredInfos', filteredInfos);
         return (
             filteredInfos.length > 0 && (
                 <div className="infos-section">
