@@ -17,6 +17,9 @@ export default ({
             (t) => t.set === 'secondary' && t.enabled,
         );
         const filteredProjects = projects.filter((p) => p.enabled);
+        const showProjects = JSON.parse(
+            process.env.REACT_APP_SHOW_PROJECTS || 'false',
+        );
 
         return (
             <div className="homepage">
@@ -70,23 +73,25 @@ export default ({
                     </div>
                 )}
 
-                <div className="projects">
-                    <div className="title">Projects</div>
-                    {filteredProjects.length > 0 ? (
-                        filteredProjects.map((project) => (
-                            <div
-                                key={project.name}
-                                className="project-container"
-                            >
-                                <Project {...project} />
+                {showProjects ? (
+                    <div className="projects">
+                        <div className="title">Projects</div>
+                        {filteredProjects.length > 0 ? (
+                            filteredProjects.map((project) => (
+                                <div
+                                    key={project.name}
+                                    className="project-container"
+                                >
+                                    <Project {...project} />
+                                </div>
+                            ))
+                        ) : (
+                            <div className="no-projects-title">
+                                No Projects To Show
                             </div>
-                        ))
-                    ) : (
-                        <div className="no-projects-title">
-                            No Projects To Show
-                        </div>
-                    )}
-                </div>
+                        )}
+                    </div>
+                ) : null}
 
                 <IconsBy fa fz />
             </div>
