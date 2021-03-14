@@ -87,7 +87,7 @@ export default [
         icon: [`fab`, `sass`],
         type: `fa`,
         set: `secondary`,
-        enabled: true,
+        enabled: false,
     },
     {
         text: `macOS`,
@@ -105,7 +105,7 @@ export default [
         icon: ['fab', 'php'],
         type: `fa`,
         set: `secondary`,
-        enabled: true,
+        enabled: false,
     },
     {
         text: `MySQL`,
@@ -114,7 +114,7 @@ export default [
         icon: `icon-mysql-alt`,
         type: `fz`,
         set: `secondary`,
-        enabled: true,
+        enabled: false,
     },
     {
         text: `Node.js`,
@@ -150,7 +150,7 @@ export default [
         icon: [`fas`, `code-branch`],
         type: `fa`,
         set: `primary`,
-        enabled: true,
+        enabled: false,
     },
     {
         text: 'Agile',
