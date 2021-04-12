@@ -5,7 +5,7 @@ export default [
         link: `https://aws.amazon.com/`,
         icon: [`fab`, `aws`],
         type: 'fa',
-        set: `secondary`,
+        set: `primary`,
         enabled: true,
     },
     {
