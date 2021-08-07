@@ -33,7 +33,7 @@ export default [
         icon: [`fas`, `server`],
         type: `fa`,
         set: `primary`,
-        enabled: true,
+        enabled: false,
     },
     {
         text: `Docker`,
@@ -140,7 +140,7 @@ export default [
         link: `https://reactjs.org`,
         icon: [`fab`, `react`],
         type: `fa`,
-        set: `primary`,
+        set: `secondary`,
         enabled: true,
     },
     {
