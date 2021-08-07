@@ -3,7 +3,7 @@ export default [
         to: '/about',
         title: 'Go to the about page',
         icon: ['fas', 'info-circle'],
-        enabled: true,
+        enabled: false,
     },
     {
         href: 'https://github.com/samscha',
