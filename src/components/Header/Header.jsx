@@ -7,7 +7,7 @@ export default () => {
             <div className="header">
                 <div className="header-container">
                     <div className="header__item">
-                        <div className="title">Samuel Cha</div>
+                        <div className="title">iLucke & Pastor Blunt</div>
                     </div>
                     <div className="header__item">
                         <div className="subtitle">Software Engineer</div>
