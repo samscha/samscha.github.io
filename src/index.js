@@ -5,13 +5,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './components/App';
 import './index.scss';
 
-import ScrollToTop from './components/ScrollToTop';
+//import ScrollToTop from './components/ScrollToTop';
+
+//const WrappedApp = ScrollToTop(App);
 
 ReactDOM.render(
     <Router>
-        <ScrollToTop>
-            <App />
-        </ScrollToTop>
+        <App />
     </Router>,
     document.getElementById('root'),
 );

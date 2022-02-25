@@ -1,16 +1,18 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
-export default withRouter(
-    class extends React.Component {
-        componentDidUpdate(prevProps) {
-            if (this.props.location.pathname !== prevProps.location.pathname) {
-                window.scrollTo(0, 0);
-            }
-        }
+export default function withRouterHOC(WrappedComponent) {
+    const location = useLocation();
 
-        render() {
-            return this.props.children;
-        }
-    },
-);
+    const prevLocationPathnameRef = useRef();
+    useEffect(() => {
+        prevLocationPathnameRef.current = location.pathname;
+    }, [location]);
+
+    if (location.pathname !== prevLocationRef.current) {
+        window.scrollTo(0, 0);
+    }
+
+    return <WrappedComponent />;
+}
+
