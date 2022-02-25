@@ -1,10 +1,10 @@
 import React from 'react';
 import './Four04.scss';
 
-export default ({ FontAwesomeIcon, NavLink, useHistory }) => {
+export default ({ FontAwesomeIcon, NavLink, useNavigate }) => {
     const Four04 = () => {
         const iconSize = '2x';
-        const history = useHistory();
+        const navigate = useNavigate();
 
         return (
             <div className="four04">
@@ -14,7 +14,7 @@ export default ({ FontAwesomeIcon, NavLink, useHistory }) => {
                 <div
                     className="link"
                     title="Go back to the previous page"
-                    onClick={() => history.goBack()}
+                    onClick={() => navigate(-1)}
                 >
                     <FontAwesomeIcon
                         icon={['fas', 'arrow-left']}
