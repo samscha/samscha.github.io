@@ -25,7 +25,7 @@ export default ({ FontAwesomeIcon, NavLink, useNavigate }) => {
 
                 <NavLink className="link" title="Go home" to="/">
                     <FontAwesomeIcon
-                        icon={['fas', 'home']}
+                        icon={['fas', 'house']}
                         size={iconSize}
                         fixedWidth
                     />
