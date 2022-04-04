@@ -49,7 +49,7 @@ export default ({ NavLink }) => {
     };
 
     Link.defaultProps = {
-        target: '_null',
+        target: '_self',
     };
 
     return Link;
