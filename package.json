@@ -31,7 +31,8 @@
         "build": "react-scripts build",
         "eject": "react-scripts eject",
         "test:watch": "jest --watch",
-        "test": "jest --no-cache"
+        "test": "jest --no-cache",
+        "sync-public-repo": "git checkout develop && git fetch upstream && git merge upstream/develop && git push && git checkout main && git fetch upstream && git merge upstream/main && git push"
     },
     "browserslist": [
         ">0.2%",
