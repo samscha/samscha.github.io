@@ -1,4 +1,7 @@
-const awsServerlessExpress = require('aws-serverless-express');
+/* Amplify Params - DO NOT EDIT
+	ENV
+	REGION
+Amplify Params - DO NOT EDIT */const awsServerlessExpress = require('aws-serverless-express');
 const app = require('./awsapp');
 
 const server = awsServerlessExpress.createServer(app);
