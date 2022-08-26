@@ -10,13 +10,14 @@ frontend:
     preBuild:
       commands:
         - echo $(cat .nvmrc)
-        - nvm install 18.7.0
-        - nvm use 18.7.0
+        - echo $(node -v)
+        #- nvm install 18.7.0
+        #- nvm use 18.7.0
         - npm ci
     build:
       commands:
-        - nvm install 18.7.0
-        - nvm use 18.7.0
+        #- nvm install 18.7.0
+        #- nvm use 18.7.0
         - npm run build
   artifacts:
     baseDirectory: build
