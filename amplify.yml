@@ -9,9 +9,12 @@ frontend:
   phases:
     preBuild:
       commands:
+        - nvm use 18.7.0
         - npm ci
     build:
       commands:
+        - nvm use 18.7.0
+        - echo $(cat .nvmrc)
         - npm run build
   artifacts:
     baseDirectory: build
