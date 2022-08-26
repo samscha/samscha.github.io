@@ -69,8 +69,7 @@
         "Code": {
           "S3Bucket": "amplify-samscha-develop-102910-deployment",
           "S3Key": "amplify-builds/api-79495346474539592f50-build.zip"
-        },
-        "Layers": []
+        }
       }
     },
     "LambdaExecutionRole": {
