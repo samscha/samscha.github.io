@@ -9,9 +9,11 @@ frontend:
   phases:
     preBuild:
       commands:
+        - nvm install $(cat .nvmrc)
         - npm ci
     build:
       commands:
+        - nvm install $(cat .nvmrc)
         - npm run build
   artifacts:
     baseDirectory: build
