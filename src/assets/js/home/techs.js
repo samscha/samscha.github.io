@@ -5,7 +5,7 @@ export default [
         link: `https://aws.amazon.com/`,
         icon: [`fab`, `aws`],
         type: 'fa',
-        set: `primary`,
+        set: `secondary`,
         enabled: true,
     },
     {
@@ -50,7 +50,7 @@ export default [
         link: `https://expressjs.com/`,
         icon: [`fas`, `server`],
         type: `fa`,
-        set: `secondary`,
+        set: `primary`,
         enabled: true,
     },
     {
@@ -140,7 +140,7 @@ export default [
         link: `https://reactjs.org`,
         icon: [`fab`, `react`],
         type: `fa`,
-        set: `secondary`,
+        set: `primary`,
         enabled: true,
     },
     {
