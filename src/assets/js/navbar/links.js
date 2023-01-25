@@ -6,6 +6,12 @@ export default [
         enabled: false,
     },
     {
+        href: 'https://linkedin.com/in/chasamuels',
+        title: "Click to go to Sam's LinkedIn",
+        icon: ['fab', 'linkedin'],
+        enabled: true,
+    },
+    {
         href: 'https://github.com/samscha',
         title: `Click to go to Sam's GitHub`,
         icon: ['fab', 'github'],
@@ -17,12 +23,6 @@ export default [
         title: 'Click to email Sam',
         icon: ['fas', 'envelope'],
         enabled: true,
-    },
-    {
-        href: 'https://linkedin.com/in/chasamuels',
-        title: "Click to go to Sam's LinkedIn",
-        icon: ['fab', 'linkedin'],
-        enabled: false,
     },
     {
         href: 'https://t.me/chasamuels',
