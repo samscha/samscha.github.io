@@ -1,9 +1,9 @@
 module.exports = () => {
-    const port = parseInt(process.env.PORT || 7777, 10);
+  const port = parseInt(process.env.PORT || 7777, 10);
 
-    if (isNaN(port)) return val;
+  if (isNaN(port)) return val;
 
-    if (port >= 0) return port;
+  if (port >= 0) return port;
 
-    return false;
+  return false;
 };
