@@ -10,8 +10,8 @@ import './index.scss';
 //const WrappedApp = ScrollToTop(App);
 
 ReactDOM.render(
-    <Router>
-        <App />
-    </Router>,
-    document.getElementById('root'),
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('root')
 );
