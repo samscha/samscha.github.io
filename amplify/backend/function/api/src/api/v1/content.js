@@ -2,14 +2,13 @@ const router = require('express').Router();
 
 // TODO: move into an auth middleware
 const tempAuth = (req, res, next) => {
-  if (req.headers.auth1 === 'acbd') {
-    next();
-  }
+    if (req.headers.auth1 === 'acbd') {
+        next();
+    }
 
-  res.sendStatus(403);
-  return;
-}
-
+    res.sendStatus(403);
+    return;
+};
 
 router
     .route('/content')
