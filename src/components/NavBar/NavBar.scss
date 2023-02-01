@@ -2,52 +2,52 @@
 @import '../../scss/variables.scss';
 
 .nav-bar {
-    @include baseGradient();
-    @include darkMode {
-        @include baseGradient(darken($color-primary, $dark-scheme-darken));
+  @include baseGradient();
+  @include darkMode {
+    @include baseGradient(darken($color-primary, $dark-scheme-darken));
+  }
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  .nav-bar-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    .nav-bar-link {
+      margin: 0 10px;
     }
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    .nav-bar-links {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 800px;
-        .nav-bar-link {
-            margin: 0 10px;
-        }
-        padding: 15px 0;
-        .header-logo {
-            height: 35px;
-            width: 35px;
-        }
-        .link.profile-img {
-            color: unset;
-            padding: unset;
-            height: 35px;
-            width: 35px;
-            border-radius: 50%;
-            &:hover {
-                background-color: unset;
-                color: unset;
-            }
-        }
-        .nav-bar-links__link {
-            @include linkInv;
-            @include darkMode {
-                @include linkInv(
-                    $dark-scheme-color,
-                    darken($color-primary, $dark-scheme-darken)
-                );
-            }
-            align-items: center;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            min-width: 27px;
-        }
+    padding: 15px 0;
+    .header-logo {
+      height: 35px;
+      width: 35px;
     }
+    .link.profile-img {
+      color: unset;
+      padding: unset;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      &:hover {
+        background-color: unset;
+        color: unset;
+      }
+    }
+    .nav-bar-links__link {
+      @include linkInv;
+      @include darkMode {
+        @include linkInv(
+          $dark-scheme-color,
+          darken($color-primary, $dark-scheme-darken)
+        );
+      }
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      min-width: 27px;
+    }
+  }
 }

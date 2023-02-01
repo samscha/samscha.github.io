@@ -2,51 +2,51 @@
 @import '../../scss/variables.scss';
 
 .homepage {
-    $section-margin-bottom: 25px;
-    display: grid;
-    grid-row-gap: 15px;
-    justify-items: center;
-    .technology-container {
-        margin: 0 0 $section-margin-bottom 0;
-        .technology-bar {
+  $section-margin-bottom: 25px;
+  display: grid;
+  grid-row-gap: 15px;
+  justify-items: center;
+  .technology-container {
+    margin: 0 0 $section-margin-bottom 0;
+    .technology-bar {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      &.secondary {
+        .technology-bar__icon {
+          margin: 5px;
+          .tech-icon {
+            $secondary-icon-size: 40px;
+            align-items: center;
             display: flex;
+            height: $secondary-icon-size;
             justify-content: center;
-            flex-flow: row wrap;
-            &.secondary {
-                .technology-bar__icon {
-                    margin: 5px;
-                    .tech-icon {
-                        $secondary-icon-size: 40px;
-                        align-items: center;
-                        display: flex;
-                        height: $secondary-icon-size;
-                        justify-content: center;
-                        padding: 2px;
-                        width: $secondary-icon-size;
-                        .icon {
-                            font-size: $font-1x;
-                        }
-                    }
-                }
+            padding: 2px;
+            width: $secondary-icon-size;
+            .icon {
+              font-size: $font-1x;
             }
-            .technology-bar__icon {
-                margin: 15px 7px;
-            }
+          }
         }
+      }
+      .technology-bar__icon {
+        margin: 15px 7px;
+      }
     }
-    .projects {
-        margin: 0 0 $section-margin-bottom 0;
-        padding: 0 15px;
-        .title {
-            font-size: $font-3x;
-            text-align: center;
-        }
-        .project-container {
-            margin: 10px 0;
-            padding: 10px 0;
-        }
-        .no-projects-title {
-            margin: 35px 0;
-        }
+  }
+  .projects {
+    margin: 0 0 $section-margin-bottom 0;
+    padding: 0 15px;
+    .title {
+      font-size: $font-3x;
+      text-align: center;
     }
+    .project-container {
+      margin: 10px 0;
+      padding: 10px 0;
+    }
+    .no-projects-title {
+      margin: 35px 0;
+    }
+  }
 }
