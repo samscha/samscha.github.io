@@ -8,5 +8,5 @@ import { withLayout } from '../../layouts';
 import HomePage from './Home';
 
 export default withLayout(
-    HomePage({ IconsBy, LocationMarker, Project, TechIcon, projects, techs }),
+  HomePage({ IconsBy, LocationMarker, Project, TechIcon, projects, techs })
 );

@@ -10,26 +10,24 @@ import * as c from '../';
 import projects from './projects.tmp';
 
 export default connect(
-    // state => ({ projects: state.projects }),
-    (_) => ({}),
-    {},
+  // state => ({ projects: state.projects }),
+  (_) => ({}),
+  {}
 )(
-    // { fetchProjects },
-    class extends Component {
-        componentWillMount() {
-            // this.props.fetchProjects('recent');
-        }
+  // { fetchProjects },
+  class extends Component {
+    componentWillMount() {
+      // this.props.fetchProjects('recent');
+    }
 
-        render() {
-            return (
-                <div className="Projects">
-                    {projects.map((project) => {
-                        return (
-                            <c.Project key={project.title} project={project} />
-                        );
-                    })}
-                </div>
-            );
-        }
-    },
+    render() {
+      return (
+        <div className="Projects">
+          {projects.map((project) => {
+            return <c.Project key={project.title} project={project} />;
+          })}
+        </div>
+      );
+    }
+  }
 );
