@@ -2,19 +2,19 @@
 @import '../../scss/variables.scss';
 
 .contact-page {
+  display: grid;
+  grid-row-gap: 25px;
+  justify-items: center;
+
+  .links-section {
     display: grid;
-    grid-row-gap: 25px;
-    justify-items: center;
+    grid-row-gap: $link-padding + 5px;
 
-    .links-section {
-        display: grid;
-        grid-row-gap: $link-padding + 5px;
+    margin: -$link-padding 0;
 
-        margin: -$link-padding 0;
-
-        .link-container {
-            display: grid;
-            grid-template-columns: auto 1fr;
-        }
+    .link-container {
+      display: grid;
+      grid-template-columns: auto 1fr;
     }
+  }
 }

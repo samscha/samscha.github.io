@@ -2,11 +2,11 @@
 @import '../../scss/variables.scss';
 
 .icons-by {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(4, auto);
-    grid-row-gap: 2px;
-    justify-content: center;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, auto);
+  grid-row-gap: 2px;
+  justify-content: center;
 
-    font-size: $font-0x;
+  font-size: $font-0x;
 }
