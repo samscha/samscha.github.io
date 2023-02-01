@@ -3,6 +3,7 @@ import './Home.scss';
 
 export default ({
   IconsBy,
+  Loading,
   LocationMarker,
   Project,
   TechIcon,
@@ -49,28 +50,53 @@ export default ({
       <div className="homepage">
         <LocationMarker location="Austin, TX" />
 
-        {skills?.primarySkills.length > 0 && (
-          <div className="technology-container">
-            <div className="technology-bar">
-              {skills.primarySkills.map((tech) => (
-                <div key={tech.link} className="technology-bar__icon">
-                  <TechIcon {...tech} size="xs" />
+        {skills ? (
+          <React.Fragment>
+            {skills.primarySkills.length === 0 &&
+              skills.secondarySkills.length === 0 && (
+                <div className="technology-container">
+                  <div className="technology-bar">
+                    <div key="no-skills-key" className="technology-bar__icon">
+                      <TechIcon
+                        {...{
+                          icon: [`far`, `file`],
+                          link: `#`,
+                          text: `No Skills`,
+                          title: 'No technical skills to show',
+                          type: 'fa',
+                        }}
+                      />
+                    </div>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
+              )}
 
-        {skills?.secondarySkills.length > 0 && (
-          <div className="technology-container">
-            <div className="technology-bar secondary">
-              {skills.secondarySkills.map((tech) => (
-                <div key={tech.link} className="technology-bar__icon">
-                  <TechIcon {...tech} text="" />
+            {skills.primarySkills.length > 0 && (
+              <div className="technology-container">
+                <div className="technology-bar">
+                  {skills.primarySkills.map((tech) => (
+                    <div key={tech.link} className="technology-bar__icon">
+                      <TechIcon {...tech} size="xs" />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            )}
+
+            {skills.secondarySkills.length > 0 && (
+              <div className="technology-container">
+                <div className="technology-bar secondary">
+                  {skills.secondarySkills.map((tech) => (
+                    <div key={tech.link} className="technology-bar__icon">
+                      <TechIcon {...tech} text="" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </React.Fragment>
+        ) : (
+          <Loading />
         )}
 
         {showProjects ? (
