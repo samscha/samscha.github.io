@@ -1,102 +1,125 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.scss';
 
 export default ({
-    IconsBy,
-    LocationMarker,
-    Project,
-    TechIcon,
-    projects,
-    techs,
+  IconsBy,
+  LocationMarker,
+  Project,
+  TechIcon,
+  projects,
+  techs,
 }) => {
-    const HomePage = () => {
-        const primaryTechs = techs.filter(
-            (t) => t.set === 'primary' && t.enabled,
-        );
-        const secondaryTechs = techs.filter(
-            (t) => t.set === 'secondary' && t.enabled,
-        );
-        const filteredProjects = projects.filter((p) => p.enabled);
-        const showProjects = JSON.parse(
-            process.env.REACT_APP_SHOW_PROJECTS || 'false',
-        );
+  const HomePage = () => {
+    const apiBaseUri = process.env.REACT_APP_API_BASE_URL;
 
-        return (
-            <div className="homepage">
-                <LocationMarker location="Austin, TX" />
+    const [skills, setSkills] = useState(null);
 
-                {primaryTechs.length > 0 && (
-                    <div className="technology-container">
-                        <div className="technology-bar">
-                            {primaryTechs
-                                .sort((a, b) => {
-                                    a = a.text.toUpperCase();
-                                    b = b.text.toUpperCase();
+    useEffect(() => {
+      let ignore = false;
 
-                                    if (a < b) return -1;
-                                    if (a > b) return 1;
-                                    return 0;
-                                })
-                                .map((tech) => (
-                                    <div
-                                        key={tech.link}
-                                        className="technology-bar__icon"
-                                    >
-                                        <TechIcon {...tech} size="xs" />
-                                    </div>
-                                ))}
-                        </div>
-                    </div>
-                )}
+      setSkills(null);
 
-                {secondaryTechs.length > 0 && (
-                    <div className="technology-container">
-                        <div className="technology-bar secondary">
-                            {secondaryTechs
-                                .sort((a, b) => {
-                                    a = a.text.toUpperCase();
-                                    b = b.text.toUpperCase();
+      fetch(`${apiBaseUri}/v1/skills`)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          if (!ignore) {
+            setSkills(data);
+          }
+        })
+        .catch((err) => {
+          console.warn('error getting skills. using backup techs', err);
+          if (!ignore) {
+            setSkills(backupTechs(techs));
+          }
+        });
 
-                                    if (a < b) return -1;
-                                    if (a > b) return 1;
-                                    return 0;
-                                })
-                                .map((tech) => (
-                                    <div
-                                        key={tech.link}
-                                        className="technology-bar__icon"
-                                    >
-                                        <TechIcon {...tech} text="" />
-                                    </div>
-                                ))}
-                        </div>
-                    </div>
-                )}
+      return () => {
+        ignore = true;
+      };
+    }, []);
 
-                {showProjects ? (
-                    <div className="projects">
-                        <div className="title">Projects</div>
-                        {filteredProjects.length > 0 ? (
-                            filteredProjects.map((project) => (
-                                <div
-                                    key={project.name}
-                                    className="project-container"
-                                >
-                                    <Project {...project} />
-                                </div>
-                            ))
-                        ) : (
-                            <div className="no-projects-title">
-                                No Projects To Show
-                            </div>
-                        )}
-                    </div>
-                ) : null}
+    const filteredProjects = projects.filter((p) => p.enabled);
+    const showProjects = JSON.parse(
+      process.env.REACT_APP_SHOW_PROJECTS || 'false'
+    );
 
-                <IconsBy fa fz />
+    return (
+      <div className="homepage">
+        <LocationMarker location="Austin, TX" />
+
+        {skills?.primarySkills.length > 0 && (
+          <div className="technology-container">
+            <div className="technology-bar">
+              {skills.primarySkills.map((tech) => (
+                <div key={tech.link} className="technology-bar__icon">
+                  <TechIcon {...tech} size="xs" />
+                </div>
+              ))}
             </div>
-        );
-    };
+          </div>
+        )}
 
-    return HomePage;
+        {skills?.secondarySkills.length > 0 && (
+          <div className="technology-container">
+            <div className="technology-bar secondary">
+              {skills.secondarySkills.map((tech) => (
+                <div key={tech.link} className="technology-bar__icon">
+                  <TechIcon {...tech} text="" />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {showProjects ? (
+          <div className="projects">
+            <div className="title">Projects</div>
+            {filteredProjects.length > 0 ? (
+              filteredProjects.map((project) => (
+                <div key={project.name} className="project-container">
+                  <Project {...project} />
+                </div>
+              ))
+            ) : (
+              <div className="no-projects-title">No Projects To Show</div>
+            )}
+          </div>
+        ) : null}
+
+        <IconsBy fa fz />
+      </div>
+    );
+  };
+
+  return HomePage;
+};
+
+const backupTechs = (techs) => {
+  const primaryTechs = techs
+    .filter((t) => t.set === 'primary' && t.enabled)
+    .sort((a, b) => {
+      a = a.text.toUpperCase();
+      b = b.text.toUpperCase();
+
+      if (a < b) return -1;
+      if (a > b) return 1;
+      return 0;
+    });
+  const secondaryTechs = techs
+    .filter((t) => t.set === 'secondary' && t.enabled)
+    .sort((a, b) => {
+      a = a.text.toUpperCase();
+      b = b.text.toUpperCase();
+
+      if (a < b) return -1;
+      if (a > b) return 1;
+      return 0;
+    });
+
+  return {
+    primarySkills: primaryTechs,
+    secondarySkills: secondaryTechs,
+  };
 };
