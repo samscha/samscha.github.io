@@ -5,7 +5,7 @@ module.exports = [
     link: `https://aws.amazon.com/`,
     icon: [`fab`, `aws`],
     type: 'fa',
-    set: `secondary`,
+    set: `primary`,
     enabled: true,
   },
   {
@@ -105,7 +105,7 @@ module.exports = [
     icon: ['fab', 'php'],
     type: `fa`,
     set: `secondary`,
-    enabled: false,
+    enabled: true,
   },
   {
     text: `MySQL`,
@@ -114,7 +114,7 @@ module.exports = [
     icon: `icon-mysql-alt`,
     type: `fz`,
     set: `secondary`,
-    enabled: false,
+    enabled: true,
   },
   {
     text: `Node.js`,
