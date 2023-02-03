@@ -24,6 +24,7 @@
         "@babel/preset-env": "^7.13.8",
         "@babel/preset-react": "^7.12.10",
         "@types/jest": "^29.1.2",
+        "prettier": "2.8.3",
         "react-test-renderer": "^18.0.0"
     },
     "scripts": {
@@ -32,6 +33,9 @@
         "eject": "react-scripts eject",
         "test:watch": "jest --watch",
         "test": "jest --no-cache",
+        "pretti:all": "npm run pretti:api && npm run pretti:fe",
+        "pretti:api": "prettier --write \"amplify/backend/function/api/src/**/*.js\"",
+        "pretti:fe": "prettier --write \"src/**/*.{jsx,js,scss}\"",
         "sync-public-repo": "git checkout develop && git fetch upstream && git merge upstream/develop && git push && git checkout main && git fetch upstream && git merge upstream/main && git push"
     },
     "browserslist": [

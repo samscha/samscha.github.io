@@ -2,14 +2,14 @@
 @import '../../scss/variables.scss';
 
 .footer {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 15px 0 25px 0;
+  .copyright-info {
     display: flex;
-    flex-flow: row nowrap;
-    padding: 15px 0 25px 0;
-    .copyright-info {
-        display: flex;
-        justify-content: flex-end;
-        font-size: $font-0x;
-        padding: 0 12px 0 0;
-        width: 100%;
-    }
+    justify-content: flex-end;
+    font-size: $font-0x;
+    padding: 0 12px 0 0;
+    width: 100%;
+  }
 }

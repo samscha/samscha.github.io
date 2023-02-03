@@ -1,11 +1,11 @@
-export default [
+module.exports = [
   {
     text: `AWS`,
     title: 'Click to learn more about AWS',
     link: `https://aws.amazon.com/`,
     icon: [`fab`, `aws`],
     type: 'fa',
-    set: `secondary`,
+    set: `primary`,
     enabled: true,
   },
   {
@@ -105,7 +105,7 @@ export default [
     icon: ['fab', 'php'],
     type: `fa`,
     set: `secondary`,
-    enabled: false,
+    enabled: true,
   },
   {
     text: `MySQL`,
@@ -114,7 +114,7 @@ export default [
     icon: `icon-mysql-alt`,
     type: `fz`,
     set: `secondary`,
-    enabled: false,
+    enabled: true,
   },
   {
     text: `Node.js`,

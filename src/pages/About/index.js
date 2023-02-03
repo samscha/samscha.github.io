@@ -8,5 +8,5 @@ import LocationMarker from '../../components/IconsBy';
 import About from './About.jsx';
 
 export default withLayout(
-    About({ IconsBy, IconText, Link, LocationMarker, infos, infoText }),
+  About({ IconsBy, IconText, Link, LocationMarker, infos, infoText })
 );

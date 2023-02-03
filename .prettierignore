@@ -1,3 +1,12 @@
 **/node_modules/**
 *.yaml
 *.yml
+
+# backend
+bin/
+
+# AWS
+awsapp.js
+event.json
+amplify/backend/function/api/src/index.js
+
