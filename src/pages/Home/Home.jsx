@@ -14,6 +14,33 @@ export default ({
     const apiBaseUri = process.env.REACT_APP_API_BASE_URL;
 
     const [skills, setSkills] = useState(null);
+    const [location, setLocation] = useState(null);
+
+    useEffect(() => {
+      let ignore = false;
+
+      setLocation(null);
+
+      fetch(`${apiBaseUri}/v1/location`)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          if (!ignore) {
+            setLocation(data.location);
+          }
+        })
+        .catch((err) => {
+          console.warn('error getting location. using backup location', err);
+          if (!ignore) {
+            setLocation(backupLocation());
+          }
+        });
+
+      return () => {
+        ignore = true;
+      };
+    }, []);
 
     useEffect(() => {
       let ignore = false;
@@ -48,10 +75,10 @@ export default ({
 
     return (
       <div className="homepage">
-        <LocationMarker location="Austin, TX" />
-
-        {skills ? (
+        {skills && location ? (
           <React.Fragment>
+            <LocationMarker location={location} />
+
             {skills.primarySkills.length === 0 &&
               skills.secondarySkills.length === 0 && (
                 <div className="technology-container">
@@ -94,27 +121,27 @@ export default ({
                 </div>
               </div>
             )}
+
+            {showProjects ? (
+              <div className="projects">
+                <div className="title">Projects</div>
+                {filteredProjects.length > 0 ? (
+                  filteredProjects.map((project) => (
+                    <div key={project.name} className="project-container">
+                      <Project {...project} />
+                    </div>
+                  ))
+                ) : (
+                  <div className="no-projects-title">No Projects To Show</div>
+                )}
+              </div>
+            ) : null}
+
+            <IconsBy fa fz />
           </React.Fragment>
         ) : (
           <Loading />
         )}
-
-        {showProjects ? (
-          <div className="projects">
-            <div className="title">Projects</div>
-            {filteredProjects.length > 0 ? (
-              filteredProjects.map((project) => (
-                <div key={project.name} className="project-container">
-                  <Project {...project} />
-                </div>
-              ))
-            ) : (
-              <div className="no-projects-title">No Projects To Show</div>
-            )}
-          </div>
-        ) : null}
-
-        <IconsBy fa fz />
       </div>
     );
   };
@@ -148,4 +175,8 @@ const backupTechs = (techs) => {
     primarySkills: primaryTechs,
     secondarySkills: secondaryTechs,
   };
+};
+
+const backupLocation = () => {
+  return 'Austin, TX';
 };
