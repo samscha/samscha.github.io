@@ -9,6 +9,12 @@
     },
     "env": {
       "Type": "String"
+    },
+    "deploymentBucketName": {
+      "Type": "String"
+    },
+    "s3Key": {
+      "Type": "String"
     }
   },
   "Conditions": {
@@ -67,8 +73,12 @@
         "Runtime": "nodejs16.x",
         "Timeout": "25",
         "Code": {
-          "S3Bucket": "amplify-samscha-develop-102910-deployment",
-          "S3Key": "amplify-builds/api-79495346474539592f50-build.zip"
+          "S3Bucket": {
+            "Ref": "deploymentBucketName"
+          },
+          "S3Key": {
+            "Ref": "s3Key"
+          }
         }
       }
     },
