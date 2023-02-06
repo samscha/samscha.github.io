@@ -92,7 +92,7 @@ module.exports = [
   {
     text: `macOS`,
     title: `Click to learn more about macOS`,
-    link: `https://en.wikipedia.org/wiki/MacOS`,
+    link: `https://www.apple.com/macos`,
     icon: [`fab`, `apple`],
     type: `fa`,
     set: `primary`,
