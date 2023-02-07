@@ -12,15 +12,6 @@
       display: flex;
       justify-content: center;
       flex-flow: row wrap;
-      .technology-bar__icon {
-        .tech-icon {
-          &.xl {
-            .text {
-              font-size: 75%;
-            }
-          }
-        }
-      }
       &.secondary {
         .technology-bar__icon {
           margin: 5px;
@@ -39,7 +30,14 @@
         }
       }
       .technology-bar__icon {
-        margin: 15px 7px;
+        margin: 17px 12px;
+        .tech-icon {
+          &.xl {
+            .text {
+              font-size: 77%;
+            }
+          }
+        }
       }
     }
   }
