@@ -103,7 +103,11 @@ export default ({
                 <div className="technology-bar">
                   {skills.primarySkills.map((tech) => (
                     <div key={tech.link} className="technology-bar__icon">
-                      <TechIcon {...tech} size="xs" />
+                      <TechIcon
+                        {...tech}
+                        size="xs"
+                        className={tech.text.length > 10 ? 'xl' : ''}
+                      />
                     </div>
                   ))}
                 </div>

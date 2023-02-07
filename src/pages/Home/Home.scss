@@ -12,6 +12,15 @@
       display: flex;
       justify-content: center;
       flex-flow: row wrap;
+      .technology-bar__icon {
+        .tech-icon {
+          &.xl {
+            .text {
+              font-size: 75%;
+            }
+          }
+        }
+      }
       &.secondary {
         .technology-bar__icon {
           margin: 5px;

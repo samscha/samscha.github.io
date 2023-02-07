@@ -3,9 +3,15 @@ import PropTypes from 'prop-types';
 import './TechIcon.scss';
 
 export default ({ FontAwesomeIcon, Link }) => {
-  const TechIcon = ({ icon, link, text, title, type }) => {
+  const TechIcon = ({ className, icon, link, text, title, type }) => {
+    const classNames = ['tech-icon'];
+
+    if (className) {
+      classNames.push(className);
+    }
+
     return (
-      <Link className="tech-icon" title={title} href={link}>
+      <Link className={classNames.join(' ')} title={title} href={link}>
         <div className="icon">
           {type === 'fa' && <FontAwesomeIcon icon={icon} />}
           {type === 'fz' && <i className={icon} />}
@@ -19,6 +25,7 @@ export default ({ FontAwesomeIcon, Link }) => {
   };
 
   TechIcon.propTypes = {
+    className: PropTypes.string,
     icon: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
     link: PropTypes.string,
     text: PropTypes.string,
@@ -27,6 +34,7 @@ export default ({ FontAwesomeIcon, Link }) => {
   };
 
   TechIcon.defaultProps = {
+    className: '',
     type: 'def',
   };
 
