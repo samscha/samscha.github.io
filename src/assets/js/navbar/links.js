@@ -22,7 +22,7 @@ export default [
     target: '',
     title: 'Click to email Sam',
     icon: ['fas', 'envelope'],
-    enabled: true,
+    enabled: false,
   },
   {
     href: 'https://t.me/chasamuels',
@@ -33,7 +33,8 @@ export default [
   {
     to: '/contact',
     title: 'Go to the contact page',
-    text: 'contact',
-    enabled: false,
+    //text: 'contact',
+    icon: ['fas', 'address-card'],
+    enabled: true,
   },
 ];

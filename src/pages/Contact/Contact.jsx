@@ -8,22 +8,24 @@ export default ({ IconsBy, IconText, Link, contacts }) => {
       <div className="contact-page">
         {contacts.length > 0 && (
           <div className="links-section">
-            {contacts.map((info) => {
-              const { href, icon, target, text, title } = info;
+            {contacts
+              .filter((c) => c.enabled)
+              .map((info) => {
+                const { href, icon, target, text, title } = info;
 
-              return (
-                href &&
-                icon &&
-                text &&
-                title && (
-                  <div key={href} className="link-container">
-                    <Link href={href} target={target} title={title}>
-                      <IconText fixedWidth icon={icon} text={text} />
-                    </Link>
-                  </div>
-                )
-              );
-            })}
+                return (
+                  href &&
+                  icon &&
+                  text &&
+                  title && (
+                    <div key={href} className="link-container">
+                      <Link href={href} target={target} title={title}>
+                        <IconText fixedWidth icon={icon} text={text} />
+                      </Link>
+                    </div>
+                  )
+                );
+              })}
           </div>
         )}
 
