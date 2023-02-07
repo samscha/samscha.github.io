@@ -197,4 +197,13 @@ module.exports = [
     set: 'primary',
     enabled: true,
   },
+  {
+    text: 'Microservices',
+    title: 'Click to learn more about microservices',
+    link: 'https://aws.amazon.com/microservices/',
+    icon: ['fas', 'layer-group'],
+    type: 'fa',
+    set: 'primary',
+    enabled: true,
+  },
 ];
