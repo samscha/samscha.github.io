@@ -1,5 +1,4 @@
 import projects from '../../assets/js/home/projects';
-import techs from '../../assets/js/home/techs';
 import IconsBy from '../../components/IconsBy';
 import { Loading } from '../../components/Loading';
 import LocationMarker from '../../components/LocationMarker';
@@ -16,6 +15,5 @@ export default withLayout(
     Project,
     TechIcon,
     projects,
-    techs,
   })
 );

@@ -10,5 +10,5 @@ That is, until I enrolled in Lambda School’s Computer Science program. There, 
 
 I was a Software Engineer at NewPoint Media, a real estate and integrated marketing company in Austin, TX, with the goal of combining print and technology for the best home buying experience from December 2018 to March 2020.
 
-I am currently a part of the engineering team at Volusion, an ecommerce platform based in Austin, TX.
+Until recently, I was part of the engineering team at Volusion, an ecommerce platform based in Austin, TX, working as a Backend Engineer.
 `;

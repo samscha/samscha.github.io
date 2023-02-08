@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   {
     href: 'mailto:contact@samscha.com',
     icon: ['fas', 'envelope'],

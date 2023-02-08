@@ -9,13 +9,13 @@ export default [
     href: 'https://linkedin.com/in/chasamuels',
     title: "Click to go to Sam's LinkedIn",
     icon: ['fab', 'linkedin'],
-    enabled: true,
+    enabled: false,
   },
   {
     href: 'https://github.com/samscha',
     title: `Click to go to Sam's GitHub`,
     icon: ['fab', 'github'],
-    enabled: true,
+    enabled: false,
   },
   {
     href: 'mailto:contact@samscha.com',
