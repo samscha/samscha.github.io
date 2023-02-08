@@ -16,7 +16,9 @@ export default ({ IconsBy, IconText, Link, Loading }) => {
           const response = await fetch(`${apiBaseUri}/v1/contacts`);
           if (response.status !== 200) {
             console.warn('response not 200 getting contacts', response);
-            setContacts(backupContacts);
+            if (!ignore) {
+              setContacts(backupContacts);
+            }
             return;
           }
 
