@@ -1,5 +1,4 @@
 import IconsBy from '../../components/IconsBy';
-import contacts from '../../assets/js/contact/contacts';
 import IconText from '../../components/IconText';
 import Link from '../../components/Link';
 import { Loading } from '../../components/Loading';
