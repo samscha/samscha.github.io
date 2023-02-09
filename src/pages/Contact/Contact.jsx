@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuery} from 'react-query'
+import { useQuery } from 'react-query';
 import PropTypes from 'prop-types';
 
 import './Contact.scss';
@@ -13,15 +13,17 @@ export default ({ IconsBy, IconText, Link, Loading }) => {
       if (response.status !== 200) {
         throw new Error(JSON.stringify(response));
       }
-      
+
       return response.json();
-    }
+    };
 
     const contactsQuery = useQuery('contacts', fetchContacts);
 
     return (
       <div className="contact-page">
-        {!contactsQuery.isLoading ? (
+        {contactsQuery.isLoading ? (
+          <Loading />
+        ) : (
           <React.Fragment>
             {contactsQuery.data.contacts.length > 0 ? (
               <React.Fragment>
@@ -58,8 +60,6 @@ export default ({ IconsBy, IconText, Link, Loading }) => {
               </div>
             )}
           </React.Fragment>
-        ) : (
-          <Loading />
         )}
       </div>
     );
