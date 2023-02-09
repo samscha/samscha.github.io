@@ -1,55 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useQuery} from 'react-query'
 import PropTypes from 'prop-types';
+
 import './Contact.scss';
 
 export default ({ IconsBy, IconText, Link, Loading }) => {
   const ContactPage = () => {
     const apiBaseUri = process.env.REACT_APP_API_BASE_URL;
 
-    const [contacts, setContacts] = useState(null);
+    const fetchContacts = async () => {
+      const response = await fetch(`${apiBaseUri}/v1/contacts`);
+      if (response.status !== 200) {
+        throw new Error(JSON.stringify(response));
+      }
+      
+      return response.json();
+    }
 
-    useEffect(() => {
-      const fetchContacts = async () => {
-        try {
-          setContacts(null);
-
-          const response = await fetch(`${apiBaseUri}/v1/contacts`);
-          if (response.status !== 200) {
-            console.warn('response not 200 getting contacts', response);
-            if (!ignore) {
-              setContacts(backupContacts);
-            }
-            return;
-          }
-
-          const result = await response.json();
-          if (!ignore) {
-            setContacts(result.contacts);
-          }
-        } catch (err) {
-          console.warn('error getting contacts', err);
-          if (!ignore) {
-            setContacts(backupContacts);
-          }
-        }
-      };
-
-      let ignore = false;
-      fetchContacts();
-
-      return () => {
-        ignore = true;
-      };
-    }, []);
+    const contactsQuery = useQuery('contacts', fetchContacts);
 
     return (
       <div className="contact-page">
-        {contacts ? (
+        {!contactsQuery.isLoading ? (
           <React.Fragment>
-            {contacts.length > 0 ? (
+            {contactsQuery.data.contacts.length > 0 ? (
               <React.Fragment>
                 <div className="links-section">
-                  {contacts
+                  {contactsQuery.data.contacts
                     .filter((c) => c.enabled)
                     .map((info) => {
                       const { href, icon, target, text, title } = info;
