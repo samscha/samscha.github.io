@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQueryClient, useQuery } from 'react-query';
+import { useQuery } from 'react-query';
 
 import './Home.scss';
 
@@ -30,8 +30,6 @@ export default ({
 
       return response.json();
     };
-
-    const queryClient = useQueryClient();
 
     const locationQuery = useQuery('location', fetchLocation);
     const skillsQuery = useQuery('skills', fetchSkills);
