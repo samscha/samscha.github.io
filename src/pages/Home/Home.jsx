@@ -41,7 +41,9 @@ export default ({
 
     return (
       <div className="homepage">
-        {!skillsQuery.isLoading && !locationQuery.isLoading ? (
+        {skillsQuery.isLoading || locationQuery.isLoading ? (
+          <Loading />
+        ) : (
           <React.Fragment>
             <LocationMarker location={locationQuery.data.location} />
 
@@ -109,8 +111,6 @@ export default ({
 
             <IconsBy fa fz />
           </React.Fragment>
-        ) : (
-          <Loading />
         )}
       </div>
     );
