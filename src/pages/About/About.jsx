@@ -53,8 +53,14 @@ export default ({ IconsBy, IconText, Link, Loading, infos, infoText }) => {
                 })}
               </div>
             )}
+
             {infoText && <p className="info-text">{infoText}</p>}
-            <IconsBy fa />
+
+            {infoQuery.data.info.length > 0 && <IconsBy fa />}
+
+            {infoQuery.data.info.length === 0 && !infoText && (
+              <div>No info to show</div>
+            )}
           </>
         )}
       </div>
