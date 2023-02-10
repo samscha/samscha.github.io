@@ -1,3 +1,3 @@
-import { ErrorText as component} from './ErrorText';
+import { ErrorText as component } from './ErrorText';
 
-export const ErrorText = component({})
+export const ErrorText = component({});

@@ -3,7 +3,15 @@ import { useQuery } from 'react-query';
 
 import './About.scss';
 
-export default ({ ErrorText, IconsBy, IconText, Link, Loading, infos, infoText }) => {
+export default ({
+  ErrorText,
+  IconsBy,
+  IconText,
+  Link,
+  Loading,
+  infos,
+  infoText,
+}) => {
   const apiBaseUri = process.env.REACT_APP_API_BASE_URL;
 
   const types = ['work', 'education'];
@@ -62,9 +70,7 @@ export default ({ ErrorText, IconsBy, IconText, Link, Loading, infos, infoText }
             )}
           </>
         )}
-        {infoQuery.isError && (
-<ErrorText />
-        )}
+        {infoQuery.isError && <ErrorText />}
       </div>
     );
   };
