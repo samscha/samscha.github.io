@@ -22,6 +22,7 @@ export default ({ ErrorText, IconsBy, IconText, Link, Loading }) => {
     return (
       <div className="contact-page">
         {contactsQuery.isLoading && <Loading />}
+        {contactsQuery.isError && <ErrorText />}
         {contactsQuery.isSuccess && (
           <React.Fragment>
             {contactsQuery.data.contacts.length > 0 ? (
@@ -60,8 +61,6 @@ export default ({ ErrorText, IconsBy, IconText, Link, Loading }) => {
             )}
           </React.Fragment>
         )}
-
-        {contactsQuery.isError && <ErrorText />}
       </div>
     );
   };

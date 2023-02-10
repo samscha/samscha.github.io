@@ -43,6 +43,7 @@ export default ({
     return (
       <div className="homepage">
         {(skillsQuery.isLoading || locationQuery.isLoading) && <Loading />}
+        {(skillsQuery.isError || locationQuery.isError) && <ErrorText />}
         {skillsQuery.isSuccess && locationQuery.isSuccess && (
           <React.Fragment>
             <LocationMarker location={locationQuery.data.location} />
@@ -112,8 +113,6 @@ export default ({
             <IconsBy fa fz />
           </React.Fragment>
         )}
-
-        {(skillsQuery.isError || locationQuery.isError) && <ErrorText />}
       </div>
     );
   };

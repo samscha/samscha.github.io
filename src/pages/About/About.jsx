@@ -38,6 +38,7 @@ export default ({
     return (
       <div className="about-page">
         {infoQuery.isLoading && <Loading />}
+        {infoQuery.isError && <ErrorText />}
         {infoQuery.isSuccess && (
           <>
             {infoQuery.data.info.length > 0 && (
@@ -70,7 +71,6 @@ export default ({
             )}
           </>
         )}
-        {infoQuery.isError && <ErrorText />}
       </div>
     );
   };
