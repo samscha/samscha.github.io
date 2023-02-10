@@ -40,20 +40,24 @@ export default ({ IconText, Image, Link, navBarLinks, useLocation }) => {
       <div className="nav-bar">
         <div className="nav-bar-links">
           {profileImg()}
-          {filteredNavBarLinks.map((link) => (
-            <Link
-              key={JSON.stringify(link)}
-              className="nav-bar-links__link nav-bar-link"
-              to={link.to}
-              href={link.href}
-              title={link.title}
-            >
-              <>
-                {link.icon && <IconText icon={link.icon} text="" />}
-                {link.text && link.text}
-              </>
-            </Link>
-          ))}
+          {filteredNavBarLinks.map((link) => {
+            const classNames = ['nav-bar-links__link', 'nav-bar-link'];
+
+            return (
+              <Link
+                key={JSON.stringify(link)}
+                className={classNames.join(' ')}
+                to={link.to}
+                href={link.href}
+                title={link.title}
+              >
+                <>
+                  {link.icon && <IconText icon={link.icon} text="" />}
+                  {link.text && link.text}
+                </>
+              </Link>
+            );
+          })}
         </div>
       </div>
     );
