@@ -1,55 +1,63 @@
 import React from 'react';
+import { useQuery } from 'react-query';
+
 import './About.scss';
 
-export default ({
-  IconsBy,
-  IconText,
-  Link,
-  LocationMarker,
-  infos,
-  infoText,
-}) => {
-  const filteredInfos = infos.filter((i) => i.enabled);
-  const getInfo = (types = []) => {
-    return (
-      filteredInfos.length > 0 && (
-        <div className="infos-section">
-          {filteredInfos
-            .filter((info) => types.includes(info.type))
-            .map((info) => {
-              const { href, icon, target, text, title } = info;
+export default ({ IconsBy, IconText, Link, Loading, infos, infoText }) => {
+  const apiBaseUri = process.env.REACT_APP_API_BASE_URL;
 
-              return (
-                href &&
-                icon &&
-                text &&
-                title && (
-                  <div key={href} className="link-container">
-                    <Link href={href} target={target} title={title}>
-                      <IconText fixedWidth icon={icon} text={text} />
-                    </Link>
-                  </div>
-                )
-              );
-            })}
-        </div>
-      )
-    );
-  };
+  const types = ['work', 'education'];
 
-  const AboutPage = () => {
+  return () => {
+    const fetchInfo = async () => {
+      const typeQueryParams = types
+        .map((t) => {
+          return `type=${t}`;
+        })
+        .join('&');
+      // TODO: add sort query params
+
+      const response = await fetch(`${apiBaseUri}/v1/info?${typeQueryParams}`);
+      if (response.status !== 200) {
+        throw new Error(JSON.stringify(response));
+      }
+
+      return response.json();
+    };
+
+    const infoQuery = useQuery('info', fetchInfo);
+
     return (
       <div className="about-page">
-        <LocationMarker location="Austin, TX" />
+        {infoQuery.isLoading ? (
+          <Loading />
+        ) : (
+          <>
+            {infoQuery.data.info.length > 0 && (
+              <div className="infos-section">
+                {infoQuery.data.info.map((info) => {
+                  const { href, icon, target, text, title } = info;
 
-        {getInfo(['work', 'education'])}
-
-        {infoText && <p className="info-text">{infoText}</p>}
-
-        <IconsBy fa />
+                  return (
+                    href &&
+                    icon &&
+                    text &&
+                    title && (
+                      <div key={href} className="link-container">
+                        <Link href={href} target={target} title={title}>
+                          <IconText fixedWidth icon={icon} text={text} />
+                        </Link>
+                      </div>
+                    )
+                  );
+                })}
+              </div>
+            )}
+            {infoText && <p className="info-text">{infoText}</p>}
+            <IconsBy fa />
+          </>
+        )}
       </div>
     );
   };
-
-  return AboutPage;
 };
