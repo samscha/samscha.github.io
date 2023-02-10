@@ -21,4 +21,11 @@ module.exports = [
     title: `Click to go to Sam's Twitter`,
     enabled: false,
   },
+  {
+    href: 'https://github.com/samscha',
+    icon: ['fab', 'github'],
+    text: 'samscha',
+    title: `Click to go to Sam's GitHub`,
+    enabled: true,
+  },
 ];
