@@ -23,6 +23,7 @@ router
 
     res.status(200).json({
       info,
+types,
     });
   })
   .all((req, res) => {
