@@ -55,3 +55,7 @@
     @content;
   }
 }
+
+@mixin errorText {
+  color: #ff3333;
+}

@@ -29,9 +29,8 @@ export default ({ IconsBy, IconText, Link, Loading, infos, infoText }) => {
 
     return (
       <div className="about-page">
-        {infoQuery.isLoading ? (
-          <Loading />
-        ) : (
+        {infoQuery.isLoading && <Loading />}
+        {infoQuery.isSuccess && (
           <>
             {infoQuery.data.info.length > 0 && (
               <div className="infos-section">
@@ -62,6 +61,11 @@ export default ({ IconsBy, IconText, Link, Loading, infos, infoText }) => {
               <div>No info to show</div>
             )}
           </>
+        )}
+        {infoQuery.isError && (
+          <div className="error">
+            Something went wrong. Please try again later
+          </div>
         )}
       </div>
     );
