@@ -9,9 +9,17 @@ router
     const types = convertReqQueryToArr(req.query.type);
     // TODO: add sort handling
 
-    const info = infoData.filter((i) => {
-      return types.includes(i.type) && i.enabled;
-    });
+    const info = infoData
+      .filter((i) => {
+        return i.enabled;
+      })
+      .filter((i) => {
+        if (types.length === 0) {
+          return true;
+        }
+
+        return types.includes(i.type);
+      });
 
     res.status(200).json({
       info,
@@ -28,5 +36,9 @@ const convertReqQueryToArr = (reqQuery) => {
     return reqQuery.filter((q) => Boolean(q));
   }
 
-  return [reqQuery];
+  if (typeof reqQuery === 'string') {
+    return [reqQuery];
+  }
+
+  return [];
 };
