@@ -1,72 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useQuery } from 'react-query';
+
 import './Home.scss';
 
 export default ({
+  ErrorText,
   IconsBy,
   Loading,
   LocationMarker,
   Project,
   TechIcon,
   projects,
-  techs,
 }) => {
   const HomePage = () => {
     const apiBaseUri = process.env.REACT_APP_API_BASE_URL;
 
-    const [skills, setSkills] = useState(null);
-    const [location, setLocation] = useState(null);
+    const fetchLocation = async () => {
+      const response = await fetch(`${apiBaseUri}/v1/location`);
+      if (response.status !== 200) {
+        throw new Error(JSON.stringify(response));
+      }
 
-    useEffect(() => {
-      let ignore = false;
+      return response.json();
+    };
+    const fetchSkills = async () => {
+      const response = await fetch(`${apiBaseUri}/v1/skills`);
+      if (response.status !== 200) {
+        throw new Error(JSON.stringify(response));
+      }
 
-      setLocation(null);
+      return response.json();
+    };
 
-      fetch(`${apiBaseUri}/v1/location`)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          if (!ignore) {
-            setLocation(data.location);
-          }
-        })
-        .catch((err) => {
-          console.warn('error getting location. using backup location', err);
-          if (!ignore) {
-            setLocation(backupLocation());
-          }
-        });
-
-      return () => {
-        ignore = true;
-      };
-    }, []);
-
-    useEffect(() => {
-      let ignore = false;
-
-      setSkills(null);
-
-      fetch(`${apiBaseUri}/v1/skills`)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          if (!ignore) {
-            setSkills(data);
-          }
-        })
-        .catch((err) => {
-          console.warn('error getting skills. using backup techs', err);
-          if (!ignore) {
-            setSkills(backupTechs(techs));
-          }
-        });
-
-      return () => {
-        ignore = true;
-      };
-    }, []);
+    const locationQuery = useQuery('location', fetchLocation);
+    const skillsQuery = useQuery('skills', fetchSkills);
 
     const filteredProjects = projects.filter((p) => p.enabled);
     const showProjects = JSON.parse(
@@ -75,11 +42,13 @@ export default ({
 
     return (
       <div className="homepage">
-        {skills && location ? (
+        {(skillsQuery.isLoading || locationQuery.isLoading) && <Loading />}
+        {(skillsQuery.isError || locationQuery.isError) && <ErrorText />}
+        {skillsQuery.isSuccess && locationQuery.isSuccess && (
           <React.Fragment>
-            <LocationMarker location={location} />
+            <LocationMarker location={locationQuery.data.location} />
 
-            {skills.primarySkills.length === 0 &&
+            {skillsQuery.data.primarySkills.length === 0 &&
               skills.secondarySkills.length === 0 && (
                 <div className="technology-container">
                   <div className="technology-bar">
@@ -98,10 +67,10 @@ export default ({
                 </div>
               )}
 
-            {skills.primarySkills.length > 0 && (
+            {skillsQuery.data.primarySkills.length > 0 && (
               <div className="technology-container">
                 <div className="technology-bar">
-                  {skills.primarySkills.map((tech) => (
+                  {skillsQuery.data.primarySkills.map((tech) => (
                     <div key={tech.link} className="technology-bar__icon">
                       <TechIcon
                         {...tech}
@@ -114,10 +83,10 @@ export default ({
               </div>
             )}
 
-            {skills.secondarySkills.length > 0 && (
+            {skillsQuery.data.secondarySkills.length > 0 && (
               <div className="technology-container">
                 <div className="technology-bar secondary">
-                  {skills.secondarySkills.map((tech) => (
+                  {skillsQuery.data.secondarySkills.map((tech) => (
                     <div key={tech.link} className="technology-bar__icon">
                       <TechIcon {...tech} text="" />
                     </div>
@@ -143,44 +112,10 @@ export default ({
 
             <IconsBy fa fz />
           </React.Fragment>
-        ) : (
-          <Loading />
         )}
       </div>
     );
   };
 
   return HomePage;
-};
-
-const backupTechs = (techs) => {
-  const primaryTechs = techs
-    .filter((t) => t.set === 'primary' && t.enabled)
-    .sort((a, b) => {
-      a = a.text.toUpperCase();
-      b = b.text.toUpperCase();
-
-      if (a < b) return -1;
-      if (a > b) return 1;
-      return 0;
-    });
-  const secondaryTechs = techs
-    .filter((t) => t.set === 'secondary' && t.enabled)
-    .sort((a, b) => {
-      a = a.text.toUpperCase();
-      b = b.text.toUpperCase();
-
-      if (a < b) return -1;
-      if (a > b) return 1;
-      return 0;
-    });
-
-  return {
-    primarySkills: primaryTechs,
-    secondarySkills: secondaryTechs,
-  };
-};
-
-const backupLocation = () => {
-  return 'Austin, TX';
 };

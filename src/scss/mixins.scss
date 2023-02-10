@@ -21,15 +21,7 @@
 }
 
 @mixin unLink {
-  @include link;
-  cursor: initial;
-  &:active {
-    text-decoration: unset;
-  }
-  &:hover {
-    background: unset;
-    color: unset;
-  }
+  pointer-events: none;
 }
 
 @mixin iconText {
@@ -62,4 +54,8 @@
   @media (prefers-color-scheme: dark) {
     @content;
   }
+}
+
+@mixin errorText {
+  color: #ff3333;
 }

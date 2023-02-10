@@ -3,26 +3,26 @@ export default [
     to: '/about',
     title: 'Go to the about page',
     icon: ['fas', 'info-circle'],
-    enabled: false,
+    enabled: true,
   },
   {
     href: 'https://linkedin.com/in/chasamuels',
     title: "Click to go to Sam's LinkedIn",
     icon: ['fab', 'linkedin'],
-    enabled: true,
+    enabled: false,
   },
   {
     href: 'https://github.com/samscha',
     title: `Click to go to Sam's GitHub`,
     icon: ['fab', 'github'],
-    enabled: true,
+    enabled: false,
   },
   {
     href: 'mailto:contact@samscha.com',
     target: '',
     title: 'Click to email Sam',
     icon: ['fas', 'envelope'],
-    enabled: true,
+    enabled: false,
   },
   {
     href: 'https://t.me/chasamuels',
@@ -33,7 +33,8 @@ export default [
   {
     to: '/contact',
     title: 'Go to the contact page',
-    text: 'contact',
-    enabled: false,
+    //text: 'contact',
+    icon: ['fas', 'address-card'],
+    enabled: true,
   },
 ];
