@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import './Contact.scss';
 
-export default ({ IconsBy, IconText, Link, Loading }) => {
+export default ({ ErrorText, IconsBy, IconText, Link, Loading }) => {
   const ContactPage = () => {
     const apiBaseUri = process.env.REACT_APP_API_BASE_URL;
 
@@ -21,9 +21,9 @@ export default ({ IconsBy, IconText, Link, Loading }) => {
 
     return (
       <div className="contact-page">
-        {contactsQuery.isLoading ? (
-          <Loading />
-        ) : (
+        {contactsQuery.isLoading && <Loading />}
+        {contactsQuery.isError && <ErrorText />}
+        {contactsQuery.isSuccess && (
           <React.Fragment>
             {contactsQuery.data.contacts.length > 0 ? (
               <React.Fragment>

@@ -49,5 +49,8 @@
       justify-content: center;
       min-width: 27px;
     }
+    .active {
+      @include unLink;
+    }
   }
 }

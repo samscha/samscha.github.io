@@ -1,12 +1,12 @@
-import infos from '../../assets/js/about/infos';
 import infoText from '../../assets/js/about/infoText';
 import { withLayout } from '../../layouts';
 import IconsBy from '../../components/IconsBy';
 import IconText from '../../components/IconText';
 import Link from '../../components/Link';
-import LocationMarker from '../../components/IconsBy';
+import { ErrorText } from '../../components/ErrorText';
+import { Loading } from '../../components/Loading';
 import About from './About.jsx';
 
 export default withLayout(
-  About({ IconsBy, IconText, Link, LocationMarker, infos, infoText })
+  About({ ErrorText, IconsBy, IconText, Link, Loading, infoText })
 );

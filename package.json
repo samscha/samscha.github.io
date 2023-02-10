@@ -34,7 +34,7 @@
         "eject": "react-scripts eject",
         "test:watch": "jest --watch",
         "test": "jest --no-cache",
-        "pretti:all": "npm run pretti:api && npm run pretti:fe",
+        "pretti": "npm run pretti:api && npm run pretti:fe",
         "pretti:api": "prettier --write \"amplify/backend/function/api/src/**/*.js\"",
         "pretti:fe": "prettier --write \"src/**/*.{jsx,js,scss}\"",
         "sync-public-repo": "git checkout develop && git fetch upstream && git merge upstream/develop && git push && git checkout main && git fetch upstream && git merge upstream/main && git push"

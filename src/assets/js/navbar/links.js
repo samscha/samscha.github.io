@@ -3,7 +3,7 @@ export default [
     to: '/about',
     title: 'Go to the about page',
     icon: ['fas', 'info-circle'],
-    enabled: false,
+    enabled: true,
   },
   {
     href: 'https://linkedin.com/in/chasamuels',

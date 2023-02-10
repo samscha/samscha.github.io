@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   {
     text: 'Volusion',
     title: `Click to go to Volusion's website`,
