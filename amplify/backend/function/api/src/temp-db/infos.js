@@ -18,9 +18,9 @@ module.exports = [
     enabled: true,
   },
   {
-    text: 'Lambda School',
-    title: 'Click to learn more about Lambda School',
-    href: 'https://lambdaschool.com/',
+    text: 'BloomTech',
+    title: 'Click to learn more about BloomTech',
+    href: 'https://www.bloomtech.com/',
     external: true,
     icon: ['fas', 'graduation-cap'],
     type: 'education',
