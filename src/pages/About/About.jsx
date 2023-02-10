@@ -18,14 +18,12 @@ export default ({
 
   return () => {
     const fetchInfo = async () => {
-      const typeQueryParams = types
-        .map((t) => {
-          return `type=${t}`;
-        })
-        .join('&');
+      const typeQueryParams = types.join(',');
       // TODO: add sort query params
 
-      const response = await fetch(`${apiBaseUri}/v1/info?${typeQueryParams}`);
+      const response = await fetch(
+        `${apiBaseUri}/v1/info?types=${typeQueryParams}`
+      );
       if (response.status !== 200) {
         throw new Error(JSON.stringify(response));
       }

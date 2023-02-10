@@ -6,7 +6,7 @@ const infoData = require('../../temp-db/infos');
 router
   .route('/info')
   .get((req, res) => {
-    const types = convertReqQueryToArr(req.query.type);
+    const types = convertReqQueryToArr(req.query.types);
     // TODO: add sort handling
 
     const info = infoData
@@ -23,7 +23,6 @@ router
 
     res.status(200).json({
       info,
-types,
     });
   })
   .all((req, res) => {
@@ -38,7 +37,7 @@ const convertReqQueryToArr = (reqQuery) => {
   }
 
   if (typeof reqQuery === 'string') {
-    return [reqQuery];
+    return reqQuery.split(',');
   }
 
   return [];
