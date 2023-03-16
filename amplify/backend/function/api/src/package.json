@@ -16,8 +16,8 @@
         "nodemon": "^2.0.7"
     },
     "scripts": {
+        "dev": "npm run node && nodemon -r dotenv/config ./bin/www",
         "node": "n i $(cat .nvmrc)",
-        "local": "npm run node && nodemon -r dotenv/config ./bin/www",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Samuel Cha",
