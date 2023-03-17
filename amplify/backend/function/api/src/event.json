@@ -1,5 +1,5 @@
 {
-    "body": null,
+  "body": null,
   "httpMethod": "GET",
   "path": "/my-path",
   "requestContext": {}
