@@ -4,6 +4,7 @@ const router = require('express').Router();
 const tempAuth = (req, res, next) => {
   if (req.headers.auth1 === 'acbd') {
     next();
+    return;
   }
 
   res.sendStatus(403);
