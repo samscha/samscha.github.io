@@ -1,38 +1,24 @@
-const {
-  //SSM,
-SSMClient,
-GetParametersCommand
-} = require("@aws-sdk/client-ssm");
+const { SSMClient, GetParametersCommand } = require('@aws-sdk/client-ssm');
 const router = require('express').Router();
-//const secrets = require('../../app/secrets');
 
 // TODO: move into an auth middleware
 const tempAuth = async (req, res, next) => {
+  const client = new SSMClient();
+  const command = new GetParametersCommand({
+    Names: ['AUTH_KEY_TEMP'].map((secretName) => process.env[secretName]),
+    WithDecryption: true,
+  });
 
+  const response = await client.send(command);
+  console.log(client, 'res', response);
 
-const client = new SSMClient();
-const command = new GetParametersCommand({
-      Names: ["AUTH_KEY_TEMP"].map(secretName => process.env[secretName]),
-      WithDecryption: true,
+  // TODO: move to above request invocation
+  if (response.Parameters.length === 0) {
+    res.sendStatus(500);
+    return;
+  }
 
-});
-
-const response = await client.send(command);
-console.log('res',response);
-
-/*
-  const { Parameters } = await (new SSM())
-    .getParameters({
-      Names: ["AUTH_KEY_TEMP"].map(secretName => process.env[secretName]),
-      WithDecryption: true,
-    })
-    .promise();
-*/
-
-//const authKey = Parameters.pop().Value;
-const authKey = response.Parameters.pop().Value;
-
-  //const authKey = secrets.get('AUTH_KEY_TEMP');
+  const authKey = response.Parameters.pop().Value;
 
   if (req.headers.auth1 === authKey) {
     next();
@@ -40,7 +26,6 @@ const authKey = response.Parameters.pop().Value;
   }
 
   res.sendStatus(403);
-  return;
 };
 
 router
