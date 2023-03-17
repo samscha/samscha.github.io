@@ -15,7 +15,8 @@
       "function": {
         "api": {
           "deploymentBucketName": "amplify-samscha-develop-102910-deployment",
-          "s3Key": "amplify-builds/api-6d616961413273386332-build.zip"
+          "s3Key": "amplify-builds/api-6d616961413273386332-build.zip",
+          "secretsPathAmplifyAppId": "d2m36eneuifk1i"
         }
       }
     }
