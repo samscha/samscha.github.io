@@ -1,8 +1,11 @@
 const router = require('express').Router();
+const secrets = require('../../app/secrets');
 
 // TODO: move into an auth middleware
 const tempAuth = (req, res, next) => {
-  if (req.headers.auth1 === 'acbd') {
+  const authKey = secrets.get('AUTH_KEY_TEMP');
+
+  if (req.headers.auth1 === authKey) {
     next();
     return;
   }
