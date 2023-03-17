@@ -5,11 +5,10 @@ const app = require('./awsapp');
 
 //const server = awsServerlessExpress.createServer(app);
 
-/*
 exports.handler = (event, context) => {
     console.log(`EVENT: ${JSON.stringify(event)}`);
-    awsServerlessExpress.proxy(server, event, context);
+    //awsServerlessExpress.proxy(server, event, context);
+    serverlessExpress({ app });
 };
-*/
 
-exports.handler = serverlessExpress({ app });
+//exports.handler = serverlessExpress({ app });
