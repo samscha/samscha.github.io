@@ -1,18 +1,17 @@
-const { SSMClient, GetParametersCommand } = require('@aws-sdk/client-ssm');
+const aws = require('aws-sdk');
 const router = require('express').Router();
 
 // TODO: move into an auth middleware
 const tempAuth = async (req, res, next) => {
-  const client = new SSMClient();
-  const command = new GetParametersCommand({
-    Names: ['AUTH_KEY_TEMP'].map((secretName) => process.env[secretName]),
-    WithDecryption: true,
-  });
-
-  const response = await client.send(command);
+  const { Parameters } = await new aws.SSM()
+    .getParameters({
+      Names: ['AUTH_KEY_TEMP'].map((secretName) => process.env[secretName]),
+      WithDecryption: true,
+    })
+    .promise();
 
   // TODO: move to above request invocation
-  if (response.Parameters.length === 0) {
+  if (Parameters.length === 0) {
     res.sendStatus(500);
     return;
   }
