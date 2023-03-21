@@ -1,6 +1,5 @@
 {
-  "body": null,
-  "httpMethod": "GET",
-  "path": "/my-path",
-  "requestContext": {}
-}
+   "key1": "value1",
+   "key2": "value2",
+   "key3": "value3"
+ }
