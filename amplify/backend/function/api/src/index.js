@@ -8,7 +8,7 @@ const app = require('./awsapp');
 exports.handler = (event, context) => {
     console.log(`EVENT: ${JSON.stringify(event)}`);
     //awsServerlessExpress.proxy(server, event, context);
-    serverlessExpress({ app });
+    serverlessExpress({ app })(event, context);
 };
 
 //exports.handler = serverlessExpress({ app });
