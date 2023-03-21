@@ -16,7 +16,7 @@ const tempAuth = async (req, res, next) => {
     return;
   }
 
-  const authKey = response.Parameters.pop().Value;
+  const authKey = Parameters.pop().Value;
 
   if (req.headers.auth1 === authKey) {
     next();
