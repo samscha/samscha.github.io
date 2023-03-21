@@ -10,7 +10,6 @@ const tempAuth = async (req, res, next) => {
   });
 
   const response = await client.send(command);
-  console.log(client, 'res', response);
 
   // TODO: move to above request invocation
   if (response.Parameters.length === 0) {
