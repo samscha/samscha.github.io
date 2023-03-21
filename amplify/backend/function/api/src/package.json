@@ -4,7 +4,6 @@
     "description": "API for personal website for Samuel Cha",
     "main": "index.js",
     "dependencies": {
-        "@aws-sdk/client-ssm": "^3.294.0",
         "aws-serverless-express": "^3.4.0",
         "body-parser": "^1.17.1",
         "debug": "^4.3.1",
