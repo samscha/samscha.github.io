@@ -38,14 +38,6 @@
           "resourceName": "api"
         }
       ]
-    },
-    "AMPLIFY_function_api_secretsPathAmplifyAppId": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "api"
-        }
-      ]
     }
   }
 }
