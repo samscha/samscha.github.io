@@ -15,9 +15,33 @@
       "function": {
         "api": {
           "deploymentBucketName": "amplify-samscha-develop-102910-deployment",
-          "s3Key": "amplify-builds/api-6d616961413273386332-build.zip",
+          "s3Key": "amplify-builds/api-7648657232444341394e-build.zip",
           "secretsPathAmplifyAppId": "d2m36eneuifk1i"
         }
+      }
+    }
+  },
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-samscha-main-50942-authRole",
+      "UnauthRoleArn": "arn:aws:iam::609215230012:role/amplify-samscha-main-50942-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::609215230012:role/amplify-samscha-main-50942-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-samscha-main-50942-deployment",
+      "UnauthRoleName": "amplify-samscha-main-50942-unauthRole",
+      "StackName": "amplify-samscha-main-50942",
+      "StackId": "arn:aws:cloudformation:us-east-1:609215230012:stack/amplify-samscha-main-50942/fa2393c0-7b39-11eb-bf23-129d8c0b3757",
+      "AmplifyAppId": "d2m36eneuifk1i"
+    },
+    "categories": {
+      "function": {
+        "api": {
+          "deploymentBucketName": "amplify-samscha-main-50942-deployment",
+          "s3Key": "amplify-builds/api-426f50775977436a576f-build.zip"
+        }
+      },
+      "api": {
+        "samscha": {}
       }
     }
   },
