@@ -17,6 +17,9 @@
           "deploymentBucketName": "amplify-samscha-main-50942-deployment",
           "s3Key": "amplify-builds/api-426f50775977436a576f-build.zip"
         }
+      },
+      "api": {
+        "samscha": {}
       }
     }
   },
