@@ -1,12 +1,9 @@
 import React from 'react';
-// import { useQuery } from 'react-query';
 
 import './Home.scss';
 
 export default ({
-  // ErrorText,
   IconsBy,
-  // Loading,
   LocationMarker,
   Project,
   TechIcon,
@@ -17,28 +14,6 @@ export default ({
   },
 }) => {
   const HomePage = () => {
-    // const apiBaseUri = process.env.REACT_APP_API_BASE_URL;
-
-    // const fetchLocation = async () => {
-    //   const response = await fetch(`${apiBaseUri}/v1/location`);
-    //   if (response.status !== 200) {
-    //     throw new Error(JSON.stringify(response));
-    //   }
-
-    //   return response.json();
-    // };
-    // const fetchSkills = async () => {
-    //   const response = await fetch(`${apiBaseUri}/v1/skills`);
-    //   if (response.status !== 200) {
-    //     throw new Error(JSON.stringify(response));
-    //   }
-
-    //   return response.json();
-    // };
-
-    // const locationQuery = useQuery('location', fetchLocation);
-    // const skillsQuery = useQuery('skills', fetchSkills);
-
     const filteredProjects = projects.filter((p) => p.enabled);
     const showProjects = JSON.parse(
       process.env.REACT_APP_SHOW_PROJECTS || 'false'
@@ -46,77 +21,70 @@ export default ({
 
     return (
       <div className="homepage">
-        {/* {(skillsQuery.isLoading || locationQuery.isLoading) && <Loading />} */}
-        {/* {(skillsQuery.isError || locationQuery.isError) && <ErrorText />} */}
-        {/* {skillsQuery.isSuccess && locationQuery.isSuccess && ( */}
-        <React.Fragment>
-          <LocationMarker location={location} />
+        <LocationMarker location={location} />
 
-          {primarySkills.length === 0 &&
-            skills.secondarySkills.length === 0 && (
-              <div className="technology-container">
-                <div className="technology-bar">
-                  <div key="no-skills-key" className="technology-bar__icon">
-                    <TechIcon
-                      {...{
-                        icon: [`far`, `file`],
-                        link: `#`,
-                        text: `No Skills`,
-                        title: 'No technical skills to show',
-                        type: 'fa',
-                      }}
-                    />
-                  </div>
+        {primarySkills.length === 0 && skills.secondarySkills.length === 0 && (
+          <div className="technology-container">
+            <div className="technology-bar">
+              <div key="no-skills-key" className="technology-bar__icon">
+                <TechIcon
+                  {...{
+                    icon: [`far`, `file`],
+                    link: `#`,
+                    text: `No Skills`,
+                    title: 'No technical skills to show',
+                    type: 'fa',
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
+        {primarySkills.length > 0 && (
+          <div className="technology-container">
+            <div className="technology-bar">
+              {primarySkills.map((tech) => (
+                <div key={tech.link} className="technology-bar__icon">
+                  <TechIcon
+                    {...tech}
+                    size="xs"
+                    className={tech.text.length > 10 ? 'xl' : ''}
+                  />
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {secondarySkills.length > 0 && (
+          <div className="technology-container">
+            <div className="technology-bar secondary">
+              {secondarySkills.map((tech) => (
+                <div key={tech.link} className="technology-bar__icon">
+                  <TechIcon {...tech} text="" />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {showProjects ? (
+          <div className="projects">
+            <div className="title">Projects</div>
+            {filteredProjects.length > 0 ? (
+              filteredProjects.map((project) => (
+                <div key={project.name} className="project-container">
+                  <Project {...project} />
+                </div>
+              ))
+            ) : (
+              <div className="no-projects-title">No Projects To Show</div>
             )}
+          </div>
+        ) : null}
 
-          {primarySkills.length > 0 && (
-            <div className="technology-container">
-              <div className="technology-bar">
-                {primarySkills.map((tech) => (
-                  <div key={tech.link} className="technology-bar__icon">
-                    <TechIcon
-                      {...tech}
-                      size="xs"
-                      className={tech.text.length > 10 ? 'xl' : ''}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {secondarySkills.length > 0 && (
-            <div className="technology-container">
-              <div className="technology-bar secondary">
-                {secondarySkills.map((tech) => (
-                  <div key={tech.link} className="technology-bar__icon">
-                    <TechIcon {...tech} text="" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {showProjects ? (
-            <div className="projects">
-              <div className="title">Projects</div>
-              {filteredProjects.length > 0 ? (
-                filteredProjects.map((project) => (
-                  <div key={project.name} className="project-container">
-                    <Project {...project} />
-                  </div>
-                ))
-              ) : (
-                <div className="no-projects-title">No Projects To Show</div>
-              )}
-            </div>
-          ) : null}
-
-          <IconsBy fa fz />
-        </React.Fragment>
-        {/* )} */}
+        <IconsBy fa fz />
       </div>
     );
   };
