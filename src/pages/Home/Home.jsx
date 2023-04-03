@@ -1,12 +1,9 @@
 import React from 'react';
-// import { useQuery } from 'react-query';
 
 import './Home.scss';
 
 export default ({
-  // ErrorText,
   IconsBy,
-  // Loading,
   LocationMarker,
   Project,
   TechIcon,
@@ -17,28 +14,6 @@ export default ({
   },
 }) => {
   const HomePage = () => {
-    // const apiBaseUri = process.env.REACT_APP_API_BASE_URL;
-
-    // const fetchLocation = async () => {
-    //   const response = await fetch(`${apiBaseUri}/v1/location`);
-    //   if (response.status !== 200) {
-    //     throw new Error(JSON.stringify(response));
-    //   }
-
-    //   return response.json();
-    // };
-    // const fetchSkills = async () => {
-    //   const response = await fetch(`${apiBaseUri}/v1/skills`);
-    //   if (response.status !== 200) {
-    //     throw new Error(JSON.stringify(response));
-    //   }
-
-    //   return response.json();
-    // };
-
-    // const locationQuery = useQuery('location', fetchLocation);
-    // const skillsQuery = useQuery('skills', fetchSkills);
-
     const filteredProjects = projects.filter((p) => p.enabled);
     const showProjects = JSON.parse(
       process.env.REACT_APP_SHOW_PROJECTS || 'false'
@@ -46,10 +21,6 @@ export default ({
 
     return (
       <div className="homepage">
-        {/* {(skillsQuery.isLoading || locationQuery.isLoading) && <Loading />} */}
-        {/* {(skillsQuery.isError || locationQuery.isError) && <ErrorText />} */}
-        {/* {skillsQuery.isSuccess && locationQuery.isSuccess && ( */}
-        <React.Fragment>
           <LocationMarker location={location} />
 
           {primarySkills.length === 0 &&
@@ -115,8 +86,6 @@ export default ({
           ) : null}
 
           <IconsBy fa fz />
-        </React.Fragment>
-        {/* )} */}
       </div>
     );
   };
