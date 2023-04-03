@@ -25,13 +25,6 @@
       "AmplifyAppId": "d2m36eneuifk1i"
     },
     "categories": {
-      "function": {
-        "api": {
-          "deploymentBucketName": "amplify-samscha-main-50942-deployment",
-          "s3Key": "amplify-builds/api-426f50775977436a576f-build.zip",
-          "secretsPathAmplifyAppId": "d2m36eneuifk1i"
-        }
-      },
       "api": {
         "samscha": {}
       }
