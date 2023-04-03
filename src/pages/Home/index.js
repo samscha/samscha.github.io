@@ -1,3 +1,4 @@
+import data from './assets';
 import projects from '../../assets/js/home/projects';
 import IconsBy from '../../components/IconsBy';
 import { ErrorText } from '../../components/ErrorText';
@@ -17,5 +18,6 @@ export default withLayout(
     Project,
     TechIcon,
     projects,
+    data,
   })
 );

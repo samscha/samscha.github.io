@@ -1,3 +1,4 @@
+import data from './assets';
 import infoText from '../../assets/js/about/infoText';
 import { withLayout } from '../../layouts';
 import IconsBy from '../../components/IconsBy';
@@ -8,5 +9,5 @@ import { Loading } from '../../components/Loading';
 import About from './About.jsx';
 
 export default withLayout(
-  About({ ErrorText, IconsBy, IconText, Link, Loading, infoText })
+  About({ ErrorText, IconsBy, IconText, Link, Loading, infoText, data })
 );
