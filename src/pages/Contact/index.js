@@ -5,7 +5,8 @@ import { ErrorText } from '../../components/ErrorText';
 import { Loading } from '../../components/Loading';
 import { withLayout } from '../../layouts';
 import Contact from './Contact.jsx';
+import data from './assets';
 
 export default withLayout(
-  Contact({ ErrorText, IconsBy, IconText, Link, Loading })
+  Contact({ ErrorText, IconsBy, IconText, Link, Loading, data })
 );
