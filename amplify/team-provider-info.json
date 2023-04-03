@@ -10,15 +10,6 @@
       "StackName": "amplify-samscha-develop-102910",
       "StackId": "arn:aws:cloudformation:us-east-1:609215230012:stack/amplify-samscha-develop-102910/fb0fca30-a5ae-11ea-9414-12328959da6d",
       "AmplifyAppId": "d2m36eneuifk1i"
-    },
-    "categories": {
-      "function": {
-        "api": {
-          "deploymentBucketName": "amplify-samscha-develop-102910-deployment",
-          "s3Key": "amplify-builds/api-35546a42796b4e733838-build.zip",
-          "secretsPathAmplifyAppId": "d2m36eneuifk1i"
-        }
-      }
     }
   },
   "main": {
