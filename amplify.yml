@@ -8,7 +8,11 @@ frontend:
     build:
       commands:
         - nvm install $(cat .nvmrc)
-        - npm test && npm run build
+        - npm run build
+    test:
+      commands:
+        - nvm install $(cat .nvmrc)
+        - npm test
   artifacts:
     baseDirectory: build
     files:
