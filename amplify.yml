@@ -9,6 +9,14 @@ frontend:
       commands:
         - nvm install $(cat .nvmrc)
         - npm run build
+    test:
+      phases:
+        preTest:
+          commands:
+            - npm ci
+        test:
+          commands:
+            - npm test
   artifacts:
     baseDirectory: build
     files:
