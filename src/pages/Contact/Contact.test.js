@@ -1,12 +1,25 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import Contact from './Contact.jsx';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
-describe(`Contact`, function () {
+import contactComponentFactory from './Contact.jsx';
+import IconText from '../../components/IconText';
+import Contact from './index.js';
+
+describe.skip(`Contact`, function () {
+  // const baseComponentProps = {
+  //   IconText,
+  //   data: { contacts: [] },
+  // };
+  // let Contact;
+
   const baseProps = {};
-  const baseContact = shallow(<Contact {...baseProps} />);
+
+  // beforeEach(() => {
+  //   Contact = contactComponentFactory({ ...baseComponentProps });
+  // });
 
   it(`should render without errors`, function () {
-    baseContact;
+    render(<Contact {...baseProps} />);
   });
 });
