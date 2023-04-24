@@ -5,14 +5,13 @@ frontend:
       commands:
         - nvm install $(cat .nvmrc)
         - npm ci
+    test:
+      commands:
+        - npm test
     build:
       commands:
         - nvm install $(cat .nvmrc)
         - npm run build
-    test:
-      commands:
-        - nvm install $(cat .nvmrc)
-        - npm test
   artifacts:
     baseDirectory: build
     files:
@@ -20,3 +19,13 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+test:
+  phases:
+    preTest:
+      commands:
+        - npm ci
+    test:
+      commands:
+        - npm test
+  artifacts:
+    baseDirectory: testing-ci
