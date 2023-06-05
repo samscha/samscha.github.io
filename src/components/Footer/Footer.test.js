@@ -1,12 +1,13 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import Footer from './Footer.jsx';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+import Footer from './index.js';
 
 describe(`Footer`, function () {
   const baseProps = {};
-  const baseFooter = shallow(<Footer {...baseProps} />);
 
   it(`should render without errors`, function () {
-    baseFooter;
+    render(<Footer {...baseProps} />);
   });
 });

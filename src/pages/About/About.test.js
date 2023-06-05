@@ -1,12 +1,20 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import About from './About.jsx';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+import aboutComponentFactory from './About.jsx';
 
 describe(`About`, function () {
+  const baseComponentProps = { data: { info: [] } };
+  let About;
+
   const baseProps = {};
-  const baseAbout = shallow(<About {...baseProps} />);
+
+  beforeEach(() => {
+    About = aboutComponentFactory({ ...baseComponentProps });
+  });
 
   it(`should render without errors`, function () {
-    baseAbout;
+    render(<About {...baseProps} />);
   });
 });
