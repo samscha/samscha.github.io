@@ -12,8 +12,8 @@ export default ({
     location,
     skills: { primarySkills, secondarySkills },
   },
-}) => {
-  const HomePage = () => {
+}): any => {
+  const HomePage = (): any => {
     const filteredProjects = projects.filter((p) => p.enabled);
     const showProjects = JSON.parse(
       process.env.REACT_APP_SHOW_PROJECTS || 'false'
@@ -23,7 +23,7 @@ export default ({
       <div className="homepage">
         <LocationMarker location={location} />
 
-        {primarySkills.length === 0 && skills.secondarySkills.length === 0 && (
+        {primarySkills.length === 0 && secondarySkills.length === 0 && (
           <div className="technology-container">
             <div className="technology-bar">
               <div key="no-skills-key" className="technology-bar__icon">

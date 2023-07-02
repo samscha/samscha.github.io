@@ -6,7 +6,7 @@ import IconText from '../../components/IconText';
 import Link from '../../components/Link';
 import { ErrorText } from '../../components/ErrorText';
 import { Loading } from '../../components/Loading';
-import About from './About.jsx';
+import About from './About.tsx';
 
 export default withLayout(
   About({ ErrorText, IconsBy, IconText, Link, Loading, infoText, data })
