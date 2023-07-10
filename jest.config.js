@@ -7,7 +7,7 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest',
   },
   preset: 'ts-jest',
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
 };
 
 // module.exports = {
