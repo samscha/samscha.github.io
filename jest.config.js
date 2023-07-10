@@ -7,7 +7,15 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest',
   },
   preset: 'ts-jest',
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
+  /*
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+]
+*/
 };
 
 // module.exports = {
