@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "esModuleInterop": true,
+        "lib": ["DOM"],
+    "outDir": "dist",
+    },
+    "typeAcquisition": {
+        "include": ["jest"]
+    }
+}
