@@ -59,8 +59,8 @@ export default {
       },
       {
         text: 'Git',
-        title: "Click to go to Sam's GitHub",
-        link: 'https://github.com/samscha',
+        title: 'Click to learn more about Git',
+        link: 'https://git-scm.com',
         icon: 'icon-git',
         type: 'fz',
         set: 'primary',
