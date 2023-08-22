@@ -1,14 +1,13 @@
 import React from 'react';
 
-import {Loading} from '../Loading'
+import { Loading } from '../Loading';
 
-
-export default ({   init }) => {
+export default ({ init }) => {
   init();
 
   return () => (
     <div className="app">
-    <Loading />
+      <Loading />
     </div>
   );
 };
