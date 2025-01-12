@@ -6,4 +6,5 @@ https://samscha.com
 
 ## `TODO`
 
--   [ ] update to vite and vitest
+- [ ] update to vite and vitest
+- [ ] add pre and post commit hooks (prettier)
