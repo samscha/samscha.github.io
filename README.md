@@ -6,17 +6,4 @@ https://samscha.com
 
 ## `TODO`
 
--   [ ] add admin section
--   [ ] add db for assets
--   [ ] add in-depth unit tests
--   [ ] add e2e tests
--   [ ] add resizing of images via cdn/lambda
--   [ ] finish basic unit tests
--   [ ] move images to api
--   [x] reintegrate API
--   [x] add dark mode
--   [x] add backend
--   [x] add projects
--   [x] fix page length vh
--   [x] move image to cdn
--   [x] update to hooks
+-   [ ] update to vite and vitest
