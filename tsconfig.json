@@ -1,11 +1,7 @@
 {
-    "compilerOptions": {
-        "jsx": "react",
-        "esModuleInterop": true,
-        "lib": ["DOM"],
-    "outDir": "dist",
-    },
-    "typeAcquisition": {
-        "include": ["jest"]
-    }
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
