@@ -6,4 +6,5 @@ https://samscha.com
 
 ## `TODO`
 
+-   [ ] add custom domain
 -   [ ] update to vite and vitest
