@@ -1,0 +1,29 @@
+.page {
+  height: 100vh;
+  padding: 0 2em;
+  padding-top: 0.5em;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-height: 3em;
+}
+
+.subheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.page .title {
+  margin-bottom: 0.2em;
+}
+
+.spacer {
+  height: 2em;
+}

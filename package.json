@@ -12,7 +12,7 @@
         "lint": "eslint .",
         "preview": "vite preview",
         "test": "vitest",
-        "pr": "prettier --write \"./**/*.{js,jsx,ts,tsx}\"",
+        "pr": "prettier --write \"./**/*.{css,js,jsx,ts,tsx}\"",
         "cc": "vitest run --coverage"
     },
     "dependencies": {

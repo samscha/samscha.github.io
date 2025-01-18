@@ -1,0 +1,19 @@
+.technical-skills .technical-skill {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 750px) {
+  .technical-skills .technical-skill {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .experiences .experience-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+}

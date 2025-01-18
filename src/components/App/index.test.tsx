@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import { expect, test } from 'vitest';
-import App from './';
+import { App } from '../';
 
-test('renders App', async () => {
-  render(<App />);
+test('renders content', async () => {
+  render(<App renderContent={<div data-testid="app-id" />} />);
 
-  expect(screen.getByText('APP')).toBeInTheDocument();
+  expect(screen.getByTestId('app-id')).toBeInTheDocument();
 });
