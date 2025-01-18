@@ -1,0 +1,18 @@
+.educations .education {
+  margin-bottom: 1em;
+}
+
+.educations .education .education-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 0.25em;
+}
+
+@media only screen and (min-width: 750px) {
+  .educations .education .education-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+}

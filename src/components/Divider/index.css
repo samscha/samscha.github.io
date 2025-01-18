@@ -1,0 +1,14 @@
+.divider {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.md {
+  height: 2em;
+}
+
+.divider .divider-line {
+  margin: auto 0;
+  border: 0.05em solid white;
+}

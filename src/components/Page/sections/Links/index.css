@@ -1,0 +1,25 @@
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 20em;
+}
+
+.links .link {
+  padding: 0.2em 0;
+}
+
+@media only screen and (min-width: 750px) {
+  .links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .links .link {
+    padding: 0 0.5em;
+  }
+}
