@@ -12,3 +12,9 @@
   margin: auto 0;
   border: 0.05em solid white;
 }
+
+@media (prefers-color-scheme: light) {
+  .divider .divider-line {
+    border-color: black;
+  }
+}
