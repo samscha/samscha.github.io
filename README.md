@@ -6,6 +6,7 @@ https://samscha.com
 
 ## `TODO`
 
-- [x] add custom domain
 - [ ] add pre and post commit hooks (prettier)
-- [ ] update to vite and vitest
+- [ ] add light/dark mode toggle
+- [x] add custom domain
+- [x] update to vite and vitest

@@ -87,7 +87,7 @@ createRoot(document.getElementById('root')!).render(
           projects={[
             {
               name: 'Personal Website',
-              tools: ['GitHub Pages', 'React', 'Vite', 'TypeScript'],
+              tools: ['React', 'TypeScript', 'Vite', 'GitHub Pages'],
               start: '1/2025',
               end: null,
               present: true,
@@ -98,7 +98,7 @@ createRoot(document.getElementById('root')!).render(
             },
             {
               name: 'Personal Website (previous)',
-              tools: ['Amazon Web Services (AWS)', 'React'],
+              tools: ['React', 'Amazon Web Services (AWS)'],
               start: '8/2018',
               end: '12/2023',
               present: false,
