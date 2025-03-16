@@ -65,10 +65,6 @@ export const Page = ({
   const renderProjects = projects && !!projects.length;
   const renderEducations = educations && !!educations.length;
 
-  const Spacer = () => {
-    return <div className="spacer" />;
-  };
-
   return (
     <div className="page">
       <div className="header">
@@ -96,9 +92,12 @@ export const Page = ({
 
       {renderEducations && <Educations educations={educations} />}
 
-      <Spacer />
+      <Divider />
 
-      <div className="footer" />
+      <div className="footer">
+        &copy;&nbsp;2018&#8212;{new Date().getFullYear()}
+        &nbsp;Samuel&nbsp;Cha
+      </div>
     </div>
   );
 };
