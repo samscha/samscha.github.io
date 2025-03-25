@@ -1,5 +1,3 @@
-import './index.css';
-
 interface Props {
   classNames?: string[];
   href: string;
