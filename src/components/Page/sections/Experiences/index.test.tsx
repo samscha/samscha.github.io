@@ -20,16 +20,28 @@ test('renders experiences', async () => {
     />
   );
 
-  const element = getElementWithin(screen.getByText('Experiences'));
-  const getText = (text: string) => element.getByText(getIncludedText(text));
+  const element = getElementWithin(
+    screen.getByText('Experiences').parentElement
+  );
+  const getElements = (text: string) =>
+    element.getAllByText(getIncludedText(text));
+  const getTexts = (text: string) => {
+    const elements = getElements(text);
 
-  expect(getText('CEO')).toBeInTheDocument();
-  expect(getText('1/2000')).toBeInTheDocument();
-  expect(getText('Present')).toBeInTheDocument();
-  expect(getText('My Company')).toBeInTheDocument();
-  expect(getText('Earth')).toBeInTheDocument();
-  expect(getText('Do stuff')).toBeInTheDocument();
-  expect(getText('Do more stuff')).toBeInTheDocument();
+    if (elements.length === 1) {
+      return elements[0];
+    }
+
+    return elements;
+  };
+
+  expect(getTexts('CEO')).toHaveLength(2);
+  expect(getTexts('1/2000')).toHaveLength(2);
+  expect(getTexts('Present')).toHaveLength(2);
+  expect(getTexts('My Company')).toBeInTheDocument();
+  expect(getTexts('Earth')).toBeInTheDocument();
+  expect(getTexts('Do stuff')).toBeInTheDocument();
+  expect(getTexts('Do more stuff')).toBeInTheDocument();
 });
 
 test("doesn't render Present when experience not present", async () => {

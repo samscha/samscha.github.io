@@ -28,7 +28,7 @@ test('renders header', async () => {
 test('renders subheader', async () => {
   render(<Page />);
 
-  const subheader = screen.getByText('Austin, TX');
+  const subheader = screen.getByText('Seattle, WA');
   expect(subheader).toBeInTheDocument();
 });
 
