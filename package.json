@@ -14,7 +14,8 @@
         "preview": "vite preview",
         "test": "vitest",
         "pr": "prettier --write \"./**/*.{css,js,jsx,ts,tsx}\"",
-        "cc": "vitest run --coverage"
+        "cc": "vitest run --coverage",
+        "test:ci": "npm run pr && npm run cc && npm run build"
     },
     "dependencies": {
         "react": "^19.0.0",

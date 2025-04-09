@@ -8,7 +8,7 @@ export const Experiences = (props: Props) => {
   const experiences = props.experiences.map((experience) => {
     const { start, end, present } = experience;
     const from = start;
-    const to = present ? utils.getCurrentMonthYear() : end;
+    const to = present || !end ? utils.getCurrentMonthYear() : end;
 
     const duration = utils.getExperienceDurationText({
       from,

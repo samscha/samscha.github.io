@@ -21,7 +21,7 @@ test('renders experiences', async () => {
   );
 
   const element = getElementWithin(
-    screen.getByText('Experiences').parentElement
+    screen.getByText('Experiences').parentElement!
   );
   const getElements = (text: string) =>
     element.getAllByText(getIncludedText(text));
