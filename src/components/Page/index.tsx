@@ -70,7 +70,7 @@ export const Page = ({
       <div className="header">
         <div className="h1">Samuel Cha</div>
       </div>
-      <div className="subheader">Austin, TX</div>
+      <div className="subheader">Seattle, WA</div>
 
       <Divider />
 
