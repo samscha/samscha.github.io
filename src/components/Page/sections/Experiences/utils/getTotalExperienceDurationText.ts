@@ -10,7 +10,7 @@ export const getTotalExperienceDurationText = ({ months }: Props) => {
   }
 
   if (months < 12) {
-    return `${months} month${months > 1 ? 's' : ''}`;
+    return `${months} month${utils.s(months)}`;
   }
 
   const years = Math.floor(months / 12);
@@ -18,7 +18,7 @@ export const getTotalExperienceDurationText = ({ months }: Props) => {
 
   const moreThanText = remainingMonths > 0 ? '+' : '';
 
-  return `${years}${moreThanText} ${utils.pluralize({ count: years, text: 'year' })}`;
+  return `${years}${moreThanText} year${utils.s(years)}`;
 };
 
 export const getTotalMonths = utils.getTotalMonths;

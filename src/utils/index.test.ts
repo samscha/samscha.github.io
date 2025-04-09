@@ -1,13 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { calcDuration, pluralize } from './index';
+import { calcDuration, s } from './index';
 
-describe('pluralize', () => {
-  it('should pluralize correctly', async () => {
-    expect(pluralize({ count: 2, text: 'Apple' })).toBe('Apples');
+describe('s', () => {
+  it('should return s when greater than one', async () => {
+    expect(s(2)).toBe('s');
   });
 
-  it('should not pluralize when one count', async () => {
-    expect(pluralize({ count: 1, text: 'Orange' })).toBe('Orange');
+  it('should return empty string when one', async () => {
+    expect(s(1)).toBe('');
   });
 });
 

@@ -1,3 +1,5 @@
+import { s } from './index';
+
 interface Props {
   from: Date;
   to: Date;
@@ -12,19 +14,19 @@ export const calcDuration = ({ from, to }: Props) => {
     return '<1 month';
   }
   if (isLessThanOneYear) {
-    return `${totalMonths} month${totalMonths > 1 ? 's' : ''}`;
+    return `${totalMonths} month${s(totalMonths)}`;
   }
 
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths - years * 12;
 
-  const yearsText = `year${years > 1 ? 's' : ''}`;
+  const yearsText = `year${s(years)}`;
 
   if (months === 0) {
     return `${years} ${yearsText}`;
   }
 
-  const monthsText = `month${months > 1 ? 's' : ''}`;
+  const monthsText = `month${s(months)}`;
 
   return `${years} ${yearsText} ${months} ${monthsText}`;
 };
